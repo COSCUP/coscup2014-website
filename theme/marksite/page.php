@@ -1,23 +1,9 @@
 <?php
-include_once "i18n.php";
 $theme_assets_uri = "/2014-theme/assets/";
-$lc = new i18n;
-switch($this->current[0])
-{
-  case "en":
-    $lc->lang = "en";
-    break;
-  case "zh-tw":
-    $lc->lang = "zh-TW";
-    break;
-  case "zh-cn":
-    $lc->lang = "zh-CN";
-    break;
-}
 ?>
 
 <!DOCTYPE html>
-<html lang="<?php echo $lc->lang ?>">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -26,6 +12,12 @@ switch($this->current[0])
 <meta name="keywords" content="COSCUP, COSCUP2014, 開源人年會, Conference for Open Source Coders, Users and Promoters Open Source, Free Software, 自由軟體, 開放原始碼, 研討會, 社群, FLOSS">
 <meta name="description" content="COSCUP 2014, 8/3-4 台北國際會議中心。台灣 Open Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。">
 <meta name="COMPANY" content="COSCUP">
+
+<!--locales-->
+<!--[if gt IE 8]><!-->
+  <link rel="localization" href="<?php echo $theme_assets_uri;?>locales/manifest.json">
+  <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/l20n.min.js"></script>
+<!--<![endif]-->
 
 <!--fb shareing-->
 <meta property="og:title" content="2014 COSCUP-Open x [Web | Mobile | Data]" />
@@ -51,14 +43,6 @@ if (isset($styles)) {
 ?>
 <!--favicon-->
 <link type="image/x-icon" href="<?php echo $theme_assets_uri;?>favicon.ico" rel="shortcut icon">
-
-<!--隱藏網址列-->
-<!--script>
-	window.addEventListener("load",function() {
-    setTimeout(function(){
-    window.scrollTo(0, 1); }, 10);
-  });
-</script-->
 
 <!-- GA -->
 <script>
@@ -176,7 +160,7 @@ switch($this->current[0])
 <!--底-->
 <div id="footer">
 	<ul>
-        <li><?php echo $lc->_("COPYRIGHT"); ?> | </li>
+        <li><span data-l10n-id="copyright"><a href="http://coscup.org/2014/en/contact/">Contact us</a></span> | </li>
         <li><a href="http://coscup.org/2006/" target="_blank">2006</a>|</li>
         <li><a href="http://coscup.org/2007/" target="_blank">2007</a>|</li>
         <li><a href="http://coscup.org/2008/" target="_blank">2008</a>|</li>
