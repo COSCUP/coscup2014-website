@@ -1,0 +1,26 @@
+.DS_Store
+*.swp
+.svn
+*~
+*.swp
+
+# deploy
+deploy/marksite/
+deploy/tmp/
+deploy/config.php
+deploy/files/
+
+# src
+src/blocks/*.html
+src/zh-tw/sponsors/index.md
+src/zh-cn/sponsors/index.md
+src/en/sponsors/index.md
+src/en/program/*.html
+src/zh-tw/program/*.html
+src/zh-cn/program/*.html
+src/en/news/*.html
+src/zh-tw/news/*.html
+src/zh-cn/news/*.html
+src/en/live/*.html
+src/zh-tw/live/*.html
+src/zh-cn/live/*.html

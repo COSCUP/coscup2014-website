@@ -1,0 +1,885 @@
+@charset "utf-8";
+/* reset
+--------------------------------------------------- */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input {
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,th {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+}
+abbr,acronym {
+    border: 0;
+}
+ul,ol {
+    list-style: none;
+}
+fieldset,img {
+    border: none;
+}
+/* basic
+--------------------------------------------------- */
+body {
+    background: url('');
+    font: 12px/19px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
+    color: #333;
+}
+a {
+    color: #666666;
+    cursor: pointer;
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+h1 {
+    font: 18px/25px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+}
+h2 {
+    font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+}
+/* ---Mobile Shut down----------*/
+.m_kv {
+    display: none;
+}
+#mySwipe {
+    display:none
+}
+.sharing {
+    display: none;
+}
+/* Main
+--------------------------------------------------- */
+.blue {
+    width: 100%;
+    height: 7px;
+    background: #96e9ee;
+}
+#header {
+    width: 100%;
+    height: 267px;
+    background: url(head.jpg) #f1f0ed no-repeat top;
+}
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+.logo a {
+    width: 207px;
+    height: 42px;
+    background: url(logo.png) no-repeat;
+    display: block;
+    text-indent: -9999px;
+    float: left;
+    margin: 7px 0 35px -10px;
+}
+.logo a {
+    display: block;
+}
+#social {
+    width: 150px;
+    float: right;
+    margin: 5px 0 0 0;
+}
+#social li {
+    float: left;
+    margin-right: 5px;
+}
+#lan {
+    width: 136px;
+    height: 30px;
+    margin-right: 21px;
+    float: right;
+}
+#lan li {
+    float: left;
+}
+#lan li a {
+    background: #95e9ee;
+    padding: 5px 6px;
+    color: #000;
+}
+#lan li a:hover {
+    background: #000019;
+    color: #fff;
+}
+#mainNav {
+    width: 977px;
+    height: 36px;
+    background: #797979;
+    margin-top: 140px;
+    padding-left: 10px;
+    float: left;
+}
+#mainNav a {
+    color: #fff;
+    padding: 9px;
+}
+#mainNav li {
+    font-family: "微軟正黑體", "Arial Unicode MS";
+    line-height: 35px;
+    font-size: 15px;
+    color: #fff;
+    height: 36px;
+    margin-right: 8px;
+    float: left;
+}
+#mainNav li a:hover {
+    background: #9becf2;
+    color: #000;
+}
+#mainNav li.open {
+    float: right;
+}
+
+#main {
+    width: 100%;
+    background: url(bg_main.jpg) repeat;
+    border-top: 4px #797979 solid;
+    padding: 30px 0;
+    float: left;
+}
+/*--左--*/
+#left {
+    width: 430px;
+    min-height: 300px;
+    float:left
+}
+#left.blog {
+    width: 525px;
+}
+#left .register,#left .news,#left .info,#left .whatiscoscup,#left .contributor {
+    margin-bottom: 20px;
+    float: left;
+}
+#left .news .text, #left .info, #left .text {
+    font-size: 15px;
+    line-height: 28px;
+}
+#left .register {
+    width: 415px;
+    height: 75px;
+    border-top: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+    padding: 30px 0 0 15px;
+}
+#left .register em {
+    font-size: 50px;
+    position: relative;
+    top: 10px;
+}
+#left .register .date {
+    margin-right: 12px;
+    float: left;
+    font-size: 20px;
+}
+#left .register .call {
+    width: 83px;
+    font-size: 20px;
+    padding: 8px;
+    margin-top: 3px;
+    background: #97edf4;
+    float:left
+}
+#left .register .call a {
+    color: #000;
+}
+#left .contributor {
+    width: 415px;
+    height: 45px;
+    background: #c9f1f5;
+    padding: 10px 0 0 15px;
+}
+#left .contributor .date {
+    margin-right: 12px;
+    font-size: 15px;
+    padding-top: 9px;
+    float: left;
+}
+#left .contributor .call {
+    width: 83px;
+    font-size: 20px;
+    padding: 8px;
+    background: #97edf4;
+    float:left
+}
+#left .contributor .call a {
+    color: #000;
+}
+#left .news {
+    width: 430px;
+}
+#left .news .news_list .list {
+    margin-bottom: 0px;
+    border-bottom: none;
+}
+#left .news .news_list .list:last-child {
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+#left .news span {
+    width: 95%;
+    color: #999999;
+    margin-bottom: 3px;
+    float: left;
+}
+#left .news .text {
+    width: 95%;
+    float: left;
+}
+#left .news .more {
+    width: 100%;
+    text-align: right;
+}
+#left .news .more a {
+    font-size: 11px;
+    color: #000;
+    text-align: right;
+}
+#left .news .more a:hover {
+    color: #666;
+}
+#left .info {
+    width: 430px;
+}
+#left .whatiscoscup {
+    width: 430px;
+}
+/*--中--*/
+#sidebar2 {
+    width: 330px;
+    margin-left: 25px;
+    float:left
+}
+#sidebar2.blog {
+    width: 250px;
+    float: right;
+}
+#sidebar2 .fb,#sidebar2 .socialbuzz,#sidebar2 .utube {
+    margin-bottom: 20px;
+    float:left
+}
+#sidebar2 .fb {
+    width: 300px;
+    height: 65px;
+    border: 1px #CCC solid;
+    padding: 15px;
+}
+#sidebar2 .socialbuzz {
+    width: 330px;
+}
+#sidebar2 .socialbuzz h1 {
+    width: 330px;
+    height: 37px;
+    text-indent: 15px;
+    margin: 0;
+    line-height: 35px;
+    background: #42cfda;
+    color: #fff;
+}
+#sidebar2 .socialbuzz h1 em {
+    font-size: 12px;
+}
+#sidebar2 .socialbuzz .text {
+    width: 330px;
+    background: #c9f2f5;
+}
+#sidebar2 .socialbuzz .text > ul {
+    line-height: 16px;
+    margin: 0;
+    padding: 0 1em 0 2em;
+    text-align: left;
+}
+#sidebar2 .socialbuzz .text > ul li {
+    list-style: square outside none;
+    padding: 6px;
+}
+#sidebar2 .socialbuzz .text > ul .meta {
+    display: block;
+    text-align: right;
+}
+#sidebar2 .socialbuzz .more {
+    width: 322px;
+    height: 25px;
+    text-align: right;
+    padding: 5px 8px 0 0;
+    background: #afeff5;
+    float: left;
+}
+#sidebar2 .socialbuzz .more a {
+    color: #000;
+    font-size: 11px;
+}
+#sidebar2 .socialbuzz .more a:hover {
+    color: #666;
+}
+#sidebar2 .utube {
+    width: 330px;
+    height: 370px;
+}
+#sidebar2 .utube h1 {
+    height: 37px;
+    text-indent: 15px;
+    margin: 0;
+    line-height: 35px;
+    background: #42cfda;
+    color: #fff;
+}
+#sidebar2 .utube .more {
+    width: 322px;
+    height: 25px;
+    text-align: right;
+    padding: 5px 8px 0 0;
+    background: #afeff5;
+    float: left;
+}
+#sidebar2 .utube .more a {
+    color: #000;
+    font-size: 11px;
+}
+#sidebar2 .utube .more a:hover {
+    color: #666;
+}
+/*--右--*/
+#sponsor {
+    width: 177px;
+    margin-right: 17px;
+    float: right
+}
+#sponsor h2 {
+    width: 177px;
+    height: 37px;
+    font-size: 17px;
+    color: #fff;
+    text-indent: 15px;
+    line-height: 38px;
+    background: #42cfda;
+    margin: 0;
+}
+#sponsor li, #sponsor p {
+    width: 175px;
+    border: 1px #CCC solid;
+    border-top: 0px;
+    text-align: center;
+    padding: 12px 0;
+}
+#sponsor li.last {
+    border-bottom: 0;
+}
+#footer {
+    width: 100% ;
+    height: 50px;
+    background: #9bedf3;
+    float: left;
+}
+#footer ul {
+    width: 1000px;
+    padding-top: 10px;
+    margin:0 auto
+}
+#footer ul li {
+    color: #999;
+    float:left
+}
+#footer ul li a {
+    color: #999;
+    padding: 0 5px;
+}
+#footer ul li a:hover {
+    color: #000;
+}
+#footer .design {
+    color: #999;
+    padding-right: 8px;
+    float:right
+}
+#footer .design a {
+    color: #999;
+}
+#footer .design a:hover {
+    color: #000;
+}
+/* pages
+--------------------------------------------------- */
+#content {
+    width: 800px;
+    float: left;
+}
+#content h1 {
+    font-size: 22px;
+    margin-bottom: 17px;
+}
+#content h1.coscup {
+    font-style: italic;
+    color: #42CFDA;
+    margin-bottom: 45px;
+}
+#content .article {
+    font-size: 15px;
+    line-height: 28px;
+}
+#content p {
+    font-size: 15px;
+    line-height: 28px;
+    margin: 12px 0;
+}
+#content p .ab01 {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+#content p .ab02 {
+    float: right;
+    margin: 0 0px 10px 10px;
+}
+/* sponsor------ */
+.splist {
+    width: 100%;
+    margin-bottom: 35px;
+}
+.splist img {
+    margin: 5px 15px 0 0;
+    vertical-align: top;
+}
+.spinfo {
+    width: 600px;
+    background: #fff;
+    padding: 10px 15px;
+    border-left: 4px #CCC solid;
+    display: inline-block
+}
+.spinfo h2 {
+    font-size: 18px;
+}
+.spinfo p {
+    font-size: 15px;
+    line-height: 28px;
+    color: #333333
+}
+
+.donor .spinfo li {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333333
+}
+.donor .spinfo div {
+    clear: left;
+    font-size: 15px;
+    color: #333333
+}
+.donor img {
+    display: inline-block;
+    width: 140px;
+}
+
+/* map------ */
+.map {
+    width: 780px;
+}
+/* news------ */
+#content .news {
+    width: 100%;
+}
+#content .news .list {
+    background: #efefef;
+    border-top: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+    margin-bottom: 40px;
+    padding: 15px;
+    float: left;
+    width: 95%;
+}
+#content .news span {
+    width: 95%;
+    color: #999999;
+    margin-bottom: 3px;
+    float: left;
+}
+#content .news b {
+    margin-left: 10px;
+    color: #606060;
+    font-size: 13px;
+}
+#content .news .title {
+    width: 95%;
+    font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+    float: left;
+}
+#content .news .text {
+    font-size: 15px;
+    line-height: 28px;
+}
+/* Live -------- */
+#content .live {
+    width: 100%;
+    font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
+}
+#content .live .list {
+    background: #efefef;
+    border-top: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+    margin-bottom: 40px;
+    padding: 15px;
+    width: 95%;
+}
+#content .live div {
+    margin: 10px 0;
+}
+#content .live span {
+    margin-right: 10px;
+    color: #666666;
+    font-weight: bold;
+}
+#content .live span.online {
+    border: 1px solid gray;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    background: red;
+    color: white;
+    margin: 2px;
+    padding: 2px 5px;
+}
+#content .live span.online.end {
+    background: #369;
+}
+#content .live .title {
+    font-weight: bold;
+    color: #000;
+}
+#content .live iframe {
+  width: 720px;
+  height: 540px;
+}
+/* Program------ */
+h2.pro {
+    width: 780px;
+    margin-bottom: 18px;
+    float:left
+}
+#navTab {
+    width: 780px;
+    height: 40px;
+    background: #fff;
+}
+#navTab ul {
+    font-size: 15px;
+    line-height: 25px;
+    float:left
+}
+#navTab li {
+    margin: 5px 0;
+    padding: 0 15px;
+    float: left;
+}
+#navTab li.active {
+    background-color: #95E9EE;
+}
+#navTab li.active a {
+    color: black;
+}
+#navTab li:not(:first-child) {
+    border-left: 1px #666 solid;
+}
+.floatTab {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #CCC;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.track_push {
+    width: 40%;
+    font-size: 15px;
+    padding: 8px;
+    float:left
+}
+.track_push a {
+    border-right: 1px #CCC solid;
+    display:block
+}
+.class_tag {
+    width: 750px;
+    padding: 15px;
+    background: #e8e8e8;
+    font-size: 0px;
+}
+.class_tag li {
+    cursor: pointer;
+    width: 225px;
+    margin-bottom: 8px;
+    line-height: 22px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 0 5px 10px;
+    background-color: white;
+    margin: 5px;
+}
+.class_tag li:hover {
+    background: #fafaf3;
+}
+.class_tag li.inactive {
+    background-color: transparent;
+}
+/**Color Tag**/
+.colorTag-1 {
+    border-left: #f00 5px solid;
+}
+.colorTag-2 {
+    border-left: #73ff00 5px solid;
+}
+.colorTag-3 {
+    border-left: #00ffff 5px solid;
+}
+.colorTag-4 {
+    border-left: #4800a2 5px solid;
+}
+.colorTag-5 {
+    border-left: #ff7300 5px solid;
+}
+.colorTag-6 {
+    border-left: #339333 5px solid;
+}
+.colorTag-7 {
+    border-left: #57a1ff 5px solid;
+}
+.colorTag-8 {
+    border-left: #c420c4 5px solid;
+}
+.colorTag-9 {
+    border-left: #3333ff 5px solid;
+}
+.colorTag-10 {
+    border-left: #399a9a 5px solid;
+}
+.colorTag-11 {
+    border-left: #f2f22f 5px solid;
+}
+.colorTag-12 {
+    border-left: #f04e97 5px solid;
+}
+.colorTag-13 {
+    border-left: #eeeeee 5px solid;
+}
+.time {
+    width: 765px;
+    height: 32px;
+    background: #666;
+    color: #fff;
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 28px;
+    float:left
+}
+.time_finish {
+    border-bottom: 1px #d5d5d5 solid;
+    height: 1px;
+    width: 780px;
+    ;
+    float: left;
+}
+.article {
+    width: 768px;
+    border: 1px #d5d5d5 solid ;
+    border-bottom: 0;
+    border-top: 0;
+    min-height: 25px;
+    text-align: center;
+    padding: 10px 5px;
+    float:left
+}
+.program {
+    width: 370px;
+    position: relative;
+    min-height: 110px;
+    padding: 5px 1px;
+    margin: 0 5px 15px 5px;
+    text-align: left;
+    border: 1px #d5d5d5 solid;
+    background: #fff;
+    float: left;
+    cursor: pointer;
+}
+.program:hover {
+    background:#ebebeb
+}
+.program .metadata.track_tag {
+    min-height: 110px;
+    padding: 1px;
+}
+.program .metadata .head {
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.program .metadata .body {
+    clear: both;
+    margin-left: 5px;
+    height: 80px;
+    line-height: 80px;
+}
+.program .place {
+    font-weight: bold;
+    color: #666;
+    background: #EEE;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    line-height: 25px;
+    text-align: center;
+    float: left;
+    font-size: 13px;
+}
+.program .community {
+    float: right;
+    font-size: 13px;
+    color: #999;
+    margin-right: 5px;
+    line-height: 20px;
+}
+.program .slide {
+    float: right;
+    margin: 0 5px;
+}
+.program .video {
+    float: right;
+    margin: 0 5px;
+}
+.program .topic {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    width: 60%;
+    min-height: 63px;
+    margin-right: 10px;
+    float: left;
+    line-height: 16px;
+}
+.program .topic.en:after {
+    font-size: 11px;
+    content: 'En';
+    border: 1px solid gray;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    background: red;
+    color: white;
+    margin: 2px;
+    padding: 2px 5px;
+}
+.program .speaker {
+    color: #666;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+}
+.program .speaker-title {
+    color: #666;
+    font-size: 12px;
+    line-height: 18px;
+}
+.program .ps {
+    position: absolute;
+    color: #900;
+    left: 5px;
+    bottom: 5px;
+    line-height: 20px;
+}
+.program.keynote {
+    width: 754px;
+}
+
+/*** program View ***/
+
+#lock_background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+#program_detail.program {
+    overflow-y: auto;
+    position: relative;
+    margin: -250px auto 0 auto;
+    top: 50%;
+    width: 800px;
+    height: 500px;
+    background: white;
+    border: 1px #d5d5d5 solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
+    float: none;
+    padding: 5px;
+    cursor: inherit;
+}
+
+#program_detail.program .head div {
+    font-size: 16px;
+}
+
+#program_detail.program .timeinfo {
+    color: black;
+    float: left;
+    margin-left: 20px;
+}
+
+#program_detail.program .community,
+#program_detail.program .video {
+  margin-right: 10px;
+}
+
+#program_detail.program .body div {
+    font-size: 16px;
+    line-height: 24px;
+}
+#program_detail.program .topic {
+  width: 65%;
+}
+#program_detail.program .speaker,
+#program_detail.program .speaker-title {
+    padding-right: 10px;
+    text-align: right;
+}
+
+#lock_background.show {
+    display: block;
+    z-index: 99999;
+}
+
+#program_detail.program .bio,
+#program_detail.program .abstract {
+    padding: 0 10px;
+}
+
+#program_detail.program .content-title {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.webchat {
+    width: 750px;
+    height: 500px;
+    border: 0;
+}

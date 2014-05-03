@@ -1,0 +1,35 @@
+﻿<div id="openwall" class="page current">
+  <div id="panel-container">
+    <div class="logo"><a href="http://coscup.org/2013/">COSCUP2013</a></div>
+    <div id="panel"></div>
+  </div>
+</div>
+<script type="text/javascript" src="jquery.openwall.js"></script>
+<script type="text/javascript">
+jQuery(function ($) {
+
+var options = {
+  imageDir: 'photo/',
+  mobile: false
+};
+
+function initState() {
+  var sAgent = navigator.userAgent.toLowerCase();
+  if (sAgent.indexOf("msie") == -1 && !this.isIE) {
+    var mq = window.matchMedia("(max-width: 360px)");
+    options.mobile = (mq.matches)? true: false;
+  }
+  if (navigator.userAgent.match(/(Android|iPhone|iPod|iPad|IEMobile|B2G)/)) {
+    options.mobile = true;
+    //XXX fallback plan?
+  }
+
+  $('#panel').empty().openWall(options);
+}
+
+$(window).resize(function() {
+  initState();
+});
+
+initState();
+</script>
