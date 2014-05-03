@@ -23,9 +23,9 @@ $sponsors_output = array(
 		"zh-tw" => "src-tmp/blocks/sponsors-mobile.html"
 	),
 	"page" => array(
-		"zh-tw" => "src-tmp/zh-tw/sponsors/index.md",
-		"zh-cn" => "src-tmp/zh-cn/sponsors/index.md",
-		"en" => "src-tmp/en/sponsors/index.md"
+		"zh-tw" => "src-tmp/zh-tw/sponsors/index.html",
+		"zh-cn" => "src-tmp/zh-cn/sponsors/index.html",
+		"en" => "src-tmp/en/sponsors/index.html"
 	)
 );
 
