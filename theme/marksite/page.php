@@ -174,10 +174,10 @@ switch($this->current[0])
 </div>
 </body>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>respond.min.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>swipe.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>script.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>program.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>program-filter.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>bootstrap-scrollspy.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/respond.min.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/swipe.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/script.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/program.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/program-filter.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/bootstrap-scrollspy.js"></script>
 </html>
