@@ -167,7 +167,8 @@ switch($this->current[0])
         <li><a href="http://coscup.org/2009/" target="_blank">2009</a>|</li>
         <li><a href="http://coscup.org/2010/" target="_blank">2010</a>|</li>
         <li><a href="http://coscup.org/2011/" target="_blank">2011</a>|</li>
-        <li><a href="http://coscup.org/2012/" target="_blank" >2012</a>|</li>
+        <li><a href="http://coscup.org/2012/" target="_blank">2012</a>|</li>
+        <li><a href="http://coscup.org/2013/" target="_blank">2013</a>|</li>
         <div class="design">Design by <a href="http://www.lichenple.com" target="_blank">LICHENple</a></div>
     </ul>
 
