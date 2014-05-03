@@ -10,16 +10,16 @@ The term "Open Source" appears in 1998, which is familiar to everyone. This kind
 
 COSCUP celebrated its 8th anniversary this year. Over the past 7 years, the event has co-operated with coumminities all over the world. With everyone's involvement, we grow sustainly. Whoever you are a Open Source coder, a devoted Open Source promoter, a user fimiliar with Open Source, or even a newbie, we sincerely welcome you to be a part of COSCUP.
 
-## 2013 Organizaing Team
+## 2014 Organizaing Team
 
 Team leaders are listed only, the complete list comes latter.
 
 * Orgnizer : [BobChao](http://blog.bobchao.net/)
-* Session Convener : Yuren Ju
-* Sales Manager : ShiaShia
-* Marketing and PR Manager : Singing Li
-* Field Service Leader : Trista Tu
-* Network Service Leader：David Huang
-* Archeving Team Leader : [Aminzai](http://aminzai.net/)
-* Accountant : Tim Chen（Kaohsiung Linux User Group, KaLUG）
-* Administration Asisstant : [Toomore](http://blog.toomore.net/) （Mozilla Taiwan Community, MozTW）
+* Session Convener :
+* Sales Manager :
+* Marketing and PR Manager :
+* Field Service Leader :
+* Network Service Leader：
+* Archeving Team Leader :
+* Accountant :
+* Administration Asisstant :

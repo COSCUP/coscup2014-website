@@ -383,10 +383,10 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
                           htmlspecialchars($room_list[$program['room']][$lang]));
        if (isset($program['youtube'])) {
          $html['program'] .= sprintf('  <div class="video"><a href="http://www.youtube.com/watch?v=%s">', $program['youtube'][0]);
-         $html['program'] .= '<img src="/2013-theme/assets/icon_camera.png" /></a></div>';
+         $html['program'] .= '<img src="/2014-theme/assets/icon_camera.png" /></a></div>';
        }
        if ($program['slide']) {
-         $html['program'] .= sprintf('  <div class="slide"><a href="%s"><img src="/2013-theme/assets/icon_slide.png" /></a></div>', $program['slide']);
+         $html['program'] .= sprintf('  <div class="slide"><a href="%s"><img src="/2014-theme/assets/icon_slide.png" /></a></div>', $program['slide']);
        }
        $html['program'] .= sprintf('  <div class="community">%s</div>',
            htmlspecialchars($community_list[$program['community']]));
@@ -578,8 +578,8 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
   );
 
   $donateDesc = array(
-    'zh-tw' => '謝謝所有參與 COSCUP 2013 個人贊助方案的贊助者，因為有你們，促成了活動的舉行，感謝各位! 以下贊助者名字依贊助款金額與姓名筆劃順序排列：',
-    'zh-cn' => '谢谢所有参与 COSCUP 2013 个人赞助方案的赞助者，因为有你们，促成了活动的举行，感谢各位! 以下赞助者名字依赞助款金额与姓名笔划顺序排列：',
+    'zh-tw' => '謝謝所有參與 COSCUP 2014 個人贊助方案的贊助者，因為有你們，促成了活動的舉行，感謝各位! 以下贊助者名字依贊助款金額與姓名筆劃順序排列：',
+    'zh-cn' => '谢谢所有参与 COSCUP 2014 个人赞助方案的赞助者，因为有你们，促成了活动的举行，感谢各位! 以下赞助者名字依赞助款金额与姓名笔划顺序排列：',
     'en' => 'We appreciate your support! Because of you, COSCUP is doing better. The following names are ordered by sponsorship amount and number of strokes.'
   );
   $donateAnonymous = array(
@@ -614,7 +614,7 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
         $html .= "</ul>\n\n";
       }
       // add special thank
-      $sponsorLink = '/2013/'.$lang.'/sponsors/#special';
+      $sponsorLink = '/2014/'.$lang.'/sponsors/#special';
       $html .= sprintf('<h2>%s</h2>'."\n", htmlspecialchars($levelTitles['special']));
       $html .= sprintf('<ul>'."\n".'  <li><a href="%s" title="%s">%s</a></li>'."\n".'</ul>',
                       $sponsorLink, 

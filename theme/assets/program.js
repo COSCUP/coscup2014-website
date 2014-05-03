@@ -16,7 +16,7 @@ $(window).bind('pageload', function(){
   });
 
   function getDetailData(callback) {
-    $.getJSON("/2013/api/program/").done(function (data) {
+    $.getJSON("/2014/api/program/").done(function (data) {
         program_data = data;
         callback(data);
     });

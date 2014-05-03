@@ -9,14 +9,14 @@
     </div>
     <!--议程-->
     <div class="info">
-      <h1>COSCUP 2013 议程介绍</h1>
+      <h1>COSCUP 2014 议程介绍</h1>
       <div class="text">
-      COSCUP 2013 的主题定为：Open x [Web, Mobile, Data]。2013 年是一个开放平台以及开放数据热烈讨论的一年，从 Android 的持续开发，到新一代开源平台如 Firefox OS、Tizen、Sailfish OS 与 Ubuntu Touch 雨后春笋般地出现；而开放数据则由美国政府开始大力推广后，其他各国的开放数据平台也逐渐浮出台面。这些都代表着科技以及资讯的趋势都往开放的道路前进。这也是 COSCUP 2013 议程的三个大方向为 Open Web、Open Mobile 以及 Open Data 作为主轴的重要因素。因为开放的力量，政府能让公众信息更有效率的利用，企业能利用开放平台共同创造影响力，民众则有更多元的信息以及选择。
+      COSCUP 2014 的主题定为：Open x [Web, Mobile, Data]。2014 年是一个开放平台以及开放数据热烈讨论的一年，从 Android 的持续开发，到新一代开源平台如 Firefox OS、Tizen、Sailfish OS 与 Ubuntu Touch 雨后春笋般地出现；而开放数据则由美国政府开始大力推广后，其他各国的开放数据平台也逐渐浮出台面。这些都代表着科技以及资讯的趋势都往开放的道路前进。这也是 COSCUP 2014 议程的三个大方向为 Open Web、Open Mobile 以及 Open Data 作为主轴的重要因素。因为开放的力量，政府能让公众信息更有效率的利用，企业能利用开放平台共同创造影响力，民众则有更多元的信息以及选择。
       </div>
     </div>
     <!--what is coscup-->
     <div class="whatiscoscup">
-      <h1>COSCUP 2013</h1>
+      <h1>COSCUP 2014</h1>
       <div class="text">开源的三大支柱是开发者、用户与推广者。开发者（大神）是主要的生产者，但同时也是其它程序的用户。在用户了解 FLOSS 文化、熟练技能之后，也将成为下一代的开发者或推广者。推广者是扩大用户数的的重要媒介，也是 COSCUP 最所想扮演的角色。 COSCUP 希望藉由每一届的年度会议，让世界各地的 FLOSS 爱好者齐聚一堂，并邀请世界各地的专家上台分享经验，想法与新的技术，来共同的激发国内外的爱好者更加踊跃投入 FLOSS 的开发与使用。</div>
     </div>
     <!--important data-->

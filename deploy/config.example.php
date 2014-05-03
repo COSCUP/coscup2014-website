@@ -9,7 +9,7 @@ define('THEME_PATH', '../theme/');
 define('SRC_PATH', '../src/');
 define('SRC_TMP_PATH', 'src-tmp/');
 define('TMP_PATH', 'tmp/');
-define('WEBSITE_PATH', '../../2013-beta/');  // Final output
+define('WEBSITE_PATH', '../../2014-beta/');  // Final output
 
 define('RUNNING_USER', 'www-data');  // http running user, remember to change all files' ownership to this user.
 

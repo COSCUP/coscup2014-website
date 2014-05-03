@@ -10,14 +10,14 @@
     </div>
     <!--session-->
     <div class="info">
-      <h1>Session introduction of COSCUP 2013</h1>
+      <h1>Session introduction of COSCUP 2014</h1>
       <div class="text">
-      <p>The main theme of COSCUP 2013 is designated as : Open x [Web, Mobile, Data]</p>
+      <p>The main theme of COSCUP 2014 is designated as : Open x [Web, Mobile, Data]</p>
 
       <p>
       As we know, continuous developments in Android and the booming
       of new generation open source platforms like Firefox OS, Tizen,
-      Sailfish OS & Ubuntu Touch, indicate that 2013 is a year of open
+      Sailfish OS & Ubuntu Touch, indicate that 2014 is a year of open
       platform & open data.  Meanwhile, open data platforms have been
       gradually rising up to the surface among several countries
       following the recent US government's acts.  All these direct the
@@ -32,7 +32,7 @@
     </div>
     <!--what is coscup-->
     <div class="whatiscoscup">
-      <h1>COSCUP 2013</h1>
+      <h1>COSCUP 2014</h1>
       <div class="text">
       COSCUP is the largest annual FLOSS conference organized by the
       local communities in Taiwan. The conference includes sessions

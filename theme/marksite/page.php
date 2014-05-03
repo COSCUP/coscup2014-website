@@ -1,6 +1,6 @@
 <?php
 include_once "i18n.php";
-$theme_assets_uri = "/2013-theme/assets/";
+$theme_assets_uri = "/2014-theme/assets/";
 $lc = new i18n;
 switch($this->current[0])
 {
@@ -21,19 +21,19 @@ switch($this->current[0])
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title><?php echo $title; ?> | 2013 COSCUP-Open x [Web | Mobile | Data]</title>
+<title><?php echo $title; ?> | 2014 COSCUP-Open x [Web | Mobile | Data]</title>
 
-<meta name="keywords" content="COSCUP, COSCUP2013, 開源人年會, Conference for Open Source Coders, Users and Promoters Open Source, Free Software, 自由軟體, 開放原始碼, 研討會, 社群, FLOSS">
-<meta name="description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Open Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。">
+<meta name="keywords" content="COSCUP, COSCUP2014, 開源人年會, Conference for Open Source Coders, Users and Promoters Open Source, Free Software, 自由軟體, 開放原始碼, 研討會, 社群, FLOSS">
+<meta name="description" content="COSCUP 2014, 8/3-4 台北國際會議中心。台灣 Open Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。">
 <meta name="COMPANY" content="COSCUP">
 
 <!--fb shareing-->
-<meta property="og:title" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
-<meta name="og:description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Open Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。" />
+<meta property="og:title" content="2014 COSCUP-Open x [Web | Mobile | Data]" />
+<meta name="og:description" content="COSCUP 2014, 8/3-4 台北國際會議中心。台灣 Open Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://coscup.org/2013/" />
-<meta property="og:site_name" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
-<meta property="og:image" content="http://coscup.org/2013-theme/assets/og-image.jpg" />
+<meta property="og:url" content="http://coscup.org/2014/" />
+<meta property="og:site_name" content="2014 COSCUP-Open x [Web | Mobile | Data]" />
+<meta property="og:image" content="http://coscup.org/2014-theme/assets/og-image.jpg" />
 
 <!--phone-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -79,11 +79,11 @@ if (isset($styles)) {
 	<div class="blue"></div>
     <div class="m_kv"><img src="<?php echo $theme_assets_uri;?>mobile/kv.png" width="100%" /></div>
     <div class="wrap">
-   	  <div class="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">coscup 2013</a></div>
+   	  <div class="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">coscup 2014</a></div>
       	<ul id="lan">
-          <li><a href="/2013/en/" title="English" lang="en">EN</a></li>
-		  <li><a href="/2013/zh-tw/" title="正體中文" lang="zh-TW">正體</a></li>
-		  <li><a href="/2013/zh-cn/" title="简体中文" lang="zh-CN">简体</a></li>
+          <li><a href="/2014/en/" title="English" lang="en">EN</a></li>
+		  <li><a href="/2014/zh-tw/" title="正體中文" lang="zh-TW">正體</a></li>
+		  <li><a href="/2014/zh-cn/" title="简体中文" lang="zh-CN">简体</a></li>
         </ul>
 	    <ul id="social">
         <li><a href="https://www.facebook.com/coscup" title="facebook" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
