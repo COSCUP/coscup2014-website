@@ -8,6 +8,9 @@ system ("git log -1");
 chdir ($cwd);
 print ("\n");
 
+// Copy all source files to a src tmp folder
+system ('rsync -a --delete ' . SRC_PATH . ' ' . SRC_TMP_PATH);
+
 print ("= Updating GDoc =\n");
 include ("update-gdoc-functions.php");
 print ("\n");
