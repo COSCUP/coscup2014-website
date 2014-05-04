@@ -9,8 +9,6 @@ $contents = array(
   "news" => "媒体报导",
   "http://blog.coscup.org/" => "博客",
   "contact" => "联络信息",
-  "api" => "API",
-  "openwall" => "Open"
+  "api" => "API"
 );
 
-$menu_hidden = array("openwall");

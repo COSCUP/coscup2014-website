@@ -64,7 +64,7 @@ function recompile_and_sync()
 
 	}
 
-	print ("= Syncing Content =\n");
+	print ("= Syncing Content to target WEBSITE_PATH =\n");
 	system ('rsync -a --delete ' . TMP_PATH . ' ' . WEBSITE_PATH);
 	print ("\n");
 }

@@ -9,8 +9,5 @@ $contents = array(
   "news" => "News",
   "http://blog.coscup.org/" => "Blog",
   "contact" => "Contact",
-  "api" => "API",
-  "openwall" => "Open"
+  "api" => "API"
 );
-
-$menu_hidden = array("openwall");
