@@ -11,8 +11,8 @@ print ("\n");
 // Copy all source files to a src tmp folder
 system ('rsync -a --delete ' . SRC_PATH . ' ' . SRC_TMP_PATH);
 
-print ("= Updating GDoc =\n");
-include ("update-gdoc-functions.php");
+print ("= Updating Dynamic Content (from Google Docs) =\n");
+include ("update-dynamic-content.php");
 print ("\n");
 
 recompile_and_sync();
