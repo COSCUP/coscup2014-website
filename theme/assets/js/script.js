@@ -21,6 +21,8 @@ e)})}else console.log("Premature init. Put the <script> in <body>.")},handleEven
 jQuery(function ($) {
 
   var lang = ($('html').attr('lang') || 'zh-TW').toLowerCase();
+  var rootURL = 'http://coscup.org/2013';
+  var themeURL = 'http://coscup.org/2014-theme';
 
   function mobileInit() {
     /* prepend menu icon */
@@ -217,7 +219,7 @@ jQuery(function ($) {
   if ($('#nav.empty').length) {
     // Fetch site nav from remove JSON api
     $.getJSON(
-      'http://coscup.org/2012/api/menu/?callback=?',
+      rootURL + '/api/menu/?callback=?',
       function (data) {
         var $nav = $('#nav').removeClass('empty');
         $nav.html(data[lang].replace(/href="(\/[^\/])/g, 'href="http://coscup.org$1'));
@@ -232,7 +234,7 @@ jQuery(function ($) {
     (window.applicationCache && window.applicationCache.status !== 0)) {
     // Fetch sponsors from remove JSON api
     $.getJSON(
-      'http://coscup.org/2014/api/sponsors/?callback=?',
+      rootURL + '/api/sponsors/?callback=?',
       function (data) {
         var $sponsors = $('#sponsor').removeClass('empty');
         var $mobileSponsors = null;
@@ -351,7 +353,7 @@ jQuery(function ($) {
     if ($('.news > .news_list.empty').length ||
         (window.applicationCache && window.applicationCache.status !== 0)) {
       $.getJSON(
-        'http://coscup.org/2014/api/news/?callback=?',
+        rootURL + '/api/news/?callback=?',
         function (data) {
           var $news_list = $('.news > .news_list.empty').removeClass('empty');
           $.each(
@@ -586,42 +588,6 @@ jQuery(function ($) {
   };
   $(window).bind('checkAppCache', checkAppCache);
 
-  // fullpageload: imagesTile on homepage #sidebar2
-  function imageTile() {
-    if (!$('#sidebar2 > .images').length)
-      return;
-
-    var runImageTile = function () {
-      $('#sidebar2 > .images').imageTile(
-        {
-          num: 12,
-          photos: yuren_54,
-          beforeImageLoad: function ($img, i) {
-            $img.css('opacity', 0);
-          },
-          imageLoad: function ($img, i) {
-            $img.css('opacity', 1);
-          }
-        }
-      );
-    };
-
-    if ($.fn.imageTile) {
-      runImageTile();
-      return;
-    }
-
-    $.ajax(
-      {
-        url: 'http://coscup.org/2012-theme/assets/imagetile.min.js',
-        dataType: 'script',
-        cache: true,
-        success: runImageTile
-      }
-    );
-  }
-  $(window).bind('fullpageload', imageTile);
-
   // fullpageload: social buzz on homepage #sidebar2
   function socialBuzz() {
     // if (!$('#socialbuzz').length)
@@ -703,6 +669,7 @@ jQuery(function ($) {
 
     $.getJSON(
       //window.location.href.match(/^http:\/\/[ipv6\.]*coscup.org\/[^\/]+\//)[0] + 'api/plurk/',
+      //FIXME before we figure out how to generate plurk API, let use 2012's copy temporarily.
       'http://coscup.org/2012/api/plurk/',
       function (data) {
         plurks = data;
