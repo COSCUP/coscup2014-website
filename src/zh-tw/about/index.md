@@ -12,14 +12,76 @@ COSCUP 研討會已堂堂邁入第八年，七年來不但由各地社群共同�
 
 ## 2014 籌備團隊
 
-目前列出各組長，完整名單稍晚上線
+### 議程
 
-* 總召集人：[BobChao](http://blog.bobchao.net/)
-* 議程召集人：
-* 銷售經理：
-* 行銷公關經理：
-* 場務長：
-* 線路長：
-* 記錄長：
-* 會計：
-* 行政秘書：
+組長： **CC Lien**
+
+<!-- 組員 -->
+
+### 銷售
+
+組長： **蝦蝦**
+
+<!-- 組員 -->
+
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+Paddy Huang <br>
+Candy Tan <br>
+Ernest Chiang (Mozilla Community) <br>
+</div>
+
+### 行銷
+
+組長： **Muka**
+
+<!-- 組員 -->
+
+### 公關
+
+組長： **仁豪**
+
+<!-- 組員 -->
+
+### 場務
+
+組長： **Mouse**
+
+<!-- 組員 -->
+
+### 線路
+
+組長： **David Huang**
+
+<!-- 組員 -->
+
+### 記錄
+
+組長： **丞相**
+
+<!-- 組員 -->
+
+### 會計
+
+組長： **Tim Chen**
+
+<!-- 組員 -->
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+Toby Liu <br>
+Singing Li <br>
+</div>
+
+
+### 行政
+
+組長： **CrBoy**
+
+<!-- 組員 -->
+
+### 總召 ＆ 不分組
+
+總召： **[BobChao](http://blog.bobchao.net/)**（Mozilla Community）
+
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+Evelyn Hung <br>
+Kanru <br>
+</div>
