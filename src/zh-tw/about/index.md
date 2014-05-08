@@ -25,9 +25,9 @@ COSCUP 研討會已堂堂邁入第八年，七年來不但由各地社群共同�
 <!-- 組員 -->
 
 <div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-Paddy Huang <br>
-Candy Tan <br>
-Ernest Chiang (Mozilla Community) <br>
+<p>Paddy Huang
+<p>Candy Tan
+<p>Ernest Chiang (Mozilla Community) 
 </div>
 
 ### 行銷
@@ -66,8 +66,8 @@ Ernest Chiang (Mozilla Community) <br>
 
 <!-- 組員 -->
 <div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-Toby Liu <br>
-Singing Li <br>
+<p>Toby Liu
+<p>Singing Li
 </div>
 
 
@@ -79,9 +79,9 @@ Singing Li <br>
 
 ### 總召 ＆ 不分組
 
-總召： **[BobChao](http://blog.bobchao.net/)**（Mozilla Community）
+總召： **[BobChao](https://reps.mozilla.org/u/bobchao/)**（Mozilla Community）
 
 <div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-Evelyn Hung <br>
-Kanru <br>
+<p>Evelyn Hung
+<p>Kanru
 </div>
