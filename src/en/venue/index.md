@@ -1,28 +1,29 @@
 # Venue
 
-<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.tw/maps?f=q&amp;source=s_q&amp;hl=zh-TW&amp;geocode=&amp;q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E4%BF%A1%E7%BE%A9%E8%B7%AF%E4%BA%94%E6%AE%B51%E8%99%9F&amp;aq=&amp;sll=24.145973,120.666154&amp;sspn=0.067199,0.132093&amp;brcurrent=3,0x3442abadec7543e7:0x5dbcdd8252aeabe7,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&amp;ie=UTF8&amp;hq=&amp;hnear=110%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E4%BF%A1%E7%BE%A9%E8%B7%AF%E4%BA%94%E6%AE%B51%E8%99%9F&amp;t=m&amp;z=14&amp;ll=25.033248,121.560484&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.tw/maps?f=q&amp;source=embed&amp;hl=zh-TW&amp;geocode=&amp;q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E4%BF%A1%E7%BE%A9%E8%B7%AF%E4%BA%94%E6%AE%B51%E8%99%9F&amp;aq=&amp;sll=24.145973,120.666154&amp;sspn=0.067199,0.132093&amp;brcurrent=3,0x3442abadec7543e7:0x5dbcdd8252aeabe7,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&amp;ie=UTF8&amp;hq=&amp;hnear=110%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E4%BF%A1%E7%BE%A9%E8%B7%AF%E4%BA%94%E6%AE%B51%E8%99%9F&amp;t=m&amp;z=14&amp;ll=25.033248,121.560484" style="color:#0000FF;text-align:left">View Access Map</a></small>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14459.076389057125!2d121.61229245492248!3d25.04190896438523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53ceacf197917004!2z5Lq65paH56S-5pyD56eR5a246IGv5ZCI5ZyW5pu46aSoL-S4reWkrueglOeptumZog!5e0!3m2!1szh-TW!2stw!4v1399563967266" width="600" height="450" frameborder="0" style="border:0"></iframe>
 
 # COSCUP 2014 Conference Venue
 
-Taipei International Convention Center (TICC)(1 Hsin-Yi Rd.,Sec.5,Taipei 11049,Taiwan ROC)
+Humanities and Social Science Building (HSSB), Academia Sinica (No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan)
+
 <br />
 
 # Transportation
-## 1. Taipei Main Station <---> Taipei International Conversion Center (TICC)
-* a. Take No. 22 bus from "Taipei Main Station (Zhongxiao)" stop to "World Trade Center (Zhuangjing)" stop and walk to TICC.
-* b. Take the MRT blue line from "Taipei Main Station" to "Taipei City Hall". Then, take B5 or No. 266 bus to "World Trade Center (Zhungjing)" and walk to TICC.
+## 1. MRT Nangang Exhibition Center Station <---> HSSB, Academia Sinica
+* a. Take bus route 212, 276, 306, 620, 645, 679, 205, S5, S1, or S12 to "Academia Sinica" stop, and then walk to HSSB.
+* b. Take a taxi. For around NT$100, you could save the 10-minute walk to HSSB from the front gate.
 
-## 2. Songshan Station <---> Taipei International Conversion Center (TICC)
-* a. Take No. 207 bus from "Songshan Station" stop to "World Trade Center (Xinyi)", and then walk to TICC.
-* b. Take No. 284 bus from "Songshan Rail Station (Songshan)" stop to "World Trade Center (Keelung)", and then walk to TICC.
+## 2. MRT Nangang Station <---> HSSB, Academia Sinica
+* a. Take bus route 212 (either shuttle or express), 270, or B25 to "Academia Sinica" stop, and then walk to TICC.
+* b. Take a taxi. For around NT$100, you could save the 10-minute walk to HSSB from the front gate.
 
-## 3. Songshan Airport <---> Taipei International Conversion Center (TICC)
-* We recommend you to take No. 33 bus from "Minquan Dunhua Roads" stop to "World Trade Center (Zhuangjing)" stop, and then walk to TICC.
+## 3. Songshan Airport <---> HSSB, Academia Sinica
+* We recommend you to take the MRT Wenhu (brown) Line, transfer at Zhongxiao Fuxing station, and then take Bannan (blue) Line to the aforementioned MRT stations (either Nangang Exhibition Center or Nangang would suffice.)
 
-## 4. Taking MRT
-* **a. From MRT Red Line, Orange Line, or Green Line:** 
-    Take MRT to "Taipei Main Station" and take MRT Blue Line to "Taipei City Hall". Then transfer to B5 or No. 266 bus to "World Trade Center (Zhungjing)" and walk to TICC.
-* **b. From MRT Brown Line:**
-    Take MRT to "Zhongxiao Fuxing Station" and take MRT Blue line to "Taipei City Hall". Then transfer to  B5 or No. 266 bus to "World Trade Center (Zhungjing)" and walk to TICC.
+## 4. Taoyuan Airport <---> HSSB, Academia Sinica
+* **a. By Airport Bus** 
+    Either Kuokuang 1843 line (to Taipei Nangang Exhibition Center) or Kuokuang 1819 line (to Taipei Main Station) would bring you to Taipei downtown. You could then reach the venue by MRT.
+* **b. By Taxi**
+    Take a taxi directly from Taoyuan Airport roughly costs NT$1200 to NT$1500. You could ask the driver to stop at HSSB to save the 10-minute walk from the front gate of Academia Sinica.
 
-**For more detail, please <a href='http://www.ticc.com.tw/DB/FCKFiles/File/pdf/atlas_en.pdf' target='_blank'>see here</a>.**
+**Detailed information could be found at <a href='http://home.sinica.edu.tw/en/site/location.html' target='_blank'>Academia Sinica</a>'s website.**
