@@ -1,30 +1,37 @@
 # 地点
 
-<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.tw/maps?f=q&amp;source=s_q&amp;hl=zh-TW&amp;geocode=&amp;q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E4%BF%A1%E7%BE%A9%E8%B7%AF%E4%BA%94%E6%AE%B51%E8%99%9F&amp;aq=&amp;sll=24.145973,120.666154&amp;sspn=0.067199,0.132093&amp;brcurrent=3,0x3442abadec7543e7:0x5dbcdd8252aeabe7,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&amp;ie=UTF8&amp;hq=&amp;hnear=110%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E4%BF%A1%E7%BE%A9%E8%B7%AF%E4%BA%94%E6%AE%B51%E8%99%9F&amp;t=m&amp;z=14&amp;ll=25.033248,121.560484&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.tw/maps?f=q&amp;source=embed&amp;hl=zh-TW&amp;geocode=&amp;q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E4%BF%A1%E7%BE%A9%E8%B7%AF%E4%BA%94%E6%AE%B51%E8%99%9F&amp;aq=&amp;sll=24.145973,120.666154&amp;sspn=0.067199,0.132093&amp;brcurrent=3,0x3442abadec7543e7:0x5dbcdd8252aeabe7,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&amp;ie=UTF8&amp;hq=&amp;hnear=110%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E4%BF%A1%E7%BE%A9%E8%B7%AF%E4%BA%94%E6%AE%B51%E8%99%9F&amp;t=m&amp;z=14&amp;ll=25.033248,121.560484" style="color:#0000FF;text-align:left">检视较大的地图</a></small>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14459.076389057125!2d121.61229245492248!3d25.04190896438523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53ceacf197917004!2z5Lq65paH56S-5pyD56eR5a246IGv5ZCI5ZyW5pu46aSoL-S4reWkrueglOeptumZog!5e0!3m2!1szh-TW!2stw!4v1399563967266" width="600" height="450" frameborder="0" style="border:0"></iframe>
 
 # COSCUP 2014 会场地点
 
-台北国际会议中心（台北市信义区信义路五段1号）
-<br />
+中央研究院 人文社会科学馆、活动中心（台北市南港区研究院路二段128号）
 
-# 交通信息
-##一、台北车站<-->台北国际会议中心
 
-* 1.由﹝台北车站﹞(忠孝一) 搭乘22至﹝世贸中心﹞于莊敬路下车，步行前往﹝台北国际会议中心﹞
-* 2.由﹝捷运台北车站﹞搭乘板南线至﹝捷运市府站﹞搭乘蓝5、266至﹝世贸中心﹞，步行前往﹝台北国际会议中心﹞
+# 交通资讯
+##一、捷运南港展览馆站<-->人文馆
 
-##二、松山车站<-->台北国际会议中心
+* 1.搭乘公车212、276、306、620、645、679、205、
+　 小5、小1、小12 至中研院站，然后步行入院内至人文馆。
+* 2.搭乘计程车，约100 元，计程车可以直接开到人文馆门口。
 
-* 1.由﹝松山车站﹞搭乘207至﹝世贸中心﹞下车，步行前往﹝台北国际会议中心﹞
-* 2.由﹝松山前站﹞搭乘284至﹝世贸中心﹞下车，步行前往﹝台北国际会议中心﹞
+##二、捷运南港站<-->人文馆
 
-##三、松山机场<-->台北国际会议中心
+* 1.从2号出口右转换乘公车212(直)、212(区)、270或蓝25 至中研院站，然后步行入院内至人文馆。
+* 2.搭乘计程车，约100 元，计程车可以直接开到人文馆门口。
 
-* 由﹝松山机场一﹞搭乘33至﹝世贸中心﹞于莊敬路下车，步行前往﹝台北国际会议中心﹞
+##三、松山机场<-->人文馆
 
-##四、捷运搭乘方式
+* 搭乘捷运至南港或南港展览馆站后，参考上述方案至人文馆。
 
-* **1.位于淡水线、中和线、新店线之旅客：** 搭捷运至﹝捷运台北车站﹞转板南线至﹝捷运市府站﹞转乘蓝5、266至﹝世贸中心﹞，步行前往﹝台北国际会议中心﹞
-* **2.位于木栅线之旅客：** 搭捷运至﹝忠孝復兴﹞转板南线至﹝捷运市府站﹞转乘蓝5、266至﹝世贸中心﹞，步行前往﹝台北国际会议中心﹞
+##四、桃园机场<-->人文馆
 
-**更详细的信息，请看<a href='http://www.ticc.com.tw/DB/FCKFiles/File/pdf/atlas.pdf' target="_blank">官方帮助</a>。**
+* 1.搭乘国光客运1819至台北火车站后转乘捷运，参考上述方案至人文馆。
+* 2.搭乘计程车直接到人文馆，约1200元。
+
+
+##四、自行开车
+
+* 1.经由国道三号，南深路-中研院匝道〈16km〉出国道三号后，左转接南深路，再左转接旧庄路一段直走，遇到与研究院路叉路口，即可看到中研院。
+
+
+**更详细的资料，请看<a href='http://www.sinica.edu.tw/location.htm' target='_blank'>官方说明</a>。**
