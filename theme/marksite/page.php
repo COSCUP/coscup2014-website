@@ -177,6 +177,8 @@ switch($this->current[0])
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/respond.min.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/swipe.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/widget.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/sponsor.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/script.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/program.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/program-filter.js"></script>
