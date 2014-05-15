@@ -1,3 +1,7 @@
+/*
+ * query program detail data and bind click event
+ */
+
 $(window).bind('pageload', function(){
   if ($('#navTab').length === 0)
     return;
@@ -22,9 +26,7 @@ $(window).bind('pageload', function(){
     });
   }
 
-  // implicit use sponsor display (which is decided by CSS media query)
-  // to detect device, to avoid use matchmedia query in JavaScript
-  var isMobile = ($('#mySwipe').css('display') === "block" )? true : false;
+  // isMobile is a global object in page.php
   if (isMobile) {
     initMobileUI();
   } else {

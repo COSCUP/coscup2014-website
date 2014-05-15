@@ -180,6 +180,8 @@ switch($this->current[0])
   var rootURL = 'http://localhost:8000/2013';
   var themeURL = 'http://localhost:8000/2014-theme';
 
+  // implicit use sponsor display (which is decided by CSS media query)
+  // to detect device, to avoid use matchmedia query in JavaScript
   // FIXME: CSS dependent test
   var isMobile = (document.getElementById('mySwipe').clientWidth !== 0)? true : false;
 </script>
