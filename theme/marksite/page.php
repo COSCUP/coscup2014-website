@@ -174,6 +174,15 @@ switch($this->current[0])
 
 </div>
 </body>
+<script>
+  // FIXME: global ojects!
+  var lang = (navigator.language || 'zh-TW').toLowerCase();
+  var rootURL = 'http://localhost:8000/2013';
+  var themeURL = 'http://localhost:8000/2014-theme';
+
+  // FIXME: CSS dependent test
+  var isMobile = (document.getElementById('mySwipe').clientWidth !== 0)? true : false;
+</script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/respond.min.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/swipe.js"></script>

@@ -17,11 +17,6 @@
 /* AppCacheUI: https://github.com/timdream/appcacheui */
 // Note: code removed
 
-// FIXME: global ojects!
-var lang = (navigator.language || 'zh-TW').toLowerCase();
-var rootURL = 'http://coscup.org/2013';
-var themeURL = 'http://coscup.org/2014-theme';
-
 jQuery(function ($) {
 
   // FIXME: these code is not compatible with nav.empty
@@ -38,14 +33,19 @@ jQuery(function ($) {
     $("#menu-icon").on("click", toggleMenu);
     $("#mainNav li").on("click", toggleMenu);
 
-    var elem = document.getElementById('mySwipe');
-    window.mySwipe = Swipe(elem, {
-      auto: 3000
-    });
+    function initSponsor() {
+      Swipe(document.getElementById('mySwipe'), {
+        auto: 3000
+      });
+    }
+
+    if ($('#mySwipe .swipe-wrap').length) {
+      initSponsor();
+    } else {
+      $(window).bind('mobile-sponsor-ready', initSponsor);
+    }
   }
 
-  // FIXME: CSS dependent test
-  var isMobile = ($('#mySwipe').css('display') === "block" )? true : false;
   if (isMobile) {
     mobileInit();
   }
