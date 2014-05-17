@@ -1,3 +1,9 @@
+<sponsorship "贊助 COSCUP">
+<mailtoSponsor """
+  如果您欲贊助 COSCUP，請與
+  <a href="mailto:sponsorship@coscup.org">sponsorship@coscup.org</a>
+  聯絡。
+""">
 <copyright """
   &copy; 2014 COSCUP | <a href="http://coscup.org/2014/contact/">聯絡我們</a>
 """>
@@ -7,3 +13,13 @@
 <bronze "青銅級贊助">
 <cohost "協辦單位">
 <media "媒體夥伴">
+<special "特別感謝">
+<personal "個人贊助">
+<specialThanks "請點選看看有那些支持 COSCUP 的夥伴們!">
+<donateDesc """
+  謝謝所有參與 COSCUP 2014 個人贊助方案的贊助者，因為有你們，促成了活動的舉行，感謝各位! 
+  以下贊助者名字依贊助款金額與姓名筆劃順序排列：
+""">
+<donateAnonymous """
+  及不具名的好朋友 {{ $anonymousDonors }} 名
+""">

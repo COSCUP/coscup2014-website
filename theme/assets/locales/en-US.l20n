@@ -1,10 +1,24 @@
+<sponsorship "Sponsorship">
+<mailtoSponsor """
+  If you are interested in sponsoring COSCUP, please contact
+  <a href="mailto:sponsorship@coscup.org">sponsorship@coscup.org</a>.
+""">
 <copyright """
   &copy; 2014 COSCUP | <a href="http://coscup.org/2014/contact/">Contact us</a>
 """>
-
 <diamond "Diamond Level Sponsors">
 <gold "Gold Level Sponsors">
 <silver "Silver Level Sponsors">
 <bronze "Bronze Level Sponsors">
 <cohost "Co-host">
 <media "Media Partners">
+<special "Special Thanks">
+<personal "Individual Sponsorship">
+<specialThanks "Click here to know more supporting partners!">
+<donateDesc """
+  We appreciate your support! Because of you, COSCUP is doing better. 
+  The following names are ordered by sponsorship amount and number of strokes.
+""">
+<donateAnonymous """
+  ... and {{ $anonymousDonors }} anonymous donors
+""">

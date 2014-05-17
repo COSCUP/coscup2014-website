@@ -3,28 +3,24 @@ function get_sponsors_list_from_gdoc() {
 
 	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . SPONSOR_LIST_KEY . '&range=A2%3AI999&output=csv', 'r');
 
-	if (!$handle)
-	{
+	if (!$handle)	{
 		return FALSE; // failed
 	}
 
 	$SPONS = array();
 
 	// name, level, url, logoUrl, desc, enName, enDesc, zhCnName, zhCnDesc
-	while (($SPON = fgetcsv($handle)) !== FALSE)
-	{
+	while (($SPON = fgetcsv($handle)) !== FALSE) {
 
 		$level = strtolower(trim($SPON[1]));
+    // only keep sponsors who assigned level and logo image
 		if (strlen($level) === 0) continue;
+    if (trim($SPON[3]) === "") continue;
 
-		if (!isset($SPONS[$level]))
-		{
+		if (!isset($SPONS[$level])) {
 			$SPONS[$level] = array();
 		}
 
-    // only show the sponsor who has logo image
-    if (trim($SPON[3]) === "") continue;
-    
     $SPON_obj = array(
       'name' => array(
         'zh-tw' => $SPON[0]
@@ -37,23 +33,19 @@ function get_sponsors_list_from_gdoc() {
     );
     
 
-		if (trim($SPON[5]))
-		{
+		if (trim($SPON[5])) {
 			$SPON_obj['name']['en'] = $SPON[5];
 		}
 
-		if (trim($SPON[6]))
-		{
+		if (trim($SPON[6])) {
 			$SPON_obj['desc']['en'] = Markdown_Without_Markup($SPON[6]);
 		}
 
-		if (trim($SPON[7]))
-		{
+		if (trim($SPON[7])) {
 			$SPON_obj['name']['zh-cn'] = $SPON[7];
 		}
 
-		if (trim($SPON[8]))
-		{
+		if (trim($SPON[8])) {
 			$SPON_obj['desc']['zh-cn'] = Markdown_Without_Markup(linkify($SPON[8]));
 		}
 
@@ -66,26 +58,24 @@ function get_sponsors_list_from_gdoc() {
 }
 
 function get_donate_list_from_gdoc() {
-
 	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . SPONSOR_LIST_KEY . '&gid=6&range=A2%3AB999&output=csv', 'r');
 
-	if (!$handle)
-	{
+	if (!$handle) {
 		return FALSE; // failed
 	}
 
 	$donate_list = array();
 
 	// name, money
-	while (($entry = fgetcsv($handle)) !== FALSE)
-  {
+	while (($entry = fgetcsv($handle)) !== FALSE) {
     if ($entry[0] === 'anonymous') {
       $donate_list[0] = $entry[1];
       continue;
     }
     $money = intval($entry[1]);
-    if (!isset($donate_list[$money]))
+    if (!isset($donate_list[$money])) {
       $donate_list[$money] = array();
+    }
 		$donate_list[$money][] = $entry[0];
 	}
 
@@ -104,49 +94,14 @@ function get_donate_list_from_gdoc() {
 	return $donate_list;
 }
 
-function get_sponsor_info_localize($SPON, $type='name', $locale='zh-tw', $fallback='zh-tw')
-{
-	if ($SPON[$type][$locale])
-	{
+function get_sponsor_info_localize($SPON, $type='name', $locale='zh-tw', $fallback='zh-tw') {
+	if ($SPON[$type][$locale]) {
 		return $SPON[$type][$locale];
 	}
 	return $SPON[$type][$fallback];
 }
 
 function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw') {
-
-	$levelTitlesL10n = array(
-		'en' => array(
-			'diamond' => 'Diamond',
-			'gold' => 'Gold',
-			'silver' => 'Silver',
-			'bronze' => 'Bronze',
-      'cohost' => 'Co-host', 
-      'special' => 'Special Thanks',
-      'media' => 'Media Partners',
-      'personal' => 'Individual Sponsorship'
-		),
-		'zh-tw' => array(
-			'diamond' => '鑽石級贊助',
-			'gold' => '黃金級贊助',
-			'silver' => '白銀級贊助',
-			'bronze' => '青銅級贊助',
-      'cohost' => '協辦單位', 
-      'special' => '特別感謝',
-      'media' => '媒體夥伴',
-      'personal' => '個人贊助'
-		),
-		'zh-cn' => array(
-			'diamond' => '钻石级赞助商',
-      'gold' => '黄金级赞助',
-      'silver' => '白银级赞助',
-      'bronze' => '青铜级赞助',
-      'cohost' => '协办单位', 
-      'special' => '特别感谢',
-      'media' => '媒体伙伴',
-      'personal' => '个人赞助'
-		)
-	);
 
 	// order of levels (fixed)
 	$levels = array(
@@ -159,24 +114,6 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
     'media'
 	);
 
-	$levelTitles = $levelTitlesL10n[$lang];
-  $specialThanks = array(
-    'zh-tw' => '請點選看看有那些支持 COSCUP 的夥伴們!',
-    'zh-cn' => '请点选看看有那些支持 COSCUP 的伙伴们!',
-    'en' => 'Click here to know more supporting partners!'
-  );
-
-  $donateDesc = array(
-    'zh-tw' => '謝謝所有參與 COSCUP 2014 個人贊助方案的贊助者，因為有你們，促成了活動的舉行，感謝各位! 以下贊助者名字依贊助款金額與姓名筆劃順序排列：',
-    'zh-cn' => '谢谢所有参与 COSCUP 2014 个人赞助方案的赞助者，因为有你们，促成了活动的举行，感谢各位! 以下赞助者名字依赞助款金额与姓名笔划顺序排列：',
-    'en' => 'We appreciate your support! Because of you, COSCUP is doing better. The following names are ordered by sponsorship amount and number of strokes.'
-  );
-  $donateAnonymous = array(
-    'zh-tw' => '及不具名的好朋友 %s 名',
-    'zh-cn' => '及不具名的好朋友 %s 名',
-    'en' => '... and %s anonymous donors'
-  );
-
 	$html = '';
 	switch ($type)
 	{
@@ -186,7 +123,7 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
         if (!$SPONS[$level] || $level === 'special')
           continue;
 
-        $html .= sprintf("<h2>%s</h2>\n", htmlspecialchars($levelTitles[$level]));
+        $html .= sprintf("<h2 data-l10n-id='%s'></h2>\n", $level);
         $html .= sprintf('<ul class="%s">'."\n", $level);
 
         foreach ($SPONS[$level] as $i => &$SPON)
@@ -204,12 +141,10 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
       }
       // add special thank
       $sponsorLink = '/2014/'.$lang.'/sponsors/#special';
-      $html .= sprintf('<h2>%s</h2>'."\n", htmlspecialchars($levelTitles['special']));
-      $html .= sprintf('<ul>'."\n".'  <li><a href="%s" title="%s">%s</a></li>'."\n".'</ul>',
-                      $sponsorLink, 
-                      htmlspecialchars($levelTitles['special']),
-                      htmlspecialchars($specialThanks[$lang])
-               );
+      $html .= sprintf('<h2 data-l10n-id="special"></h2>'."\n");
+      $html .= sprintf('<ul>'."\n".'  <li><a href="%s" title="special" 
+        data-l10n-id="specialThanks"></a></li>'."\n".'</ul>', $sponsorLink); 
+
       break;
     case 'mobile-sidebar':
       $counter = 0;
@@ -243,8 +178,8 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
         if (!$SPONS[$level]) continue;
         // donor should before media partners
         if ($level === 'media' && count($DONATES) > 0) {
-          $html .= sprintf('<h1 id="donor">%s</h1>'."\n", htmlspecialchars($levelTitles['personal']));
-          $html .= sprintf('<p>%s</p>'."\n", htmlspecialchars($donateDesc[$lang]));
+          $html .= sprintf('<h1 id="donor" data-l10n-id="personal"></h1>'."\n");
+          $html .= sprintf('<p data-l10n-id="donateDesc"></p>'."\n");
 
           $html .= '<div class="splist donor">'."\n";
           $html .= '<img />'."\n";  // just a placeholder
@@ -258,12 +193,13 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
           }
           $html .= "</ul>\n";
           if (isset($DONATES[0])) {
-            $html .= sprintf('<div>'.$donateAnonymous[$lang].'</div>', $DONATES[0]);
+            $html .= sprintf('<script type="application/l10n-data+json">{"anonymousDonors": %s}</script>'."\n", $DONATES[0]);
+            $html .= sprintf('<div data-l10n-id="donateAnonymous"></div>');
           }
           $html .= "</div></div>\n";
         }
 
-        $html .= sprintf('<h1 id="%s">%s</h1>'."\n", $level, htmlspecialchars($levelTitles[$level]));
+        $html .= sprintf('<h1 id="%s" data-l10n-id="%s"></h1>'."\n", $level, $level);
 
         foreach ($SPONS[$level] as $i => &$SPON)
         {
