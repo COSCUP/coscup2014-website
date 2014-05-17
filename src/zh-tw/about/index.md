@@ -8,221 +8,186 @@ Open source 這個在 1998 年出現的名詞，大家早已耳熟能詳。這�
 
 <img src="images/a02.jpg" class="ab02">Coders、users 和 promoters 是讓 open source 軟體發光發熱的三大支柱，這個研討會就是專為這三種人舉辦的：你可以是 A 軟體的 coder、B 軟體的 promoter、C 軟體的 user，不論你是已經踏入 open source 領域，還是一直站在門口不知如何入門，歡迎你來參加 COSCUP — Conference for Open Source Coders, Users and Promoters!
 
-COSCUP 研討會已堂堂邁入第八年，七年來不但由各地社群共同舉辦，在眾多同好的參與之下，逐漸成長茁壯。無論你是寫 open source 軟體的開發者、熱衷 open source 軟體的推廣者、熟悉 open source 軟體的使用者或是想了解 open source 軟體的新手，都歡迎你來參加一年一度全台最大的開源人年會。
+COSCUP 研討會已堂堂邁入第九年，八年來不但由各地社群共同舉辦，在眾多同好的參與之下，逐漸成長茁壯。無論你是寫 open source 軟體的開發者、熱衷 open source 軟體的推廣者、熟悉 open source 軟體的使用者或是想了解 open source 軟體的新手，都歡迎你來參加一年一度全台最大的開源人年會。
 
 ## 2014 籌備團隊
+<div class="team">
+### 總召
+
+ **[BobChao](https://reps.mozilla.org/u/bobchao/)**（Mozilla Community）
 
 ### 議程
 
 組長： **cclien**
 
-<!-- 組員 -->
-
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>AL - 小卓
-<p>Danny
-<p>Jenny
-<p>Mosky
-<p>Richard 強哥
-<p>大眼
-<p>義鴻
-</div>
+- AL - 小卓
+- Danny
+- Jenny
+- Mosky
+- Richard 強哥
+- 大眼
+- 義鴻
 
 ### 銷售
 
 組長： **蝦蝦shiashia**
 
-<!-- 組員 -->
-
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>Ernest (dwchiang)
-<p>Paddy
-<p>糖果荔枝
-</div>
+- Ernest (dwchiang)
+- Paddy
+- 糖果荔枝
 
 ### 行銷
 
 組長： **Muka**
 
-<!-- 組員 -->
-
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>#Chiakai
-<p>pingooo
-<p>RSChiang
-<p>Singing
-<p>Violet 阿紫
-<p>凍仁翔
-<p>雁子
-</div>
+- #Chiakai
+- pingooo
+- RSChiang
+- Singing
+- Violet 阿紫
+- 凍仁翔
+- 雁子
 
 ### 公關
 
 組長： **仁豪**
 
-<!-- 組員 -->
-
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-</div>
-
 ### 場務
 
 組長： **MouseMs**
 
-<!-- 組員 -->
-
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>Aleck陳經理
-<p>Angelboy
-<p>CCKai
-<p>Clarence
-<p>Eason
-<p>Egret
-<p>Ei-ling 艾岭
-<p>Elvis
-<p>Emma
-<p>Fish福
-<p>FrankWu
-<p>frankye
-<p>Henry Lee
-<p>Kevin
-<p>Kevin-WY
-<p>Kiki
-<p>lin4h
-<p>Lulu
-<p>Marsen
-<p>NaNi
-<p>Rifur
-<p>RJ
-<p>sanyuan
-<p>SONY
-<p>Stanley
-<p>swem 蕭辰翰
-<p>Teresa
-<p>Trista
-<p>Vagabond
-<p>Vincent
-<p>wenhao
-<p>ws育慈
-<p>Yexina
-<p>φ (Phi)
-<p>下午
-<p>亞亞
-<p>伊賀
-<p>姿姿
-<p>小元
-<p>小六
-<p>小宇
-<p>小方
-<p>小馬
-<p>崑元
-<p>平原不是丘陵
-<p>幻幽
-<p>影子
-<p>政哲
-<p>敬育
-<p>日京三子
-<p>欣哥
-<p>洋蔥
-<p>白白的莫風
-<p>立揚
-<p>糖萱
-<p>紗子
-<p>花花
-<p>負負
-<p>阿膽
-<p>高個
-<p>魏言
-<p>魚魚
-<p>麵包
-</div>
+- Aleck陳經理
+- Angelboy
+- CCKai
+- Clarence
+- Eason
+- Egret
+- Ei-ling 艾岭
+- Elvis
+- Emma
+- Fish福
+- FrankWu
+- frankye
+- Henry Lee
+- Kevin
+- Kevin-WY
+- Kiki
+- lin4h
+- Lulu
+- Marsen
+- NaNi
+- Rifur
+- RJ
+- sanyuan
+- SONY
+- Stanley
+- swem 蕭辰翰
+- Teresa
+- Trista
+- Vagabond
+- Vincent
+- wenhao
+- ws育慈
+- Yexina
+- φ (Phi)
+- 下午
+- 亞亞
+- 伊賀
+- 姿姿
+- 小元
+- 小六
+- 小宇
+- 小方
+- 小馬
+- 崑元
+- 平原不是丘陵
+- 幻幽
+- 影子
+- 政哲
+- 敬育
+- 日京三子
+- 欣哥
+- 洋蔥
+- 白白的莫風
+- 立揚
+- 糖萱
+- 紗子
+- 花花
+- 負負
+- 阿膽
+- 高個
+- 魏言
+- 魚魚
+- 麵包
 
 ### 線路
 
 組長： **David Huang**
 
-<!-- 組員 -->
-
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>Conan
-<p>cyrandy <br> 薏仁
-<p>DennyHuang
-<p>HenryYang
-<p>itsneo
-<p>Ming
-<p>Nalant
-<p>Peter
-<p>Sars
-<p>sntc06
-<p>Starlition
-<p>xxx
-<p>凌羽
-<p>小明
-<p>浚原
-<p>竹本立里
-<p>胖胖
-<p>腹黒い茶
-<p>阿嘉
-</div>
+- Conan
+- cyrandy
+- 薏仁
+- DennyHuang
+- HenryYang
+- itsneo
+- Ming
+- Nalant
+- Peter
+- Sars
+- sntc06
+- Starlition
+- xxx
+- 凌羽
+- 小明
+- 浚原
+- 竹本立里
+- 胖胖
+- 腹黒い茶
+- 阿嘉
 
 ### 記錄
 
 組長： **丞相**
 
-<!-- 組員 -->
-
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>adaam
-<p>Aminzai
-<p>CJOKER
-<p>Iven
-<p>Mike
-<p>Stanley
-<p>w
-<p>傑諾特
-<p>小聖
-<p>小豪
-<p>星雨
-<p>歐三
-<p>黃牙牙
-</div>
+- adaam
+- Aminzai
+- CJOKER
+- Iven
+- Mike
+- Stanley
+- w
+- 傑諾特
+- 小聖
+- 小豪
+- 星雨
+- 歐三
+- 黃牙牙
 
 ### 會計
 
 組長： **Tim Chen**
 
-<!-- 組員 -->
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>Toby Liu
-<p>Singing Li
-</div>
+- Toby Liu
+- Singing Li
 
 ### 出納
 
 組長： **Lloyd Huang**
 
-<!-- 組員 -->
-
 ### 行政
 
 組長： **小畢 (CrBoy)**
 
-<!-- 組員 -->
+- choupi
+- Idril*阿南
+- Rainny
+- 奇猴
+- 小草
+- 闇鴉/Lora
 
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>choupi
-<p>Idril*阿南
-<p>Rainny
-<p>奇猴
-<p>小草
-<p>闇鴉/Lora
-</div>
+### 網站
 
-### 總召 ＆ 不分組
+- Evelyn Hung
+- Kanru
 
-總召： **[BobChao](https://reps.mozilla.org/u/bobchao/)**（Mozilla Community）
-
-<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>Evelyn Hung
-<p>Kanru
 </div>

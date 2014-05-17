@@ -8,18 +8,186 @@ The term "Open Source" appears in 1998, which is familiar to everyone. This kind
 
 <img src="images/a02.jpg" class="ab02">This conference is organized for three kinds of roles that makes Open Source Software sparkle. They are coders, promoters, and users. You might be a coder from Software A, a promoter from Software B, and an user from Software C. No matter you have already stepped into the field of Open Source, or even standing on the gate wandering, we welcome you to attand the annual biggest Conference for Open Source Coders, Users, and Promoters in Taiwan!
 
-COSCUP celebrated its 8th anniversary this year. Over the past 7 years, the event has co-operated with coumminities all over the world. With everyone's involvement, we grow sustainly. Whoever you are a Open Source coder, a devoted Open Source promoter, a user fimiliar with Open Source, or even a newbie, we sincerely welcome you to be a part of COSCUP.
+COSCUP celebrated its 9th anniversary this year. Over the past 8 years, the event has co-operated with coumminities all over the world. With everyone's involvement, we grow sustainly. Whoever you are a Open Source coder, a devoted Open Source promoter, a user fimiliar with Open Source, or even a newbie, we sincerely welcome you to be a part of COSCUP.
 
 ## 2014 Organizaing Team
+<div class="team">
+### Orgnizer
 
-Team leaders are listed only, the complete list comes latter.
+**[BobChao](https://reps.mozilla.org/u/bobchao/)**（Mozilla Community）
 
-* Orgnizer : [BobChao](http://blog.bobchao.net/)
-* Session Convener :
-* Sales Manager :
-* Marketing and PR Manager :
-* Field Service Leader :
-* Network Service Leader：
-* Archeving Team Leader :
-* Accountant :
-* Administration Asisstant :
+### Session Convener
+
+Leader: **cclien**
+
+- AL - 小卓
+- Danny
+- Jenny
+- Mosky
+- Richard 強哥
+- 大眼
+- 義鴻
+
+### Sales
+
+Leader: **蝦蝦shiashia**
+
+- Ernest (dwchiang)
+- Paddy
+- 糖果荔枝
+
+### Marketing
+
+Leader: **Muka**
+
+- #Chiakai
+- pingooo
+- RSChiang
+- Singing
+- Violet 阿紫
+- 凍仁翔
+- 雁子
+
+### PR
+
+Leader: **仁豪**
+
+### Field Service
+
+Leader: **MouseMs**
+
+- Aleck陳經理
+- Angelboy
+- CCKai
+- Clarence
+- Eason
+- Egret
+- Ei-ling 艾岭
+- Elvis
+- Emma
+- Fish福
+- FrankWu
+- frankye
+- Henry Lee
+- Kevin
+- Kevin-WY
+- Kiki
+- lin4h
+- Lulu
+- Marsen
+- NaNi
+- Rifur
+- RJ
+- sanyuan
+- SONY
+- Stanley
+- swem 蕭辰翰
+- Teresa
+- Trista
+- Vagabond
+- Vincent
+- wenhao
+- ws育慈
+- Yexina
+- φ (Phi)
+- 下午
+- 亞亞
+- 伊賀
+- 姿姿
+- 小元
+- 小六
+- 小宇
+- 小方
+- 小馬
+- 崑元
+- 平原不是丘陵
+- 幻幽
+- 影子
+- 政哲
+- 敬育
+- 日京三子
+- 欣哥
+- 洋蔥
+- 白白的莫風
+- 立揚
+- 糖萱
+- 紗子
+- 花花
+- 負負
+- 阿膽
+- 高個
+- 魏言
+- 魚魚
+- 麵包
+
+### Network Service
+
+Leader: **David Huang**
+
+- Conan
+- cyrandy
+- 薏仁
+- DennyHuang
+- HenryYang
+- itsneo
+- Ming
+- Nalant
+- Peter
+- Sars
+- sntc06
+- Starlition
+- xxx
+- 凌羽
+- 小明
+- 浚原
+- 竹本立里
+- 胖胖
+- 腹黒い茶
+- 阿嘉
+
+### Archeving Team
+
+Leader: **丞相**
+
+- adaam
+- Aminzai
+- CJOKER
+- Iven
+- Mike
+- Stanley
+- w
+- 傑諾特
+- 小聖
+- 小豪
+- 星雨
+- 歐三
+- 黃牙牙
+
+### Accountant
+
+Leader: **Tim Chen**
+
+- Toby Liu
+- Singing Li
+
+### Cashier
+
+Leader: **Lloyd Huang**
+
+### Administration Asisstant
+
+Leader: **小畢 (CrBoy)**
+
+- choupi
+- Idril*阿南
+- Rainny
+- 奇猴
+- 小草
+- 闇鴉/Lora
+
+### Website
+
+- Evelyn Hung
+- Kanru
+
+</div>

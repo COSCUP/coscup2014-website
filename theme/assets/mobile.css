@@ -322,6 +322,14 @@ h2 {
     font-size: 20px;
     margin-bottom: 17px;
 }
+#content h2 {
+    font-size: 18px;
+    margin-bottom: 17px;
+}
+#content h3 {
+    font-size: 16px;
+    margin-bottom: 17px;
+}
 #content h1.coscup {
     font-style: italic;
     color: #42CFDA;
@@ -336,6 +344,9 @@ h2 {
     line-height: 32px;
     margin: 12px 0;
 }
+
+/* about -----*/
+
 #content p .ab01 {
     float: left;
     margin: 0 10px 10px 0;
@@ -348,6 +359,22 @@ h2 {
     float: right;
     margin: 0 0px 10px 10px;
 }
+#content .team h3 {
+  clear: both;
+  padding-top: 17px;
+  font-weight: bold;
+}
+#content .team p {
+  font-size: 14px;
+  line-height: 22px;
+}
+#content .team li {
+  float: left;
+  width: 10em;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 /* sponsor------ */
 .splist {
     width: 100%;
