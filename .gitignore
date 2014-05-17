@@ -11,5 +11,3 @@ deploy/src-tmp/
 deploy/config.php
 deploy/files/
 
-# src
-src/blocks/

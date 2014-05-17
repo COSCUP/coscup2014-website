@@ -101,7 +101,7 @@ function get_sponsor_info_localize($SPON, $type='name', $locale='zh-tw', $fallba
 	return $SPON[$type][$fallback];
 }
 
-function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw') {
+function get_sponsors_html($SPONS, $DONATES, $lang = 'zh-tw') {
 
 	// order of levels (fixed)
 	$levels = array(
@@ -115,135 +115,68 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
 	);
 
 	$html = '';
-	switch ($type)
-	{
-		case 'sidebar':
-      foreach ($levels as &$level)
-      {
-        if (!$SPONS[$level] || $level === 'special')
+
+  foreach ($levels as &$level) {
+    if (!$SPONS[$level]) continue;
+    // donor should before media partners
+    if ($level === 'media' && count($DONATES) > 0) {
+      $html .= sprintf('<h1 id="donor" data-l10n-id="personal"></h1>'."\n");
+      $html .= sprintf('<p data-l10n-id="donateDesc"></p>'."\n");
+
+      $html .= '<div class="splist donor">'."\n";
+      $html .= '<img />'."\n";  // just a placeholder
+      $html .= '  <div class="spinfo"><ul>'."\n";
+      foreach ($DONATES as $m => &$names) {
+        if ($m === 0) {
           continue;
-
-        $html .= sprintf("<h2 data-l10n-id='%s'></h2>\n", $level);
-        $html .= sprintf('<ul class="%s">'."\n", $level);
-
-        foreach ($SPONS[$level] as $i => &$SPON)
-        {
-          $html .= sprintf('  <li><a href="%s" target="_blank" title="%s">'.
-               '<img src="%s" alt="%s"/></a></li>'."\n",
-              htmlspecialchars($SPON['url']),
-              htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang)),
-              htmlspecialchars($SPON['logoUrl']),
-              htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang))
-              );
         }
-
-        $html .= "</ul>\n\n";
-      }
-      // add special thank
-      $sponsorLink = '/2014/'.$lang.'/sponsors/#special';
-      $html .= sprintf('<h2 data-l10n-id="special"></h2>'."\n");
-      $html .= sprintf('<ul>'."\n".'  <li><a href="%s" title="special" 
-        data-l10n-id="specialThanks"></a></li>'."\n".'</ul>', $sponsorLink); 
-
-      break;
-    case 'mobile-sidebar':
-      $counter = 0;
-      foreach ($levels as &$level)
-      {
-        if (!$SPONS[$level])
-          continue;
-
-        foreach ($SPONS[$level] as $i => &$SPON)
-        {
-          if ($counter%2 === 0)  $html .= "<div><span>\n";
-
-          $html .= sprintf('  <a href="%s" target="_blank" title="%s">'.
-               '<img src="%s" alt="%s" /></a>'."\n",
-              htmlspecialchars($SPON['url']),
-              htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang)),
-              htmlspecialchars($SPON['logoUrl']),
-              htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang))
-              );
-
-          if ($counter%2 === 1)  $html .= "</span></div>\n";
-          $counter += 1;
+        foreach ($names as $name) {
+          $html .= sprintf('<li>%s</li>'."\n", htmlspecialchars($name));
         }
       }
-      if ($counter%2 === 1)  $html .= "</b></div>\n";
-      break;
-
-		case 'page':
-      foreach ($levels as &$level)
-      {
-        if (!$SPONS[$level]) continue;
-        // donor should before media partners
-        if ($level === 'media' && count($DONATES) > 0) {
-          $html .= sprintf('<h1 id="donor" data-l10n-id="personal"></h1>'."\n");
-          $html .= sprintf('<p data-l10n-id="donateDesc"></p>'."\n");
-
-          $html .= '<div class="splist donor">'."\n";
-          $html .= '<img />'."\n";  // just a placeholder
-          $html .= '  <div class="spinfo"><ul>'."\n";
-          foreach ($DONATES as $m => &$names) {
-            if ($m === 0)
-              continue;
-            foreach ($names as $name) {
-              $html .= sprintf('<li>%s</li>'."\n", htmlspecialchars($name));
-            }
-          }
-          $html .= "</ul>\n";
-          if (isset($DONATES[0])) {
-            $html .= sprintf('<script type="application/l10n-data+json">{"anonymousDonors": %s}</script>'."\n", $DONATES[0]);
-            $html .= sprintf('<div data-l10n-id="donateAnonymous"></div>');
-          }
-          $html .= "</div></div>\n";
-        }
-
-        $html .= sprintf('<h1 id="%s" data-l10n-id="%s"></h1>'."\n", $level, $level);
-
-        foreach ($SPONS[$level] as $i => &$SPON)
-        {
-          $html .= '<div class="splist">'."\n";
-          $html .= sprintf('<a href="%s" target="_blank"><img src="%s" alt="%s" />'."\n",
-              htmlspecialchars($SPON['url']),
-              htmlspecialchars($SPON['logoUrl']),
-              get_sponsor_info_localize($SPON, 'name', $lang)
-              );
-
-          $html .= '  <div class="spinfo">'."\n";
-          $html .= sprintf('    <h2>%s</h2>'."\n", get_sponsor_info_localize($SPON, 'name', $lang));
-          if (trim(get_sponsor_info_localize($SPON, 'desc', $lang)))
-          {
-            $html .= sprintf('    %s', get_sponsor_info_localize($SPON, 'desc', $lang));
-          }
-          $html .= "  </div>\n</a></div>\n";
-        }
+      $html .= "</ul>\n";
+      if (isset($DONATES[0])) {
+        $html .= sprintf('<script type="application/l10n-data+json">{"anonymousDonors": %s}</script>'."\n", 
+          $DONATES[0]);
+        $html .= sprintf('<div data-l10n-id="donateAnonymous"></div>');
       }
+      $html .= "</div></div>\n";
+    }
 
+    $html .= sprintf('<h1 id="%s" data-l10n-id="%s"></h1>'."\n", $level, $level);
 
-      break;
-	}
+    foreach ($SPONS[$level] as $i => &$SPON) {
+      $html .= '<div class="splist">'."\n";
+      $html .= sprintf('<a href="%s" target="_blank"><img src="%s" alt="%s" />'."\n",
+          htmlspecialchars($SPON['url']),
+          htmlspecialchars($SPON['logoUrl']),
+          get_sponsor_info_localize($SPON, 'name', $lang)
+          );
+
+      $html .= '  <div class="spinfo">'."\n";
+      $html .= sprintf('    <h2>%s</h2>'."\n", get_sponsor_info_localize($SPON, 'name', $lang));
+      if (trim(get_sponsor_info_localize($SPON, 'desc', $lang))) {
+        $html .= sprintf('    %s', get_sponsor_info_localize($SPON, 'desc', $lang));
+      }
+      $html .= "  </div>\n</a></div>\n";
+    }
+  }
+
 	return $html;
 }
 
 $SPONS = get_sponsors_list_from_gdoc();
 $DONATES = get_donate_list_from_gdoc();
 
-if ($SPONS === FALSE)
-{
+if ($SPONS === FALSE) {
 	print "ERROR! Unable to download sponsors list from Google Docs.\n";
 }
-else
-{
-	foreach ($sponsors_output as $type => $l10n)
-	{
-		foreach ($l10n as $lang => $path)
-		{
-			print "Write sponsors into " . $path . " .\n";
-			$fp = fopen($path, "w");
-			fwrite($fp, get_sponsors_html($SPONS, $DONATES, $type, $lang));
-			fclose($fp);
-		}
+else {
+	foreach ($sponsors_output as $lang => $path) {
+    print "Write sponsors into " . $path . " .\n";
+    $fp = fopen($path, "w");
+    fwrite($fp, get_sponsors_html($SPONS, $DONATES, $lang));
+    fclose($fp);
 	}
 
   $donors = array();
@@ -268,5 +201,4 @@ else
 		)));
 	fclose ($fp);
 }
-
 
