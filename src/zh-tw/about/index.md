@@ -14,20 +14,30 @@ COSCUP 研討會已堂堂邁入第八年，七年來不但由各地社群共同�
 
 ### 議程
 
-組長： **CC Lien**
-
-<!-- 組員 -->
-
-### 銷售
-
-組長： **蝦蝦**
+組長： **cclien**
 
 <!-- 組員 -->
 
 <div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
-<p>Paddy Huang
-<p>Candy Tan
-<p>Ernest Chiang (Mozilla Community) 
+<p>AL - 小卓
+<p>Danny
+<p>Jenny
+<p>Mosky
+<p>Richard 強哥
+<p>大眼
+<p>義鴻
+</div>
+
+### 銷售
+
+組長： **蝦蝦shiashia**
+
+<!-- 組員 -->
+
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+<p>Ernest (dwchiang)
+<p>Paddy
+<p>糖果荔枝
 </div>
 
 ### 行銷
@@ -36,17 +46,96 @@ COSCUP 研討會已堂堂邁入第八年，七年來不但由各地社群共同�
 
 <!-- 組員 -->
 
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+<p>#Chiakai
+<p>pingooo
+<p>RSChiang
+<p>Singing
+<p>Violet 阿紫
+<p>凍仁翔
+<p>雁子
+</div>
+
 ### 公關
 
 組長： **仁豪**
 
 <!-- 組員 -->
 
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+</div>
+
 ### 場務
 
-組長： **Mouse**
+組長： **MouseMs**
 
 <!-- 組員 -->
+
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+<p>Aleck陳經理
+<p>Angelboy
+<p>CCKai
+<p>Clarence
+<p>Eason
+<p>Egret
+<p>Ei-ling 艾岭
+<p>Elvis
+<p>Emma
+<p>Fish福
+<p>FrankWu
+<p>frankye
+<p>Henry Lee
+<p>Kevin
+<p>Kevin-WY
+<p>Kiki
+<p>lin4h
+<p>Lulu
+<p>Marsen
+<p>NaNi
+<p>Rifur
+<p>RJ
+<p>sanyuan
+<p>SONY
+<p>Stanley
+<p>swem 蕭辰翰
+<p>Teresa
+<p>Trista
+<p>Vagabond
+<p>Vincent
+<p>wenhao
+<p>ws育慈
+<p>Yexina
+<p>φ (Phi)
+<p>下午
+<p>亞亞
+<p>伊賀
+<p>姿姿
+<p>小元
+<p>小六
+<p>小宇
+<p>小方
+<p>小馬
+<p>崑元
+<p>平原不是丘陵
+<p>幻幽
+<p>影子
+<p>政哲
+<p>敬育
+<p>日京三子
+<p>欣哥
+<p>洋蔥
+<p>白白的莫風
+<p>立揚
+<p>糖萱
+<p>紗子
+<p>花花
+<p>負負
+<p>阿膽
+<p>高個
+<p>魏言
+<p>魚魚
+<p>麵包
+</div>
 
 ### 線路
 
@@ -54,11 +143,49 @@ COSCUP 研討會已堂堂邁入第八年，七年來不但由各地社群共同�
 
 <!-- 組員 -->
 
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+<p>Conan
+<p>cyrandy <br> 薏仁
+<p>DennyHuang
+<p>HenryYang
+<p>itsneo
+<p>Ming
+<p>Nalant
+<p>Peter
+<p>Sars
+<p>sntc06
+<p>Starlition
+<p>xxx
+<p>凌羽
+<p>小明
+<p>浚原
+<p>竹本立里
+<p>胖胖
+<p>腹黒い茶
+<p>阿嘉
+</div>
+
 ### 記錄
 
 組長： **丞相**
 
 <!-- 組員 -->
+
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+<p>adaam
+<p>Aminzai
+<p>CJOKER
+<p>Iven
+<p>Mike
+<p>Stanley
+<p>w
+<p>傑諾特
+<p>小聖
+<p>小豪
+<p>星雨
+<p>歐三
+<p>黃牙牙
+</div>
 
 ### 會計
 
@@ -70,12 +197,26 @@ COSCUP 研討會已堂堂邁入第八年，七年來不但由各地社群共同�
 <p>Singing Li
 </div>
 
+### 出納
+
+組長： **Lloyd Huang**
+
+<!-- 組員 -->
 
 ### 行政
 
-組長： **CrBoy**
+組長： **小畢 (CrBoy)**
 
 <!-- 組員 -->
+
+<div style="-moz-column-width:15em;-webkit-column-width:15em;column-width:15em;-moz-column-gap:2em;-webkit-column-gap:2em;column-gap:2em;">
+<p>choupi
+<p>Idril*阿南
+<p>Rainny
+<p>奇猴
+<p>小草
+<p>闇鴉/Lora
+</div>
 
 ### 總召 ＆ 不分組
 
