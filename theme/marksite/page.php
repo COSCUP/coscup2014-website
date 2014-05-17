@@ -132,8 +132,8 @@ if (isset($styles)) {
 <script>
   // FIXME: global ojects!
   var lang = (navigator.language || 'zh-TW').toLowerCase();
-  var rootURL = 'http://localhost:8000/2013';
-  var themeURL = 'http://localhost:8000/2014-theme';
+  var rootURL = window.location.origin + '/2014';
+  var themeURL = window.location.origin + '/2014-theme';
 
   // implicit use sponsor display (which is decided by CSS media query)
   // to detect device, to avoid use matchmedia query in JavaScript
