@@ -65,7 +65,7 @@ if (file_exists(TMP_PATH.'site.appcache')) {
 }
 
 print ("= Syncing Content to target WEBSITE_PATH =\n");
-system ('rsync -a --delete ' . TMP_PATH . ' ' . WEBSITE_PATH);
+system ('rsync -a ' . TMP_PATH . ' ' . WEBSITE_PATH);
 print ("\n");
 
 print ("= Copy assets to WEBSITE_PATH =\n");
