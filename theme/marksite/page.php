@@ -1,5 +1,6 @@
 <?php
 $theme_assets_uri = "/2014-theme/assets/";
+$rootPath = MARKSITE_ABSOLUTE_PATH;
 ?>
 
 <!DOCTYPE html>
@@ -65,9 +66,9 @@ if (isset($styles)) {
     <div class="wrap">
    	  <div class="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">coscup 2014</a></div>
       	<ul id="lan">
-          <li><a href="/2014/en/" title="English" lang="en">EN</a></li>
-		  <li><a href="/2014/zh-tw/" title="正體中文" lang="zh-TW">正體</a></li>
-		  <li><a href="/2014/zh-cn/" title="简体中文" lang="zh-CN">简体</a></li>
+          <li><a href="<?php echo $rootPath;?>en/" title="English" lang="en">EN</a></li>
+          <li><a href="<?php echo $rootPath;?>zh-tw/" title="正體中文" lang="zh-TW">正體</a></li>
+          <li><a href="<?php echo $rootPath;?>zh-cn/" title="简体中文" lang="zh-CN">简体</a></li>
         </ul>
 	    <ul id="social">
         <li><a href="https://www.facebook.com/coscup" title="facebook" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
@@ -132,7 +133,7 @@ if (isset($styles)) {
 <script>
   // FIXME: global ojects!
   var lang = (navigator.language || 'zh-TW').toLowerCase();
-  var rootURL = window.location.origin + '/2014';
+  var rootURL = window.location.origin + '<?php echo $rootPath;?>';
   var themeURL = window.location.origin + '/2014-theme';
 
   // implicit use sponsor display (which is decided by CSS media query)
