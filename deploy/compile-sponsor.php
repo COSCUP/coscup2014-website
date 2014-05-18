@@ -12,11 +12,11 @@ function get_sponsors_list_from_gdoc() {
 	// name, level, url, logoUrl, desc, enName, enDesc, zhCnName, zhCnDesc
 	while (($SPON = fgetcsv($handle)) !== FALSE) {
 
-		$level = strtolower(trim($SPON[1]));
     // only keep sponsors who assigned level and logo image
-		if (strlen($level) === 0) continue;
+    if (!isset($SPON[1]) || trim($SPON[1]) === "") continue;
     if (trim($SPON[3]) === "") continue;
 
+    $level = strtolower(trim($SPON[1]));
 		if (!isset($SPONS[$level])) {
 			$SPONS[$level] = array();
 		}
@@ -58,7 +58,7 @@ function get_sponsors_list_from_gdoc() {
 }
 
 function get_donate_list_from_gdoc() {
-	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . SPONSOR_LIST_KEY . '&gid=6&range=A2%3AB999&output=csv', 'r');
+	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . SPONSOR_LIST_KEY . '&gid=7&range=A2%3AB999&output=csv', 'r');
 
 	if (!$handle) {
 		return FALSE; // failed
@@ -115,6 +115,9 @@ function get_sponsors_html($SPONS, $DONATES, $lang = 'zh-tw') {
 	);
 
 	$html = '';
+
+  if (count($SPONS) === 0)
+    return $html;
 
   foreach ($levels as &$level) {
     if (!$SPONS[$level]) continue;
