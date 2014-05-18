@@ -12,21 +12,10 @@
     <div class="info">
       <h1>Session introduction of COSCUP 2014</h1>
       <div class="text">
-      <p>The main theme of COSCUP 2014 is designated as : Open x [Web, Mobile, Data]</p>
+      <p>The main theme of COSCUP 2014 is designated as : Make Things Happen</p>
 
       <p>
-      As we know, continuous developments in Android and the booming
-      of new generation open source platforms like Firefox OS, Tizen,
-      Sailfish OS & Ubuntu Touch, indicate that 2014 is a year of open
-      platform & open data.  Meanwhile, open data platforms have been
-      gradually rising up to the surface among several countries
-      following the recent US government's acts.  All these direct the
-      IT technologies toward a much more open route.  Therefore Open
-      Web, Open Mobile and Open data are chosen as our main theme.
-      With the power of open, governments can make better use of
-      public information, enterprises can create different influence
-      via open platform, and the public will have a diversity of
-      retriving information and making choices.
+      2014 is a year that software comes closer the people's life. We can see Open sourced hardware and software makes the Maker community blooming and new style of civic movements that powered by Open Data and social media. We focus on Open Source Maker, Open Governance and Open Data. But we don't miss important topics like community culture and legal issues. COSCUP is a wonderful platform for both Open Source Users, Coders, and Promoters.
       </p>
       </div>
     </div>
@@ -47,11 +36,11 @@
     <div class="importantdate">
       <h1>Important Dates</h1>
       <ul class="text">
-        <li>Call for proposal: 4 月 1 日 ~ 5 月 3 日</li>
+        <li>Call for proposal: 4 月 12 日 ~ 5 月 12 日</li>
         <li>Contributor Registration: 4 月 7 日 ~ 5 月 31 日</li>
         <li>Program announced: 5 月 31 日</li>
         <li>Registration opens: 6 月 3 日</li>
-        <li>Conference dates: 8 月 3 - 4 日</li>
+        <li>Conference dates: 7 月 19 - 20 日</li>
       </ul>
     </div>
   </div>
