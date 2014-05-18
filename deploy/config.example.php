@@ -14,19 +14,9 @@ define('WEBSITE_PATH', '../../2014-beta/');  // Final output
 define('RUNNING_USER', 'www-data');  // http running user, remember to change all files' ownership to this user.
 
 $sponsors_output = array(
-	"sidebar" => array(
-		"zh-tw" => "src-tmp/blocks/sponsors-zh-tw.html",
-		"zh-cn" => "src-tmp/blocks/sponsors-zh-cn.html",
-		"en" => "src-tmp/blocks/sponsors-en.html"
-	),
-	"mobile-sidebar" => array(
-		"zh-tw" => "src-tmp/blocks/sponsors-mobile.html"
-	),
-	"page" => array(
-		"zh-tw" => "src-tmp/zh-tw/sponsors/index.html",
-		"zh-cn" => "src-tmp/zh-cn/sponsors/index.html",
-		"en" => "src-tmp/en/sponsors/index.html"
-	)
+  "zh-tw" => "src-tmp/zh-tw/sponsors/index.html",
+  "zh-cn" => "src-tmp/zh-cn/sponsors/index.html",
+  "en" => "src-tmp/en/sponsors/index.html"
 );
 
 $program_list_output = array(
