@@ -11,7 +11,7 @@
     <div class="info">
       <h1>COSCUP 2014 議程介紹</h1>
       <div class="text">
-        COSCUP 2014 的主題定為：Open x [Web, Mobile, Data]。2014 年是一個開放平台以及開放資料熱烈討論的一年，從 Android 的持續開發，到新一代開放源碼平台如 Firefox OS、Tizen、Sailfish OS 與 Ubuntu Touch 雨後春筍般地出現；而開放資料則由美國政府開始大力推廣後，其他各國的開放資料平台也逐漸浮出台面。這些都代表著科技以及資訊的趨勢都往開放的道路前進。這也是 COSCUP 2014 議程的三個大方向為 Open Web、Open Mobile 以及 Open Data 作為主軸的重要因素。因為開放的力量，政府能讓公眾資訊更有效率的利用，企業能利用開放平台共同創造影響力，民眾則有更多元的資訊以及選擇。
+        COSCUP 2014 的主題定為：Make Things Happen。2014 年是軟體落地生根貼近生活的一年，開源軟硬體整合促成 Maker 圈的蓬勃發展、開放資料及社群媒體為基礎的新一代公民運動。今年的 COSCUP 重點議程將放在 Open Source Maker、Open Governance 以及 Open Data 上。當然，開放原始碼社群文化以及法律相關的議題這些 COSCUP 往年的特色亦不缺少。是 Coder, User, Promoter 三種角色交流的好平台。
       </div>
     </div>
     <!--what is coscup-->
@@ -25,11 +25,11 @@
     <div class="importantdate">
       <h1>重要日期</h1>
       <ul class="text">
-        <li>議程徵求： 4 月 1 日 ~ 5 月 3 日</li>
+        <li>議程徵求： 4 月 12 日 ~ 5 月 12 日</li>
         <li>貢獻者報名： 4 月 7 日 ~ 5 月 31 日</li>
         <li>議程公布： 5 月 31 日</li>
         <li>大眾報名： 6 月 3 日</li>
-        <li>大會時間： 8 月 3 - 4 日</li>
+        <li>大會時間： 7 月 19 - 20 日</li>
       </ul>
     </div>
   </div>
