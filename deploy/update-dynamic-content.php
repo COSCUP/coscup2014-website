@@ -1,5 +1,4 @@
 <?php
-include_once ("deploy.php");
 include_once ("markdown-without-markup.php");
 
 date_default_timezone_set('Asia/Taipei');

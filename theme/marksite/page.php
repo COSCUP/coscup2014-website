@@ -1,6 +1,6 @@
 <?php
-$theme_assets_uri = "/2014-theme/assets/";
 $rootPath = MARKSITE_ABSOLUTE_PATH;
+$theme_assets_uri = MARKSITE_ABSOLUTE_PATH."assets/";
 ?>
 
 <!DOCTYPE html>
@@ -134,7 +134,7 @@ if (isset($styles)) {
   // FIXME: global ojects!
   var lang = (navigator.language || 'zh-TW').toLowerCase();
   var rootURL = window.location.origin + '<?php echo $rootPath;?>';
-  var themeURL = window.location.origin + '/2014-theme';
+  var themeURL = '<?php echo $theme_assets_uri; ?>';
 
   // implicit use sponsor display (which is decided by CSS media query)
   // to detect device, to avoid use matchmedia query in JavaScript
