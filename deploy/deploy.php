@@ -29,9 +29,6 @@ $cwd = getcwd();
 
 function recompile_and_sync()
 {
-	# workaround trying to use value in config.
-	include ("config.php");
-
 	print ("= Compiling Content =\n");
 
 	chdir (MARKSITE_PATH);
@@ -39,6 +36,7 @@ function recompile_and_sync()
 	chdir ("..");
 	print ("\n");
 
+  global $json_output;
 	print ("= Writing menu.json.js =\n");
 	$fp = fopen ($json_output["menu"], "w");
 	$r = array();
@@ -61,7 +59,6 @@ function recompile_and_sync()
 		$fp = fopen (TMP_PATH.'site.appcache', "a");
 		fwrite ($fp, "\n# THEME $theme_hash\n");
 		print ("\n");
-
 	}
 
 	print ("= Syncing Content to target WEBSITE_PATH =\n");
