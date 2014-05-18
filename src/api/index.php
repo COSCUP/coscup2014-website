@@ -28,9 +28,11 @@ foreach ($langs as $lang => $val) {
        switch(preg_replace('/_/', '-', $lang))
        {
                case 'zh-tw':
-               case 'zh-cn':
                case 'zh':
                        header("Location: ../zh-tw/api/");
+                       return;
+               case 'zh-cn':
+                       header("Location: ../zh-cn/api/");
                        return;
                case 'en':
                        header("Location: ../en/api/");
