@@ -29,7 +29,7 @@ function get_sponsors_list_from_gdoc() {
         'zh-tw' => Markdown_Without_Markup($SPON[4])
       ),
       'url' => $SPON[2],
-      'logoUrl' => $SPON[3],
+      'logoUrl' => SPONSOR_LOGO_PATH.$SPON[3],
     );
     
 
