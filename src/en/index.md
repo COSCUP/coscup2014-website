@@ -36,11 +36,11 @@
     <div class="importantdate">
       <h1>Important Dates</h1>
       <ul class="text">
-        <li>Call for proposal: 4 月 12 日 ~ 5 月 12 日</li>
-        <li>Contributor Registration: 4 月 7 日 ~ 5 月 31 日</li>
-        <li>Program announced: 5 月 31 日</li>
-        <li>Registration opens: 6 月 3 日</li>
-        <li>Conference dates: 7 月 19 - 20 日</li>
+        <li>Call for proposal: 4/12 - 5/12</li>
+        <li>Contributor Registration: 5/1 - 5/25</li>
+        <li>Program announced: 5/31</li>
+        <li>Registration opens: 6/3</li>
+        <li>Conference dates: 7/19 - 20</li>
       </ul>
     </div>
   </div>
