@@ -62,7 +62,7 @@ if (isset($styles)) {
 <body>
 <div id="header">
 	<div class="blue"></div>
-    <div class="m_kv"><img src="<?php echo $theme_assets_uri;?>mobile/kv.png" width="100%" /></div>
+    <div class="m_kv"><img src="<?php echo $theme_assets_uri;?>mobile/header.jpg" width="100%" /></div>
     <div class="wrap">
    	  <div class="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">coscup 2014</a></div>
       	<ul id="lan">
