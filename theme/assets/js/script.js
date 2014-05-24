@@ -22,8 +22,6 @@ jQuery(function ($) {
   // FIXME: these code is not compatible with nav.empty
   // Initialize some components in mobile version
   function mobileInit() {
-    /* prepend menu icon */
-    $('#nav-wrap').prepend('<div id="menu-icon">menu</div>');
     var toggleMenu = function() {
       $("#mainNav").toggle();
       $("#menu-icon").toggleClass("active");

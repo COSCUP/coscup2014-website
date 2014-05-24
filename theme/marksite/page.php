@@ -31,6 +31,7 @@ $theme_assets_uri = MARKSITE_ABSOLUTE_PATH."assets/";
 <!--phone-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <link rel="apple-touch-icon" href="<?php echo $theme_assets_uri;?>ios-fav.jpg" />
+<link href="<?php echo $theme_assets_uri;?>normalize.css" type= "text/css" rel="stylesheet" />
 <link media="only screen and (max-width:768px)" href="<?php echo $theme_assets_uri;?>mobile.css" type= "text/css" rel="stylesheet" />
 <link media="screen and (min-width:769px)" href="<?php echo $theme_assets_uri;?>style.css" type="text/css" rel="stylesheet" />
 <?php
@@ -61,16 +62,15 @@ if (isset($styles)) {
 </head>
 <body>
 <div id="header">
-	<div class="blue"></div>
-    <div class="m_kv"><img src="<?php echo $theme_assets_uri;?>mobile/header.jpg" width="100%" /></div>
+    <img id="mobile-header" src="<?php echo $theme_assets_uri;?>mobile/header.jpg" width="100%" />
     <div class="wrap">
-   	  <div class="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">coscup 2014</a></div>
-      	<ul id="lan">
+      <div id="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">COSCUP 2014</a></div>
+        <ul id="languages" class="no-decoration">
           <li><a href="<?php echo $rootPath;?>en/" title="English" lang="en">EN</a></li>
           <li><a href="<?php echo $rootPath;?>zh-tw/" title="正體中文" lang="zh-TW">正體</a></li>
           <li><a href="<?php echo $rootPath;?>zh-cn/" title="简体中文" lang="zh-CN">简体</a></li>
         </ul>
-	    <ul id="social">
+	    <ul id="desktop-social-links" class="no-decoration">
         <li><a href="https://www.facebook.com/coscup" title="facebook" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
         <li><a href="https://plus.google.com/101434041225212178932" title="Google+" rel="publisher" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_gplus.png"/></a></li>
         <li><a href="http://www.plurk.com/coscup" title="plurk" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" /></a></li>
@@ -80,9 +80,9 @@ if (isset($styles)) {
         <li><a href="http://www.youtube.com/user/thecoscup?feature=watch" title="youtube" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_utube.png" /></a></li>
 	    </ul>
       <nav id="nav-wrap">
-        <ul id="mainNav">
+        <div id="mobile-menu-icon" data-l10n-id="menu">選單</div>
+        <ul id="mainNav" class="no-decoration">
           <?php echo $this->menu(1); ?>
-          <li class="open">We (heart) Open.</li>
         </ul>
       </nav> 
     </div>
@@ -103,7 +103,7 @@ if (isset($styles)) {
 </div>
 </div>
 <!--social Mobile-->
-<ul class="sharing">
+<ul id="mobile-social-links" class="no-decoration">
   <li class="title">Follow Us!!<hr></li>
   <li><a href="https://www.facebook.com/coscup" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_fb.png" align="absmiddle" /><span>facebook</span></a></li>
   <li><a href="https://plus.google.com/101434041225212178932" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_gplus.png" align="absmiddle" /><span>Google+</span></a></li>
@@ -115,19 +115,17 @@ if (isset($styles)) {
 </ul><!--social Mobile end-->
 <!--底-->
 <div id="footer">
-	<ul>
-        <li><span data-l10n-id="copyright"><a href="http://coscup.org/2014/en/contact/">Contact us</a></span> | </li>
-        <li><a href="http://coscup.org/2006/" target="_blank">2006</a>|</li>
-        <li><a href="http://coscup.org/2007/" target="_blank">2007</a>|</li>
-        <li><a href="http://coscup.org/2008/" target="_blank">2008</a>|</li>
-        <li><a href="http://coscup.org/2009/" target="_blank">2009</a>|</li>
-        <li><a href="http://coscup.org/2010/" target="_blank">2010</a>|</li>
-        <li><a href="http://coscup.org/2011/" target="_blank">2011</a>|</li>
-        <li><a href="http://coscup.org/2012/" target="_blank">2012</a>|</li>
-        <li><a href="http://coscup.org/2013/" target="_blank">2013</a>|</li>
-        <div class="design">Design by <a href="http://www.lichenple.com" target="_blank">LICHENple</a></div>
-    </ul>
-
+  <ul class="no-decoration">
+    <li><span data-l10n-id="copyright"><a href="http://coscup.org/2014/en/contact/">Contact us</a></span> | </li>
+    <li><a href="http://coscup.org/2006/" target="_blank">2006</a>|</li>
+    <li><a href="http://coscup.org/2007/" target="_blank">2007</a>|</li>
+    <li><a href="http://coscup.org/2008/" target="_blank">2008</a>|</li>
+    <li><a href="http://coscup.org/2009/" target="_blank">2009</a>|</li>
+    <li><a href="http://coscup.org/2010/" target="_blank">2010</a>|</li>
+    <li><a href="http://coscup.org/2011/" target="_blank">2011</a>|</li>
+    <li><a href="http://coscup.org/2012/" target="_blank">2012</a>|</li>
+    <li><a href="http://coscup.org/2013/" target="_blank">2013</a>|</li>
+  </ul>
 </div>
 </body>
 <script>

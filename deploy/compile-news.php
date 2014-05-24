@@ -54,8 +54,8 @@ function get_news_list_html($NEWS_LIST, $lang = 'zh-tw') {
     );
 
     $html = '';
-    $html .= sprintf("<h1 id=\"News\">%s</h1>\n", htmlspecialchars($l10n[$lang]['News']));
-    $html .= "<div class=\"news\">\n";
+    $html .= sprintf("<h1>%s</h1>\n", htmlspecialchars($l10n[$lang]['News']));
+    $html .= "<div class=\"news news-list\">\n";
     foreach ($NEWS_LIST as $idx => &$news)
     {
         $html .= "    <div class=\"list\">\n";

@@ -19,7 +19,7 @@ jQuery(function ($) {
         var $h2 = $('<h2 data-l10n-id="' + level + '" />');
         $h2.text(document.l10n.getSync(level));
         $sponsors.append($h2);
-        var $u = $('<ul class="' + level + '" />');
+        var $u = $('<ul class="' + level + ' no-decoration" />');
         $.each(
           data['sponsors'][level],
           function (i, sponsor) {

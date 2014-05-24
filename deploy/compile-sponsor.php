@@ -126,9 +126,9 @@ function get_sponsors_html($SPONS, $DONATES, $lang = 'zh-tw') {
       $html .= sprintf('<h1 id="donor" data-l10n-id="personal"></h1>'."\n");
       $html .= sprintf('<p data-l10n-id="donateDesc"></p>'."\n");
 
-      $html .= '<div class="splist donor">'."\n";
+      $html .= '<div class="sponsor donor">'."\n";
       $html .= '<img />'."\n";  // just a placeholder
-      $html .= '  <div class="spinfo"><ul>'."\n";
+      $html .= '  <div class="sponsor-info"><ul>'."\n";
       foreach ($DONATES as $m => &$names) {
         if ($m === 0) {
           continue;
@@ -149,14 +149,14 @@ function get_sponsors_html($SPONS, $DONATES, $lang = 'zh-tw') {
     $html .= sprintf('<h1 id="%s" data-l10n-id="%s"></h1>'."\n", $level, $level);
 
     foreach ($SPONS[$level] as $i => &$SPON) {
-      $html .= '<div class="splist">'."\n";
+      $html .= '<div class="sponsor">'."\n";
       $html .= sprintf('<a href="%s" target="_blank"><img src="%s" alt="%s" />'."\n",
           htmlspecialchars($SPON['url']),
           htmlspecialchars($SPON['logoUrl']),
           get_sponsor_info_localize($SPON, 'name', $lang)
           );
 
-      $html .= '  <div class="spinfo">'."\n";
+      $html .= '  <div class="sponsor-info">'."\n";
       $html .= sprintf('    <h2>%s</h2>'."\n", get_sponsor_info_localize($SPON, 'name', $lang));
       if (trim(get_sponsor_info_localize($SPON, 'desc', $lang))) {
         $html .= sprintf('    %s', get_sponsor_info_localize($SPON, 'desc', $lang));

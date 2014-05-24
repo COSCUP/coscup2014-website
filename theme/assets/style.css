@@ -1,145 +1,137 @@
 @charset "utf-8";
-/* reset
---------------------------------------------------- */
-html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input {
-    margin: 0;
-    padding: 0;
-}
-h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,th {
-    font-size: 1em;
-    font-weight: normal;
-    font-style: normal;
-}
-abbr,acronym {
-    border: 0;
-}
-ul,ol {
-    list-style: none;
-}
-fieldset,img {
-    border: none;
-}
-/* basic
---------------------------------------------------- */
 body {
-    background: url('');
-    font: 12px/19px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
+    font-size: 15px;
     color: #333;
+    font-family: "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
 }
 a {
-    color: #666666;
+    color: #333;
+    text-decoration: none;
     cursor: pointer;
 }
 a:link, a:visited, a:active {
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: none;
+    color: #666;
 }
+
+ul.no-decoration {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.no-decoration li {
+    float: left;
+}
+
+h1, h2 {
+    color: #2D5E0A;
+}
+
 h1 {
-    font: 18px/25px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
-    font-weight: bold;
-    color: #000;
-    margin: 10px 0;
+    font-size: 22px;
+    line-height: 35px;
 }
+
 h2 {
-    font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
-    font-weight: bold;
-    color: #000;
-    margin: 10px 0;
+    font-size: 18px;
+    line-height: 30px;
 }
-/* ---Mobile Shut down----------*/
-.m_kv {
+
+/* --- Mobile Shut down ----------*/
+#mobile-header {
     display: none;
+}
+#mobile-menu-icon {
+  display: none;
 }
 #mySwipe {
     display:none
 }
-.sharing {
+#mobile-social-links {
     display: none;
 }
-/* Main
---------------------------------------------------- */
-.blue {
-    width: 100%;
-    height: 7px;
-    background: #96e9ee;
-}
+
+/* ---------------------------------------
+ * Site Structure
+ ----------------------------------------- */
 #header {
     width: 100%;
+    border-top: solid 7px #CCDAA9;   
     height: 267px;
     background: url(head.jpg) #f1f0ed no-repeat top;
 }
+
 .wrap {
     width: 1000px;
     margin: 0 auto;
 }
-.logo a {
-    width: 207px;
-    height: 42px;
+
+#logo a {
     background: url(logo.png) no-repeat;
     display: block;
+    margin-top: 7px;
+    width: 207px;
+    height: 42px;
     text-indent: -9999px;
     float: left;
-    margin: 7px 0 35px -10px;
-}
-.logo a {
     display: block;
 }
-#social {
+
+#desktop-social-links {
     width: 150px;
     float: right;
-    margin: 5px 0 0 0;
+    margin-top: 5px;
 }
-#social li {
-    float: left;
+#desktop-social-links li {
     margin-right: 5px;
 }
-#lan {
-    width: 136px;
-    height: 30px;
-    margin-right: 21px;
+
+#languages {
+    margin-right: 18px;
     float: right;
 }
-#lan li {
-    float: left;
+
+#languages li a {
+    padding: 5px;
+    background: #CCDAA9;
 }
-#lan li a {
-    background: #95e9ee;
-    padding: 5px 6px;
-    color: #000;
-}
-#lan li a:hover {
-    background: #000019;
+
+#languages li a:hover {
+    background: #333;
     color: #fff;
 }
-#mainNav {
-    width: 977px;
+
+#nav-wrap {
+    width: 100%;
     height: 36px;
-    background: #797979;
-    margin-top: 140px;
-    padding-left: 10px;
+    margin-top: 181px;
     float: left;
 }
+
+#mainNav {
+    padding-left: 10px;
+    font-size: 17px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
 #mainNav a {
-    color: #fff;
+    color: #2D5E0A;
     padding: 9px;
 }
+
 #mainNav li {
-    font-family: "微軟正黑體", "Arial Unicode MS";
-    line-height: 35px;
-    font-size: 15px;
-    color: #fff;
-    height: 36px;
     margin-right: 8px;
-    float: left;
 }
+
 #mainNav li a:hover {
-    background: #9becf2;
+    background: #EAF1D0;
     color: #000;
-}
-#mainNav li.open {
-    float: right;
 }
 
 #main {
@@ -149,299 +141,160 @@ h2 {
     padding: 30px 0;
     float: left;
 }
-/*--左--*/
-#left {
-    width: 430px;
-    min-height: 300px;
-    float:left
-}
-#left.blog {
-    width: 525px;
-}
-#left .register,#left .news,#left .info,#left .whatiscoscup,#left .contributor {
-    margin-bottom: 20px;
-    float: left;
-}
-#left .news .text, #left .info, #left .text {
-    font-size: 15px;
-    line-height: 28px;
-}
-#left .register {
-    width: 415px;
-    height: 75px;
-    border-top: 1px #CCC solid;
-    border-bottom: 1px #CCC solid;
-    padding: 30px 0 0 15px;
-}
-#left .register em {
-    font-size: 50px;
-    position: relative;
-    top: 10px;
-}
-#left .register .date {
-    margin-right: 12px;
-    float: left;
-    font-size: 20px;
-}
-#left .register .call {
-    width: 83px;
-    font-size: 20px;
-    padding: 8px;
-    margin-top: 3px;
-    background: #97edf4;
-    float:left
-}
-#left .register .call a {
-    color: #000;
-}
-#left .contributor {
-    width: 415px;
-    height: 45px;
-    background: #c9f1f5;
-    padding: 10px 0 0 15px;
-}
-#left .contributor .date {
-    margin-right: 12px;
-    font-size: 15px;
-    padding-top: 9px;
-    float: left;
-}
-#left .contributor .call {
-    width: 83px;
-    font-size: 20px;
-    padding: 8px;
-    background: #97edf4;
-    float:left
-}
-#left .contributor .call a {
-    color: #000;
-}
-#left .news {
-    width: 430px;
-}
-#left .news .news_list .list {
-    margin-bottom: 0px;
-    border-bottom: none;
-}
-#left .news .news_list .list:last-child {
-    border-bottom: 1px solid rgb(204, 204, 204);
-}
-#left .news span {
-    width: 95%;
-    color: #999999;
-    margin-bottom: 3px;
-    float: left;
-}
-#left .news .text {
-    width: 95%;
-    float: left;
-}
-#left .news .more {
-    width: 100%;
-    text-align: right;
-}
-#left .news .more a {
-    font-size: 11px;
-    color: #000;
-    text-align: right;
-}
-#left .news .more a:hover {
-    color: #666;
-}
-#left .info {
-    width: 430px;
-}
-#left .whatiscoscup {
-    width: 430px;
-}
-/*--中--*/
-#sidebar2 {
-    width: 330px;
-    margin-left: 25px;
-    float:left
-}
-#sidebar2.blog {
-    width: 250px;
-    float: right;
-}
-#sidebar2 .fb,#sidebar2 .socialbuzz,#sidebar2 .utube {
-    margin-bottom: 20px;
-    float:left
-}
-#sidebar2 .fb {
-    width: 300px;
-    height: 65px;
-    border: 1px #CCC solid;
-    padding: 15px;
-}
-#sidebar2 .socialbuzz {
-    width: 330px;
-}
-#sidebar2 .socialbuzz h1 {
-    width: 330px;
-    height: 37px;
-    text-indent: 15px;
-    margin: 0;
-    line-height: 35px;
-    background: #42cfda;
-    color: #fff;
-}
-#sidebar2 .socialbuzz h1 em {
-    font-size: 12px;
-}
-#sidebar2 .socialbuzz .text {
-    width: 330px;
-    background: #c9f2f5;
-}
-#sidebar2 .socialbuzz .text > ul {
-    line-height: 16px;
-    margin: 0;
-    padding: 0 1em 0 2em;
-    text-align: left;
-}
-#sidebar2 .socialbuzz .text > ul li {
-    list-style: square outside none;
-    padding: 6px;
-}
-#sidebar2 .socialbuzz .text > ul .meta {
-    display: block;
-    text-align: right;
-}
-#sidebar2 .socialbuzz .more {
-    width: 322px;
-    height: 25px;
-    text-align: right;
-    padding: 5px 8px 0 0;
-    background: #afeff5;
-    float: left;
-}
-#sidebar2 .socialbuzz .more a {
-    color: #000;
-    font-size: 11px;
-}
-#sidebar2 .socialbuzz .more a:hover {
-    color: #666;
-}
-#sidebar2 .utube {
-    width: 330px;
-    height: 370px;
-}
-#sidebar2 .utube h1 {
-    height: 37px;
-    text-indent: 15px;
-    margin: 0;
-    line-height: 35px;
-    background: #42cfda;
-    color: #fff;
-}
-#sidebar2 .utube .more {
-    width: 322px;
-    height: 25px;
-    text-align: right;
-    padding: 5px 8px 0 0;
-    background: #afeff5;
-    float: left;
-}
-#sidebar2 .utube .more a {
-    color: #000;
-    font-size: 11px;
-}
-#sidebar2 .utube .more a:hover {
-    color: #666;
-}
-/*--右--*/
+
 #sponsor {
-    width: 177px;
     margin-right: 17px;
-    float: right
+    float: right;
+    width: 175px;
 }
+
 #sponsor h2 {
-    width: 177px;
-    height: 37px;
-    font-size: 17px;
     color: #fff;
     text-indent: 15px;
     line-height: 38px;
-    background: #42cfda;
+    background: #A7C75A;
     margin: 0;
+    border: 1px solid #A7C75A;
 }
+
 #sponsor li, #sponsor p {
-    width: 175px;
-    border: 1px #CCC solid;
-    border-top: 0px;
+    margin: 0;
+    float: none;
+    border: 1px solid #A7C75A;
     text-align: center;
     padding: 12px 0;
+    font-size: 12px;
+    border: 1px solid #A7C75A;
 }
-#sponsor li.last {
-    border-bottom: 0;
+
+#content {
+    width: 800px;
+    float: left;
 }
+
+#content p {
+    line-height: 28px;
+    margin: 12px 0;
+}
+
 #footer {
     width: 100% ;
     height: 50px;
-    background: #9bedf3;
     float: left;
+    background: #A7C75A;
+    color: #2D5E0A;
 }
 #footer ul {
     width: 1000px;
     padding-top: 10px;
     margin:0 auto
 }
-#footer ul li {
-    color: #999;
-    float:left
-}
+
 #footer ul li a {
-    color: #999;
     padding: 0 5px;
 }
-#footer ul li a:hover {
-    color: #000;
-}
-#footer .design {
-    color: #999;
-    padding-right: 8px;
-    float:right
-}
-#footer .design a {
-    color: #999;
-}
-#footer .design a:hover {
-    color: #000;
-}
-/* pages
---------------------------------------------------- */
-#content {
-    width: 800px;
+
+/*----- Homepage: Left -----*/
+#left {
+    width: 430px;
+    min-height: 300px;
     float: left;
 }
-#content h1 {
-    font-size: 22px;
-    margin-bottom: 17px;
-}
-#content h1.coscup {
-    font-style: italic;
-    color: #42CFDA;
-    margin-bottom: 45px;
-}
-#content h2 {
-    font-size: 20px;
-    margin-bottom: 17px;
-}
-#content h3 {
-    font-size: 18px;
-    margin-bottom: 17px;
-}
-#content .article {
-    font-size: 15px;
-    line-height: 28px;
-}
-#content p {
-    font-size: 15px;
-    line-height: 28px;
-    margin: 12px 0;
+
+#left.blog {
+    width: 525px;
 }
 
-/* about -----*/
+#left > * {
+    margin-bottom: 20px;
+    float: left;
+}
+
+#left .text {
+    font-size: 15px;
+    line-height: 28px;
+}
+
+#left h1.coscup {
+    font-style: italic;
+    color: #A7C75A;
+    margin-bottom: 45px;
+}
+
+#left .news .news_list .list {
+    margin-bottom: 0px;
+    border-bottom: none;
+}
+
+#left .news .news_list .list:last-child {
+    border-bottom: 1px #CCC solid;
+}
+
+#left .news .more {
+    text-align: right;
+    font-size: 12px;
+}
+
+/*----- Homepage: Middle -----*/
+#sidebar2 {
+    width: 330px;
+    margin-left: 25px;
+    float: left;
+}
+
+#sidebar2.blog {
+    width: 250px;
+    float: right;
+}
+
+#sidebar2 > * {
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+
+#sidebar2 > * > h1 {
+    text-indent: 15px;
+    margin: 0;
+    background: #A7C75A;
+    color: #fff;
+}
+
+#sidebar2 > * > .text {
+    background: #EAF1D0;
+    font-size: 12px;
+}
+
+#sidebar2 > * > .more {
+    text-align: right;
+    padding: 5px 8px 0 0;
+    background: #C5DA8B;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+#sidebar2 .fb {
+    border: 1px solid #A7C75A;
+}
+
+#sidebar2 .socialbuzz h1 em {
+    font-size: 12px;
+}
+
+#sidebar2 .socialbuzz .text > ul {
+    margin: 0;
+    padding: 0 1em 0 2em;
+}
+#sidebar2 .socialbuzz .text > ul li {
+    list-style: square outside none;
+    padding: 6px;
+}
+#sidebar2 .socialbuzz .text > ul li > .meta {
+    display: block;
+    text-align: right;
+}
+
+/*----- Page: about -----*/
 
 #content p .ab01 {
     float: left;
@@ -453,106 +306,86 @@ h2 {
 }
 #content .team h3 {
   clear: both;
-  padding-top: 17px;
-  font-weight: bold;
+  font-size: 17px;
+  padding-top: 20px;
 }
+
 #content .team p {
-  font-size: 16px;
   line-height: 22px;
 }
 #content .team li {
   float: left;
   width: 10em;
-  font-size: 16px;
   line-height: 22px;
+  list-style: circle outside none;
 }
 
-/* sponsor------ */
-.splist {
+/*----- Page: Sponsor -----*/
+.sponsor {
     width: 100%;
     margin-bottom: 35px;
 }
-.splist img {
+.sponsor img {
     margin: 5px 15px 0 0;
     vertical-align: top;
+    width: 140px;
+    display: inline-block;
 }
-.spinfo {
+.sponsor-info {
     width: 600px;
     background: #fff;
     padding: 10px 15px;
     border-left: 4px #CCC solid;
     display: inline-block
 }
-.spinfo h2 {
-    font-size: 18px;
-}
-.spinfo p {
-    font-size: 15px;
-    line-height: 28px;
-    color: #333333
-}
 
-.donor .spinfo li {
+.donor .sponsor-info li {
     float: left;
     margin-right: 15px;
     margin-bottom: 10px;
-    font-size: 15px;
-    color: #333333
 }
-.donor .spinfo div {
+.donor .sponsor-info div {
     clear: left;
-    font-size: 15px;
-    color: #333333
-}
-.donor img {
-    display: inline-block;
-    width: 140px;
 }
 
-/* map------ */
-.map {
-    width: 780px;
-}
-/* news------ */
+
+/*----- Page: News ----- */
 #content .news {
     width: 100%;
 }
-#content .news .list {
-    background: #efefef;
+#content .news-list .list {
     border-top: 1px #CCC solid;
     border-bottom: 1px #CCC solid;
     margin-bottom: 40px;
+    background: #EFEFEF;
     padding: 15px;
-    float: left;
     width: 95%;
 }
-#content .news span {
-    width: 95%;
-    color: #999999;
-    margin-bottom: 3px;
-    float: left;
-}
-#content .news b {
+
+#content .news-list b {
     margin-left: 10px;
     color: #606060;
-    font-size: 13px;
 }
-#content .news .title {
-    width: 95%;
-    font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
+#content .news-list b:before {
+  content: '@';
+}
+
+#content .news-list .title {
     font-weight: bold;
-    color: #000;
     margin: 10px 0;
-    float: left;
 }
-#content .news .text {
-    font-size: 15px;
-    line-height: 28px;
+
+#content .news-list a {
+    color: #999;
 }
-/* Live -------- */
+
+#content .news-list a:hover {
+    color: #333;
+}
+
+/*----- Page: Live ----- */
 #content .live {
     width: 100%;
-    font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
 }
 #content .live .list {
     background: #efefef;
@@ -591,7 +424,8 @@ h2 {
   width: 720px;
   height: 540px;
 }
-/* Program------ */
+
+/*----- Page: Program ----- */
 h2.pro {
     width: 780px;
     margin-bottom: 18px;
@@ -613,7 +447,7 @@ h2.pro {
     float: left;
 }
 #navTab li.active {
-    background-color: #95E9EE;
+    background-color: #CCDAA9;
 }
 #navTab li.active a {
     color: black;
