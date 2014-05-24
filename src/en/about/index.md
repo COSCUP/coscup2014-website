@@ -22,7 +22,7 @@ Leader: **cclien**
 
 - AL - 小卓
 - Danny
-- Jenny
+- Jenny (jsliang)
 - Mosky
 - Richard 強哥
 - 大眼
