@@ -24,11 +24,11 @@ jQuery(function ($) {
   function mobileInit() {
     var toggleMenu = function() {
       $("#mainNav").toggle();
-      $("#menu-icon").toggleClass("active");
+      $("#mobile-menu-icon").toggleClass("active");
     };
 
     /* toggle nav */
-    $("#menu-icon").on("click", toggleMenu);
+    $("#mobile-menu-icon").on("click", toggleMenu);
     $("#mainNav li").on("click", toggleMenu);
 
     function initSponsor() {

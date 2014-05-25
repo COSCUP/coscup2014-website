@@ -138,6 +138,9 @@ if (isset($styles)) {
   // to detect device, to avoid use matchmedia query in JavaScript
   // FIXME: CSS dependent test
   var isMobile = (document.getElementById('mySwipe').clientWidth !== 0)? true : false;
+  if (navigator.userAgent.match(/(Android|iPhone|iPod|iPad|IEMobile|Mobile)/)) {
+    isMobile = true;
+  }
 </script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/respond.min.js"></script>
