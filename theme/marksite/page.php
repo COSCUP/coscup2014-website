@@ -26,7 +26,7 @@ $theme_assets_uri = MARKSITE_ABSOLUTE_PATH."assets/";
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://coscup.org/2014/" />
 <meta property="og:site_name" content="2014 COSCUP" />
-<meta property="og:image" content="http://coscup.org/2014-theme/assets/og-image.jpg" />
+<meta property="og:image" content="http://coscup.org/2014/assets/og-image.jpg" />
 
 <!--phone-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
