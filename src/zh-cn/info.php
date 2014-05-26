@@ -11,4 +11,4 @@ $contents = array(
   "contact" => "联络信息",
   "api" => "API"
 );
-$menu_hidden = array("program", "live");
+$menu_hidden = array("program", "live", "api");
