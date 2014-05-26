@@ -142,10 +142,6 @@ jQuery(function ($) {
             document.title = res.responseText.match(/<title>(.+)<\/title>/)[1];
             $('#content').html($h.find('#content').children()).removeClass('loading');
 
-            if (!$h.find('nav').is('.empty')) {
-              $('nav').html($h.find('nav').children());
-            }
-
             if (window._gaq)
               _gaq.push(['_trackPageview']);
 
@@ -177,8 +173,9 @@ jQuery(function ($) {
       }
 
       // mobile layout
-      if (window._gaq)
+      if (window._gaq) {
         _gaq.push(['_trackEvent', 'Mobile 2014', window.location.href]);
+      }
 
       // Make sure we give back the desktop stuff if the user
       // had load the page in mobile layout but then resize the window
@@ -223,63 +220,6 @@ jQuery(function ($) {
       }
     );
   }
-
-  // init: Load sponsors from API if it's empty (happen on sub-domain sites),
-  // or if the page is loaded from AppCache
-  // Note: code moved to sponsor.js
-
-  // pageload: news widget
-  // Note: code moved to widget.js
-
-  // init: Analytics tracking for Sponsors
-  // Note: code removed
-
-  // init: CSS hover menu alternative for touch devices
-  // Need to test on actual device
-  $('nav > ul > li').bind(
-    'touchstart',
-    function () {
-      var $this = $(this);
-      $this.addClass('selected');
-      $(document.body).bind(
-        'touchend',
-        function (ev) {
-          $this.removeClass('selected');
-          $(this).unbind(ev);
-        }
-      );
-    }
-  );
-
-  // pageload: Put random selected mobile logo into header
-  // mobileSponsorLogo() is also called by .sponsors.empty function
-  // Note: code removed 
-
-  // pageload: Put a shortcut to the current section on program page
-  // Note: code removed
-
-  // pageload: checkAppCache
-  // if the browser tab has been opened for kAppCacheCheckingInterval
-  // the next pageload will trigger AppCache check update
-  // Note: code removed
-
-  // fullpageload: social buzz on homepage #sidebar2
-  // Note: code moved to widget.js
-
-  // fullpageload: ipv6 block on homepage #sidebar2
-  // Note: code removed
-
-  // fullpageload: countdown on homepage #sidebar2
-  // Note: code removed
-
-  // deferpageload: hide iframe in .hideInMobile iframe
-  // Note: code removed
-
-  // pageload: the big program table on program page
-  // Note: code removed
-
-  // This is a cached HTML. Let's insert date as version.
-  // Note: code removed
 
   // Start everything.
   PageHandler.init();
