@@ -14,7 +14,8 @@ jQuery(function ($) {
       $.getJSON(
         rootURL + '/api/news/?callback=?',
         function (data) {
-          if (!data) {
+          if (!data || data['news'].length === 0) {
+            $('.news').hide();
             return;
           }
           var $news_list = $('.news > .news_list.empty').removeClass('empty');
