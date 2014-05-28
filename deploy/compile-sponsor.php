@@ -1,4 +1,45 @@
 <?php
+function make_sponsor($SPON) {
+  return array(
+    'name'     => trim($SPON[0]),
+    'level'    => trim($SPON[1]),
+    'url'      => trim($SPON[2]),
+    'logoUrl'  => trim($SPON[3]),
+    'desc'     => trim($SPON[4]),
+    'enName'   => trim($SPON[5]),
+    'zhCnName' => trim($SPON[6]),
+    'zhCnDesc' => trim($SPON[7]),
+  );
+}
+
+function validate_sponsor_data($sponsor) {
+  $ret = TRUE;
+
+  if (!isset($sponsor['name'])) {
+    print "SKIP unknown sponsor. Please fill the 'name' field";
+    return FALSE;
+  }
+
+  $checklist = array('level', 'url', 'logoUrl', 'desc');
+
+  foreach ($checklist as $item) {
+    if (!isset($sponsor[$item]) || $sponsor[$item] == "") {
+      print "SKIP sponsor ".$sponsor['name'];
+      print " because '".$item."' is empty.\n";
+      $ret = FALSE;
+    }
+  }
+
+  // Check if logo file exists
+  $logoPath = WEBSITE_PATH.SPONSOR_LOGO_RELATIVE_PATH.$sponsor['logoUrl'];
+  if ($sponsor['logoUrl'] != "" && !file_exists($logoPath)) {
+    print "SKIP sponsor ".$sponsor['name'];
+    print " because logo '".$sponsor['logoUrl']."' doesn't exist.\n";
+    $ret = FALSE;
+  }
+  return $ret;
+}
+
 function get_sponsors_list_from_gdoc() {
 
 	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . SPONSOR_LIST_KEY . '&range=A2%3AI999&output=csv', 'r');
@@ -12,41 +53,43 @@ function get_sponsors_list_from_gdoc() {
 	// name, level, url, logoUrl, desc, enName, enDesc, zhCnName, zhCnDesc
 	while (($SPON = fgetcsv($handle)) !== FALSE) {
 
-    // only keep sponsors who assigned level and logo image
-    if (!isset($SPON[1]) || trim($SPON[1]) === "") continue;
-    if (trim($SPON[3]) === "") continue;
+    $sponsor = make_sponsor($SPON);
+    if (!validate_sponsor_data($sponsor)) {
+      continue;
+    }
 
-    $level = strtolower(trim($SPON[1]));
+    $level = strtolower($sponsor['level']);
 		if (!isset($SPONS[$level])) {
 			$SPONS[$level] = array();
 		}
 
+    // Create JSON object
     $SPON_obj = array(
       'name' => array(
-        'zh-tw' => $SPON[0]
+        'zh-tw' => $sponsor['name']
       ),
       'desc' => array(
-        'zh-tw' => Markdown_Without_Markup($SPON[4])
+        'zh-tw' => Markdown_Without_Markup($sponsor['desc'])
       ),
-      'url' => $SPON[2],
-      'logoUrl' => SPONSOR_LOGO_PATH.$SPON[3],
+      'url' => $sponsor['url'],
+      'logoUrl' => MARKSITE_ABSOLUTE_PATH.SPONSOR_LOGO_RELATIVE_PATH.$sponsor['logoUrl'],
     );
     
 
-		if (trim($SPON[5])) {
-			$SPON_obj['name']['en'] = $SPON[5];
+		if ($sponsor['enName']) {
+			$SPON_obj['name']['en'] = $sponsor['enName'];
 		}
 
-		if (trim($SPON[6])) {
-			$SPON_obj['desc']['en'] = Markdown_Without_Markup($SPON[6]);
+		if ($sponsor['enDesc']) {
+			$SPON_obj['desc']['en'] = Markdown_Without_Markup($sponsor['enDesc']);
 		}
 
-		if (trim($SPON[7])) {
-			$SPON_obj['name']['zh-cn'] = $SPON[7];
+		if ($sponsor['zhCnName']) {
+			$SPON_obj['name']['zh-cn'] = $sponsor['zhCnName'];
 		}
 
-		if (trim($SPON[8])) {
-			$SPON_obj['desc']['zh-cn'] = Markdown_Without_Markup(linkify($SPON[8]));
+		if ($sponsor['zhCnDesc']) {
+			$SPON_obj['desc']['zh-cn'] = Markdown_Without_Markup(linkify($sponsor['zhCnDesc']));
 		}
 
 		array_push ($SPONS[$level], $SPON_obj);

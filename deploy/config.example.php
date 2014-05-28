@@ -15,7 +15,7 @@ define('WEBSITE_PATH', '../../2014-beta/');  // Final output
 
 # marksite configurations
 define('MARKSITE_ABSOLUTE_PATH', '/2014-beta/' );
-define('SPONSOR_LOGO_PATH', '/2014-beta/sponsors/' );
+define('SPONSOR_LOGO_RELATIVE_PATH', 'sponsors/' );
 define('MARKSITE_SRC_PATH', '../src-tmp/' );
 define('MARKSITE_DST_PATH', '../tmp/' );
 define('MARKSITE_TEMPLATE_PATH', '../../theme/marksite/page.php' );
