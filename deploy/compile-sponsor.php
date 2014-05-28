@@ -7,8 +7,9 @@ function make_sponsor($SPON) {
     'logoUrl'  => trim($SPON[3]),
     'desc'     => trim($SPON[4]),
     'enName'   => trim($SPON[5]),
-    'zhCnName' => trim($SPON[6]),
-    'zhCnDesc' => trim($SPON[7]),
+    'enDesc'   => trim($SPON[6]),
+    'zhCnName' => trim($SPON[7]),
+    'zhCnDesc' => trim($SPON[8]),
   );
 }
 
