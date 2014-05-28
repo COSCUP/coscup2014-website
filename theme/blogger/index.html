@@ -96,16 +96,13 @@
 &lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
-        gapi.load(&quot;iframes-styles-bubble&quot;, function() {
-          if (window.iframes &amp;&amp; iframes.open) {
-            iframes.open(
-                &#39;//www.blogger.com/navbar.g?targetBlogID\0751507397902127725653\46blogName\75COSCUP+%E9%96%8B%E6%BA%90%E4%BA%BA%E5%B9%B4%E6%9C%83\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://blog.coscup.org/search\46blogLocale\75zh_TW\46v\0752\46homepageUrl\75http://blog.coscup.org/\46blogFollowUrl\75https://plus.google.com/101434041225212178932\46vt\758892972770321746946&#39;,
-                {
-                  container: &quot;navbar-iframe-container&quot;,
-                  id: &quot;navbar-iframe&quot;
-                },
-                {
-                });
+        gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+          if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+            gapi.iframes.getContext().openChild({
+                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0751507397902127725653\46blogName\75COSCUP+%E9%96%8B%E6%BA%90%E4%BA%BA%E5%B9%B4%E6%9C%83\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://blog.coscup.org/search\46blogLocale\75zh_TW\46v\0752\46homepageUrl\75http://blog.coscup.org/\46blogFollowUrl\75https://plus.google.com/101434041225212178932\46vt\758892972770321746946&#39;,
+                where: document.getElementById(&quot;navbar-iframe-container&quot;),
+                id: &quot;navbar-iframe&quot;
+            });
           }
         });
       &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
@@ -122,13 +119,12 @@ head.appendChild(script);
     </b:widget>
   </b:section>
 <div id='header'>
-  <div class='blue'/>
-    <img id="mobile-header" src='http://coscup.org/2014/assets/mobile/header.jpg' width='100%'/></div>
+    <img id="mobile-header" src='http://coscup.org/2014/assets/mobile/header.jpg' width='100%'/>
     <div class='wrap'>
       <div id='logo'><a href='http://coscup.org/2014/zh-tw/index.html'>COSCUP 2014</a></div>
-        <ul id='languages' class='no-decoration'>
-          <li><a href='#'>正體</a></li>
-        </ul>
+      <ul id='languages' class='no-decoration'>
+        <li><a href='#'>正體</a></li>
+      </ul>
       <ul id="desktop-social-links" class="no-decoration">
         <li><a href='https://www.facebook.com/coscup' target='_blank' title='facebook'><img src='http://coscup.org/2014/assets/icon_fb.png'/></a></li>
         <li><a href='https://plus.google.com/101434041225212178932' target='_blank' title='Google+'><img src='http://coscup.org/2014/assets/icon_gplus.png'/></a></li>
