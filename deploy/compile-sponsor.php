@@ -15,7 +15,7 @@ function make_sponsor($SPON) {
 function validate_sponsor_data($sponsor) {
   $ret = TRUE;
 
-  if (!isset($sponsor['name'])) {
+  if (!isset($sponsor['name']) || $sponsor['name'] == "") {
     print "SKIP unknown sponsor. Please fill the 'name' field";
     return FALSE;
   }
