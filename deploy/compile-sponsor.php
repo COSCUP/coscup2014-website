@@ -139,7 +139,7 @@ function get_donate_list_from_gdoc() {
 }
 
 function get_sponsor_info_localize($SPON, $type='name', $locale='zh-tw', $fallback='zh-tw') {
-	if ($SPON[$type][$locale]) {
+	if (isset($SPON[$type][$locale])) {
 		return $SPON[$type][$locale];
 	}
 	return $SPON[$type][$fallback];
@@ -164,7 +164,7 @@ function get_sponsors_html($SPONS, $DONATES, $lang = 'zh-tw') {
     return $html;
 
   foreach ($levels as &$level) {
-    if (!$SPONS[$level]) continue;
+    if (!isset($SPONS[$level]) || !$SPONS[$level]) continue;
     // donor should before media partners
     if ($level === 'media' && count($DONATES) > 0) {
       $html .= sprintf('<h1 id="donor" data-l10n-id="personal"></h1>'."\n");
