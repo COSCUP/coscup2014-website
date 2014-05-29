@@ -168,7 +168,7 @@ h2 {
     background: white;
 }
 #sponsor li img {
-  width: 178px;
+  max-width: 178px;
 }
 
 #content {
