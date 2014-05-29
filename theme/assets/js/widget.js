@@ -31,7 +31,6 @@ jQuery(function ($) {
         });
     }
   }
-  $(window).bind('pageload', loadNewsWidget);
 
   // fullpageload: social buzz on homepage #sidebar2
   function socialBuzz() {
@@ -129,5 +128,8 @@ jQuery(function ($) {
       }
     );
   }
-  $(window).bind('fullpageload', socialBuzz);
+
+  // init widgets
+  loadNewsWidget();
+  socialBuzz();
 });
