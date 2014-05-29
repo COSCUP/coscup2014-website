@@ -266,7 +266,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
 	}
 	$html['program'] .= '</ul>' . "\n\n";
 
-	$html['program'] .= '<div id="navTab" class="nav"><ul>';
+	$html['program'] .= '<div id="navTab" class="nav"><ul class="no-decoration">';
 
 	foreach (array(1, 2) as $day) {
 		$html['program'] .= sprintf('<li><a href="#day%d_am">%s</a></li>'."\n",
@@ -371,10 +371,10 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
                           htmlspecialchars($room_list[$program['room']][$lang]));
        if (isset($program['youtube'])) {
          $html['program'] .= sprintf('  <div class="video"><a href="http://www.youtube.com/watch?v=%s">', $program['youtube'][0]);
-         $html['program'] .= '<img src="/2014-theme/assets/icon_camera.png" /></a></div>';
+         $html['program'] .= '<img src="/2014/assets/icon_camera.png" /></a></div>';
        }
        if ($program['slide']) {
-         $html['program'] .= sprintf('  <div class="slide"><a href="%s"><img src="/2014-theme/assets/icon_slide.png" /></a></div>', $program['slide']);
+         $html['program'] .= sprintf('  <div class="slide"><a href="%s"><img src="/2014/assets/icon_slide.png" /></a></div>', $program['slide']);
        }
        $html['program'] .= sprintf('  <div class="community">%s</div>',
            htmlspecialchars($community_list[$program['community']]));
