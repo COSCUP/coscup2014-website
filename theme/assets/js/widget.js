@@ -12,7 +12,7 @@ jQuery(function ($) {
   function loadNewsWidget() {
     if ($('.news > .news_list.empty').length) {
       $.getJSON(
-        rootURL + '/api/news/?callback=?',
+        'http://coscup.org/2014/api/news/?callback=?',
         function (data) {
           if (!data || data['news'].length === 0) {
             $('.news').hide();

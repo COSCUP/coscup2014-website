@@ -11,7 +11,6 @@ jQuery(function ($) {
 
     // Save existing nodes
     var $existingSponsors = $sponsors.children();
-    console.log('existing sponsor! ' + $existingSponsors);
     $sponsors.empty();
 
     $.each(sponsorLevels, function (i, level) {
@@ -26,7 +25,7 @@ jQuery(function ($) {
             // Assume that there is no special chars to escape
             $u.append(
               '<li><a href="' + sponsor.url + '" target="_blank">'
-              + '<img title="' + sponsor.name[lang] + '" src="' + sponsor.logoUrl + '" />'
+              + '<img title="' + sponsor.name[lang] + '" src="http://coscup.org' + sponsor.logoUrl + '" />'
               + '</a></li>'
             );
           }
@@ -71,7 +70,7 @@ jQuery(function ($) {
 
   function getData(callback) {
     $.getJSON(
-      rootURL + '/api/sponsors/sponsors.json.js',
+      'http://coscup.org/2014/api/sponsors/?callback=?',
       function (data) {
         // FIXME make sure it won't have event racing
         document.l10n.ready(function() {

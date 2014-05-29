@@ -212,7 +212,7 @@ jQuery(function ($) {
   if ($('nav.empty').length) {
     // Fetch site nav from remove JSON api
     $.getJSON(
-      rootURL + '/api/menu/?callback=?',
+      'http://coscup.org/2014/api/menu/?callback=?',
       function (data) {
         var $nav = $('nav').removeClass('empty');
         $nav.html(data[lang].replace(/href="(\/[^\/])/g, 'href="http://coscup.org$1'));
