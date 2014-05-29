@@ -5,10 +5,15 @@
     <meta content='500674948' property='fb:admins'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
-    <link href="http://coscup.org/2014/assets/normalize.css" type= "text/css" rel="stylesheet" />
+    <link href='http://coscup.org/2014/assets/normalize.css' rel='stylesheet' type='text/css'/>
     <link href='http://coscup.org/2014/assets/mobile.css' media='handheld, screen and (max-width: 480px)' rel='stylesheet' type='text/css'/>
     <link href='http://coscup.org/2014/assets/style.css' media='print, screen and (min-width: 481px)' rel='stylesheet' type='text/css'/>
     <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="http://coscup.org/2014/assets/style.css" media="print, screen"/><![endif]-->
+  <!--locales-->
+  <!--[if gt IE 8]><!-->
+      <link rel='localization' href='http://coscup.org/2014/assets/locales/manifest.json'/>
+      <script type='text/javascript' src='http://coscup.org/2014/assets/js/l20n.min.js'/>
+  <!--<![endif]-->
     <link href='http://coscup.org/2014/assets/favicon.ico' rel='shortcut icon' type='image/x-icon'/>
     <meta content='width=device-width' name='viewport'/>
     <meta content='http://coscup.org/2014/assets/og-image.jpg' property='og:image'/>
@@ -119,13 +124,13 @@ head.appendChild(script);
     </b:widget>
   </b:section>
 <div id='header'>
-    <img id="mobile-header" src='http://coscup.org/2014/assets/mobile/header.jpg' width='100%'/>
+    <img id='mobile-header' src='http://coscup.org/2014/assets/mobile/header.jpg' width='100%'/>
     <div class='wrap'>
       <div id='logo'><a href='http://coscup.org/2014/zh-tw/index.html'>COSCUP 2014</a></div>
-      <ul id='languages' class='no-decoration'>
+      <ul class='no-decoration' id='languages'>
         <li><a href='#'>正體</a></li>
       </ul>
-      <ul id="desktop-social-links" class="no-decoration">
+      <ul class='no-decoration' id='desktop-social-links'>
         <li><a href='https://www.facebook.com/coscup' target='_blank' title='facebook'><img src='http://coscup.org/2014/assets/icon_fb.png'/></a></li>
         <li><a href='https://plus.google.com/101434041225212178932' target='_blank' title='Google+'><img src='http://coscup.org/2014/assets/icon_gplus.png'/></a></li>
         <li><a href='http://www.plurk.com/coscup' target='_blank' title='plurk'><img src='http://coscup.org/2014/assets/icon_plurk.png'/></a></li>
@@ -135,8 +140,8 @@ head.appendChild(script);
         <li><a href='http://www.youtube.com/user/thecoscup?feature=watch' target='_blank' title='youtube'><img src='http://coscup.org/2014/assets/icon_utube.png'/></a></li>
       </ul>
       <nav id='nav-wrap'>
-        <div id="mobile-menu-icon" data-l10n-id="menu">選單</div>
-        <ul id='mainNav' class='no-decoration'>
+        <div data-l10n-id='menu' id='mobile-menu-icon'>選單</div>
+        <ul class='no-decoration' id='mainNav'>
           <li><a href='http://coscup.org/2014/zh-tw/index.html'>首頁</a></li>
           <li><a href='http://coscup.org/2014/zh-tw/about/'>活動簡介</a></li>
           <li><a href='http://coscup.org/2014/zh-tw/venue/'>地點</a></li>
@@ -162,7 +167,7 @@ head.appendChild(script);
 <div id='content'>
 <!-- content // -->
   <!-- blogger data -->
-  <b:section id='left' class='blog' showaddelement='no'>
+  <b:section class='blog' id='left' showaddelement='no'>
     <b:widget id='Blog1' locked='true' title='網誌文章' type='Blog'>
       <b:includable id='main' var='top'>
         <b:if cond='data:top.showDummy'>
@@ -1161,7 +1166,7 @@ head.appendChild(script);
 </div>
 </div></div>
 <div id='footer'>
-  <ul class="no-decoration">
+  <ul class='no-decoration'>
       <li>&#169; 2014 COSCUP |<a href='#'> 聯絡我們</a> | </li>
         <li><a href='http://coscup.org/2006/' target='_blank'>2006</a>|</li>
         <li><a href='http://coscup.org/2007/' target='_blank'>2007</a>|</li>
@@ -1178,7 +1183,7 @@ head.appendChild(script);
 //<![CDATA[
   // FIXME: global ojects!
   var lang = (navigator.language || 'zh-TW').toLowerCase();
-  var rootURL = window.location.origin + '/2014/';
+  var rootURL = 'http://coscup.org/2014/';
   var themeURL = '/2014/assets/';
 
   // implicit use sponsor display (which is decided by CSS media query)
@@ -1192,9 +1197,10 @@ head.appendChild(script);
 </script>
 
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js' type='text/javascript'/>
-<script src='http://coscup.org/2014/assets/js/swipe.js' type='text/javascript'/>
-<script src='http://coscup.org/2014/assets/js/script.js' type='text/javascript'/>
 <script src='http://coscup.org/2014/assets/js/respond.min.js' type='text/javascript'/>
-<script type="text/javascript" src="http://coscup.org/2014/assets/js/bootstrap-scrollspy.js"></script>
+<script src='http://coscup.org/2014/assets/js/swipe.js' type='text/javascript'/>
+<script src='http://coscup.org/2014/assets/js/sponsor.js' type='text/javascript'/>
+<script src='http://coscup.org/2014/assets/js/script.js' type='text/javascript'/>
+<script src='http://coscup.org/2014/assets/js/bootstrap-scrollspy.js' type='text/javascript'/>
 </body>
 </html>
