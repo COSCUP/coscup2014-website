@@ -409,7 +409,7 @@ if (
 	|| $program_community_list === FALSE
 )
 {
-	print "ERROR! Unable to download program list from Google Docs.\n";
+	print "Notice: skip Program list from Google Docs.\n";
 }
 else
 {

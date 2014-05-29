@@ -93,7 +93,7 @@ $live_list = get_live_list_from_gdoc();
 
 if ($live_list === FALSE)
 {
-    print "ERROR! Unable to download live list from Google Docs.\n";
+    print "Notice: skip Live list from Google Docs.\n";
 }
 else
 {

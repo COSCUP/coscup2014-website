@@ -11,10 +11,6 @@ function linkify($text){
 	return $text;
 }
 
-function anchor_name($s) {
-	return str_replace(" ", "-", trim($s));
-}
-
 print ("== Generating Sponsors ==\n");
 include ("compile-sponsor.php");
 print ("\n");

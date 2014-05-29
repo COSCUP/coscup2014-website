@@ -75,7 +75,7 @@ $news_list = get_news_list_from_gdoc();
 
 if ($news_list === FALSE)
 {
-    print "ERROR! Unable to download news list from Google Docs.\n";
+    print "Notice: skip News list from Google Docs.\n";
 }
 else
 {

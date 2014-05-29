@@ -216,7 +216,7 @@ $SPONS = get_sponsors_list_from_gdoc();
 $DONATES = get_donate_list_from_gdoc();
 
 if ($SPONS === FALSE) {
-	print "ERROR! Unable to download sponsors list from Google Docs.\n";
+	print "Notice: skip Sponsor list from Google Docs.\n";
 }
 else {
 	foreach ($sponsors_output as $lang => $path) {
