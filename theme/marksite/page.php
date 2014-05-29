@@ -24,7 +24,7 @@ $theme_assets_uri = MARKSITE_ABSOLUTE_PATH."assets/";
 <meta property="og:title" content="2014 COSCUP" />
 <meta name="og:description" content="COSCUP 2014, 7/19-20 中央研究院。台灣 Opens Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。">
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://coscup.org/2014/" />
+<meta property="og:url" content="http://coscup.org/2014/zh-tw/" />
 <meta property="og:site_name" content="2014 COSCUP" />
 <meta property="og:image" content="http://coscup.org/2014/assets/og-image.jpg" />
 
