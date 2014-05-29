@@ -165,6 +165,10 @@ h2 {
     padding: 12px 0;
     font-size: 12px;
     border: 1px solid #A7C75A;
+    background: white;
+}
+#sponsor li img {
+  width: 178px;
 }
 
 #content {
