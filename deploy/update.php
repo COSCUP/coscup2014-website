@@ -1,8 +1,6 @@
 <?php
 include_once("config.php");
 
-header('Content-Type: text/plain; charset=UTF-8');
-
 if ( trim(exec('whoami')) !== RUNNING_USER ) {
 	die("Error: Please run with the specified user: ".RUNNING_USER);
 }
