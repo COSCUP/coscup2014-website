@@ -397,43 +397,43 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
   return $html;
 }
 
-$program_list = get_program_list_from_gdoc();
-$program_types_list = get_program_types_from_gdoc();
-$program_rooms_list = get_program_rooms_from_gdoc();
-$program_community_list = get_program_community_from_gdoc();
+function write_program_files($program_list_output, $json_output) {
+  $program_list = get_program_list_from_gdoc();
+  $program_types_list = get_program_types_from_gdoc();
+  $program_rooms_list = get_program_rooms_from_gdoc();
+  $program_community_list = get_program_community_from_gdoc();
 
-if (
-	$program_list === FALSE
-	|| $program_types_list === FALSE
-	|| $program_rooms_list === FALSE
-	|| $program_community_list === FALSE
-)
-{
-	print "Notice: skip Program list from Google Docs.\n";
-}
-else
-{
-	foreach ($program_list_output as $type => $l10n)
-	{
-		foreach ($l10n as $lang => $path)
-		{
-      $program_list_html = get_program_list_html($program_list, $program_types_list, $program_rooms_list, $program_community_list, $lang);
-      print "Write program into " . $path . " .\n";
-      $fp = fopen($path, "w");
-      fwrite($fp, $program_list_html[$type]);
-      fwrite($fp, '<div id="lock_background"><div id="program_detail" class="program"></div></div>');
-			fclose($fp);
-		}
-	}
+  if ($program_list === FALSE
+      || $program_types_list === FALSE
+      || $program_rooms_list === FALSE
+      || $program_community_list === FALSE)
+  {
+    print "Notice: skip Program list from Google Docs.\n";
+  }
+  else
+  {
+    foreach ($program_list_output as $type => $l10n)
+    {
+      foreach ($l10n as $lang => $path)
+      {
+        $program_list_html = get_program_list_html($program_list, $program_types_list, $program_rooms_list, $program_community_list, $lang);
+        print "Write program into " . $path . " .\n";
+        $fp = fopen($path, "w");
+        fwrite($fp, $program_list_html[$type]);
+        fwrite($fp, '<div id="lock_background"><div id="program_detail" class="program"></div></div>');
+        fclose($fp);
+      }
+    }
 
-	print "Write program into " . $json_output["program"] . " .\n";
-	$fp = fopen ($json_output["program"], "w");
-	fwrite ($fp, json_encode(
-		array(
-			'program' => $program_list,
-			'type' => $program_types_list,
-			'room' => $program_rooms_list,
-			'community' => $program_community_list
-		)));
-	fclose ($fp);
+    print "Write program into " . $json_output["program"] . " .\n";
+    $fp = fopen ($json_output["program"], "w");
+    fwrite ($fp, json_encode(
+              array(
+                'program' => $program_list,
+                'type' => $program_types_list,
+                'room' => $program_rooms_list,
+                'community' => $program_community_list
+                )));
+    fclose ($fp);
+  }
 }

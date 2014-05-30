@@ -1,15 +1,9 @@
 <?php
 include_once ("markdown-without-markup.php");
+include_once ("utils.php");
 
 date_default_timezone_set('Asia/Taipei');
 setlocale (LC_ALL, "en_US.UTF-8");
-
-// Utility functions
-function linkify($text){
-	$text = preg_replace('/(?<!\[|\<|\]\()(https?:\/\/[a-zA-Z0-9\/\&\$\#\+\;\:\?\@\%\.\-\=\_]+)/', '[$0]($0)', $text);
-	// FIXME: find better way to regexp this
-	return $text;
-}
 
 print ("== Generating Sponsors ==\n");
 include ("compile-sponsor.php");
@@ -21,6 +15,7 @@ print ("\n");
 
 print ("== Generating Program ==\n");
 include ("compile-program.php");
+write_program_files($program_list_output, $json_output);
 print ("\n");
 
 print ("== Generating Live Streaming ==\n");
