@@ -9,5 +9,6 @@ deploy/marksite/
 deploy/tmp/
 deploy/src-tmp/
 deploy/config.php
+deploy/config-stage.php
 deploy/files/
 

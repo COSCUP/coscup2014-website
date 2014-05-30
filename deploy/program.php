@@ -4,7 +4,7 @@ date_default_timezone_set('Asia/Taipei');
 setlocale(LC_ALL, "en_US.UTF-8");
 header("Content-Type: text/html; charset=UTF-8");
 
-include_once("config.php");
+include_once("config-stage.php");
 include_once("markdown-without-markup.php");
 include_once("utils.php");
 include_once("compile-program.php");
