@@ -42,10 +42,23 @@ jQuery(function ($) {
     }
   }
 
+  function initLanguageSetting() {
+    document.l10n.once(function() {
+      document.l10n.requestLocales(lang);
+    });
+    $('#languages a').each(function() {
+      $(this).click(function() {
+        var lang = this.dataset.lang;
+        document.l10n.requestLocales(lang);
+      });
+    });
+  }
+
   // start everything
   menuInit();
   if (isMobile) {
     mobileInit();
   }
+  initLanguageSetting();
 
 });

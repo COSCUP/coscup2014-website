@@ -66,9 +66,9 @@ if (isset($styles)) {
     <div class="wrap">
       <div id="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">COSCUP 2014</a></div>
         <ul id="languages" class="no-decoration">
-          <li><a href="<?php echo $rootPath;?>en/" title="English" lang="en">EN</a></li>
-          <li><a href="<?php echo $rootPath;?>zh-tw/" title="正體中文" lang="zh-TW">正體</a></li>
-          <li><a href="<?php echo $rootPath;?>zh-cn/" title="简体中文" lang="zh-CN">简体</a></li>
+          <li><a href="<?php echo $rootPath;?>en/" title="English" data-lang="en-US">EN</a></li>
+          <li><a href="<?php echo $rootPath;?>zh-tw/" title="正體中文" data-lang="zh-TW">正體</a></li>
+          <li><a href="<?php echo $rootPath;?>zh-cn/" title="简体中文" data-lang="zh-CN">简体</a></li>
         </ul>
 	    <ul id="desktop-social-links" class="no-decoration">
         <li><a href="https://www.facebook.com/coscup" title="facebook" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
@@ -130,7 +130,8 @@ if (isset($styles)) {
 </body>
 <script>
   // FIXME: global ojects!
-  var lang = (navigator.language || 'zh-TW').toLowerCase();
+  //var lang = (navigator.language || 'zh-TW').toLowerCase();
+  var lang = window.location.href.match(/2014\/([-\w]+)\//)[1];
   var rootURL = window.location.origin + '<?php echo $rootPath;?>';
   var themeURL = '<?php echo $theme_assets_uri; ?>';
 
