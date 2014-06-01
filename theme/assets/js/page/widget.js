@@ -5,37 +5,32 @@
  * - socialBuzz: use internal plurk api and external twitter api to load posts from social media 
  *
  * */
+define(['jquery', 'context'], function($, context) {
 
-jQuery(function ($) {
+  'use strict';
 
-  // pageload: news widget
+  var api_url = context.origin + context.api_path + '/news/?callback=?'; 
+
   function loadNewsWidget() {
     if ($('.news > .news_list.empty').length) {
-      $.getJSON(
-        'http://coscup.org/2014/api/news/?callback=?',
-        function (data) {
+      $.getJSON(api_url, function(data) {
           if (!data || data['news'].length === 0) {
             $('.news').hide();
             return;
           }
           var $news_list = $('.news > .news_list.empty').removeClass('empty');
-          $.each(
-            data['news'].slice(0, 3),
-            function (i, news) {
-              $news_list.append(
-                '<div class="list"><span>' + news.date + '<b>' + news.source + '</b></span>' +
-                  '<a href="' + news.link + '" target="_blank">' +
-                  '<div class="title">' + news.title+ '</div></a></div>'
-              );
-            });
-        });
+          $.each(data['news'].slice(0, 3), function (i, news) {
+            $news_list.append(
+              '<div class="list"><span>' + news.date + '<b>' + news.source + '</b></span>' +
+                '<a href="' + news.link + '" target="_blank">' +
+                '<div class="title">' + news.title+ '</div></a></div>'
+            );
+          });
+      });
     }
   }
 
-  // fullpageload: social buzz on homepage #sidebar2
   function socialBuzz() {
-    // if (!$('#socialbuzz').length)
-    //   return;
 
     $('#socialbuzz').delegate(
       'a',
@@ -45,13 +40,6 @@ jQuery(function ($) {
         return false;
       }
     );
-    $(window).one(
-      'pageunload',
-      function () {
-        $('#socialbuzz').undelegate('a', 'click');
-      }
-    );
-
     var plurks, twits;
     var showSocialBuzz = function (plurks, twits) {
       var $u = $('<ul />');

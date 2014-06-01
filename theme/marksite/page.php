@@ -1,6 +1,5 @@
 <?php
-$rootPath = MARKSITE_ABSOLUTE_PATH;
-$theme_assets_uri = MARKSITE_ABSOLUTE_PATH."assets/";
+$theme_assets_uri = $home_path."assets/";
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +16,7 @@ $theme_assets_uri = MARKSITE_ABSOLUTE_PATH."assets/";
 <!--locales-->
 <!--[if gt IE 8]><!-->
   <link rel="localization" href="<?php echo $theme_assets_uri;?>locales/manifest.json">
-  <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/l20n.min.js"></script>
+  <script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/lib/l20n.min.js"></script>
 <!--<![endif]-->
 
 <!--fb shareing-->
@@ -34,15 +33,6 @@ $theme_assets_uri = MARKSITE_ABSOLUTE_PATH."assets/";
 <link href="<?php echo $theme_assets_uri;?>normalize.css" type= "text/css" rel="stylesheet" />
 <link media="only screen and (max-width:768px)" href="<?php echo $theme_assets_uri;?>mobile.css" type= "text/css" rel="stylesheet" />
 <link media="screen and (min-width:769px)" href="<?php echo $theme_assets_uri;?>style.css" type="text/css" rel="stylesheet" />
-<?php
-if (isset($styles)) {
-  foreach ( $styles as $file ) {
-?>
-<link href="<?php echo $file;?>" type="text/css" rel="stylesheet" />
-<?php
-  }
-}
-?>
 <!--favicon-->
 <link type="image/x-icon" href="<?php echo $theme_assets_uri;?>favicon.ico" rel="shortcut icon">
 
@@ -59,6 +49,25 @@ if (isset($styles)) {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 </script>
+
+<script src="<?php echo $theme_assets_uri;?>js/lib/require.js"></script>
+<script>
+    require.config({
+      baseUrl: "<?php echo $theme_assets_uri;?>js"
+    });
+    //Load common code that includes config, then load the specific
+    //logic for this page. 
+    //Do the require calls here instead of a separate file 
+    //so after a build there are only 2 HTTP requests instead of three.
+    require(['config', 'main-menu', 'sidebar-sponsor'], function () {
+      require(['page/<?php echo $this->current[1];?>'], null, function(err) {
+        console.log(err);
+        var failedId = err.requireModules && err.requireModules[0];
+        console.log(failedId + ' is not existing');
+      });
+    });
+</script>
+
 </head>
 <body>
 <div id="header">
@@ -66,9 +75,9 @@ if (isset($styles)) {
     <div class="wrap">
       <div id="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">COSCUP 2014</a></div>
         <ul id="languages" class="no-decoration">
-          <li><a href="<?php echo $rootPath;?>en/" title="English" data-lang="en-US">EN</a></li>
-          <li><a href="<?php echo $rootPath;?>zh-tw/" title="正體中文" data-lang="zh-TW">正體</a></li>
-          <li><a href="<?php echo $rootPath;?>zh-cn/" title="简体中文" data-lang="zh-CN">简体</a></li>
+          <li><a href="<?php echo $home_path;?>en/" title="English" data-lang="en-US">EN</a></li>
+          <li><a href="<?php echo $home_path;?>zh-tw/" title="正體中文" data-lang="zh-TW">正體</a></li>
+          <li><a href="<?php echo $home_path;?>zh-cn/" title="简体中文" data-lang="zh-CN">简体</a></li>
         </ul>
 	    <ul id="desktop-social-links" class="no-decoration">
         <li><a href="https://www.facebook.com/coscup" title="facebook" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
@@ -128,28 +137,4 @@ if (isset($styles)) {
   </ul>
 </div>
 </body>
-<script>
-  // FIXME: global ojects!
-  //var lang = (navigator.language || 'zh-TW').toLowerCase();
-  var lang = window.location.href.match(/2014\/([-\w]+)\//)[1];
-  var rootURL = window.location.origin + '<?php echo $rootPath;?>';
-  var themeURL = '<?php echo $theme_assets_uri; ?>';
-
-  // implicit use sponsor display (which is decided by CSS media query)
-  // to detect device, to avoid use matchmedia query in JavaScript
-  // FIXME: CSS dependent test
-  var isMobile = (document.getElementById('mySwipe').clientWidth !== 0)? true : false;
-  if (navigator.userAgent.match(/(Android|iPhone|iPod|iPad|IEMobile|Mobile)/)) {
-    isMobile = true;
-  }
-</script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/respond.min.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/swipe.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/widget.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/sponsor.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/script.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/program.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/program-filter.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>js/bootstrap-scrollspy.js"></script>
 </html>
