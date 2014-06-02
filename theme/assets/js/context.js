@@ -10,10 +10,13 @@ define(['jquery'], function($) {
     isMobile = true;
   }
 
+  var result = window.location.href.match(/2014\/([-\w]+)\//);
+  var lang = ((result && result[1]) || 'zh-tw').toLowerCase();
+
   return {
     origin: 'http://coscup.org',
     api_path: '/2014/api',
-    lang: window.location.href.match(/2014\/([-\w]+)\//)[1],
+    lang: lang,
     mobile: isMobile
   }
 });
