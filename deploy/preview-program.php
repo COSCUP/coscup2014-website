@@ -39,8 +39,8 @@ class fake_marksite
       $transformed .= '</div>'."\n";
       $transformed .= "\n";
       $title = "Program";
-      $home_path = "";
-      $this->current = array("");
+      $home_path = MARKSITE_ABSOLUTE_PATH;
+      $this->current = array('', 'program');
       ob_start();
       include (THEME_PATH.MARKSITE_PATH."page.php");
       $output = ob_get_contents();

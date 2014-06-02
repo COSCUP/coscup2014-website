@@ -1,5 +1,4 @@
 <?php
-$home_path = MARKSITE_ABSOLUTE_PATH;
 $theme_assets_uri = $home_path."assets/";
 ?>
 
