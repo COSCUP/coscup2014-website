@@ -1,7 +1,36 @@
 <?php
+function make_program($raw_data)
+{
+    $fields = array(
+      'name', 'from', 'to',
+      'room', 'type', 'community',
+      'speaker', 'speakerTitle', 'bio', 'abstract', 'language', 'slide', 'youtube'
+    );
+    $program = array();
+    $arr_length = count($fields);
+    for ($i = 0; $i <= $arr_length; $i++) {
+      if (trim($raw_data[$i]) !== '') {
+        $program[$fields[$i]] = trim($raw_data[$i]);
+      }
+    }
+    return $program;
+}
+function validate_program_data($program)
+{
+    $ret = TRUE;
+    $checklist = array('name', 'from', 'to');
+    foreach ($checklist as $item) {
+        if (!isset($program[$item]) || $program[$item] === '') {
+            print "SKIP program " . $program['name'];
+            print " because '" . $item . "' is empty.\n";
+            $ret = FALSE;
+        }
+    }
+    return $ret;
+}
+
 function get_program_list_from_gdoc($source_url)
 {
-
     $handle = @fopen($source_url, 'r');
 
     if (!$handle) {
@@ -10,68 +39,42 @@ function get_program_list_from_gdoc($source_url)
 
     $program_list = array();
 
-    // name, from, to, room, type, community, speaker, speakerTitle, bio, abstract, language, slide, youtube
-    while (($program = fgetcsv($handle)) !== FALSE) {
-        if (trim($program[0]) === '')
+    while (($PROG = fgetcsv($handle)) !== FALSE) {
+        $program = make_program($PROG);
+        if (!validate_program_data($program)) {
             continue;
-
-        $program_obj = array(
-            'name' => $program[0],
-
-            // use strtotime to convert to unix timestamp.
-            'from' => strtotime($program[1]),
-            'to' => strtotime($program[2]),
-
-            'room' => intval($program[3])
-        );
-
-        if (trim($program[4]) !== '') {
-            $program_obj['type'] = intval($program[4]);
-        }
-        if (trim($program[5]) !== '') {
-            $program_obj['community'] = intval($program[5]);
-        } else {
-            $program_obj['community'] = 0;
         }
 
-        if (trim($program[6])) {
-            $program_obj['speaker'] = $program[6];
+        // use strtotime to convert to unix timestamp.
+        $program['from'] = strtotime($program['from']);
+        $program['to'] = strtotime($program['to']);
 
-            if (trim($program[7])) {
-                $program_obj['speakerTitle'] = $program[7];
-            }
-            if (trim($program[8])) {
-                $program_obj['bio'] = Markdown_Without_Markup(linkify($program[8]));
-            }
-            if (trim($program[9])) {
-                $program_obj['abstract'] = Markdown_Without_Markup(linkify($program[9]));
-            }
+        // empty string or NULL will get 0
+        $program['room'] = intval($program['room']);
+        $program['type'] = intval($program['type']);
+        $program['community'] = intval($program['community']);
+
+        if (isset($program['bio'])) {
+            $program['bio'] = Markdown_Without_Markup(linkify($program['bio']));
+        }
+        if (isset($program['abstract'])) {
+            $program['abstract'] = Markdown_Without_Markup(linkify($program['abstract']));
         }
 
-        if (trim($program[10])) {
-            $program_obj['lang'] = $program[10];
-        }
-
-        if (trim($program[11])) {
-            $program_obj['slide'] = trim($program[11]);
-        }
-
-        if (trim($program[12])) {
-            $program_obj['youtube'] = array();
-            foreach (explode("\n", trim($program[12])) as $url) {
+        if (isset($program['youtube'])) {
+            $videos = array();
+            foreach (explode("\n", $program['youtube']) as $url) {
                 if (trim($url)) {
-                    $program_obj['youtube'][] = preg_replace('/^.+v=([^"&?\/ ]{11}).*$/', '$1', trim($url)); // only get the ID
+                    $videos[] = preg_replace('/^.+v=([^"&?\/ ]{11}).*$/', '$1', trim($url)); // only get the ID
                 }
             }
+            $program['youtube'] = $videos;
         }
 
-        if (isset($program_obj['type']) && $program_obj['type'] === 0 && $program_obj['room'] <= 0 && !isset($program_obj['speaker'])) {
-            $program_obj['isBreak'] = true;
-        } else {
-            $program_obj['isBreak'] = false;
-        }
+        // setting room = -1 and leaving speaker empty indicate a break session
+        $program['isBreak'] = ($program['room'] < 0 && !isset($program['speaker']))? true : false;
 
-        $program_list[] = $program_obj;
+        $program_list[] = $program;
     }
 
     fclose($handle);
@@ -171,7 +174,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
         )
     );
 
-    $name_replace = array(
+    /*$name_replace = array(
         'Check In' => array(
             'zh-tw' => '報到',
             'zh-cn' => '报到'
@@ -184,7 +187,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
             'zh-tw' => '午餐',
             'zh-cn' => '午餐'
         )
-    );
+    );*/
 
     $draft = array(
         'zh-tw' => '* 議程表仍有變動，請常回來查看本網頁，不另通知',
@@ -237,10 +240,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
 
     $html['program'] .= '<div id="navTab" class="nav"><ul class="no-decoration">';
 
-    foreach (array(
-        1,
-        2
-    ) as $day) {
+    foreach (array(1, 2) as $day) {
         $html['program'] .= sprintf('<li><a href="#day%d_am">%s</a></li>' . "\n", $day, $l10n[$lang]["am_day_$day"]);
         $html['program'] .= sprintf('<li><a href="#day%d_pm">%s</a></li>' . "\n", $day, $l10n[$lang]["pm_day_$day"]);
     }
@@ -299,8 +299,8 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
             }
 
             // check in & break & lunch
-            if ($program['isBreak'] && isset($name_replace[$program['name']])) {
-                $html['program'] .= sprintf('<span class="title">%s</span>', htmlspecialchars($name_replace[$program['name']][$lang]));
+            if ($program['isBreak']) {
+                $html['program'] .= sprintf('<span class="title">%s</span>', htmlspecialchars($program['name']));
                 break;
             }
 
