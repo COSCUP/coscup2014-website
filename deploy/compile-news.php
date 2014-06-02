@@ -1,7 +1,7 @@
 <?php
-function get_news_list_from_gdoc() {
+function get_news_list_from_gdoc($source_url) {
 
-    $handle = @fopen('https://spreadsheets.google.com/pub?key=' . NEWS_LIST_KEY . '&range=A2%3AD999&output=csv', 'r');
+    $handle = @fopen($source_url, 'r');
 
     if (!$handle)
     {
@@ -71,7 +71,7 @@ function get_news_list_html($NEWS_LIST, $lang = 'zh-tw') {
     return $html;
 }
 
-$news_list = get_news_list_from_gdoc();
+$news_list = get_news_list_from_gdoc($news_sheets['news']);
 
 if ($news_list === FALSE)
 {

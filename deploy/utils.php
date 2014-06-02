@@ -10,3 +10,4 @@ function linkify($text){
 function anchor_name($s) {
 	return str_replace(" ", "-", trim($s));
 }
+

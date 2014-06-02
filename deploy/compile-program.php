@@ -1,7 +1,7 @@
 <?php
-function get_program_list_from_gdoc() {
+function get_program_list_from_gdoc($source_url) {
 
-	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . PROGRAM_LIST_KEY . '&range=A2%3AM999&output=csv', 'r');
+    $handle = @fopen($source_url, 'r');
 
 	if (!$handle)
 	{
@@ -97,10 +97,9 @@ function get_program_list_from_gdoc() {
 	return $program_list;
 }
 
-function get_program_types_from_gdoc() {
+function get_program_types_from_gdoc($source_url) {
 
-	// TODO: constant gid written in uri
-	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . PROGRAM_LIST_KEY . '&gid=3&range=A2%3AB999&output=csv', 'r');
+    $handle = @fopen($source_url, 'r');
 
 	if (!$handle)
 	{
@@ -120,10 +119,9 @@ function get_program_types_from_gdoc() {
 	return $type_list;
 }
 
-function get_program_rooms_from_gdoc() {
+function get_program_rooms_from_gdoc($source_url) {
 
-	// TODO: constant gid written in uri
-	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . PROGRAM_LIST_KEY . '&gid=4&range=A2%3AD999&output=csv', 'r');
+    $handle = @fopen($source_url, 'r');
 
 	if (!$handle)
 	{
@@ -147,10 +145,8 @@ function get_program_rooms_from_gdoc() {
 	return $room_list;
 }
 
-function get_program_community_from_gdoc() {
-
-	// TODO: constant gid written in uri
-	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . PROGRAM_LIST_KEY . '&gid=5&range=A2%3AB999&output=csv', 'r');
+function get_program_community_from_gdoc($source_url) {
+    $handle = @fopen($source_url, 'r');
 
 	if (!$handle)
 	{
@@ -397,11 +393,11 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
   return $html;
 }
 
-function write_program_files($program_list_output, $json_output) {
-  $program_list = get_program_list_from_gdoc();
-  $program_types_list = get_program_types_from_gdoc();
-  $program_rooms_list = get_program_rooms_from_gdoc();
-  $program_community_list = get_program_community_from_gdoc();
+function write_program_files($program_sheets, $program_list_output, $json_output) {
+  $program_list = get_program_list_from_gdoc($program_sheets['program']);
+  $program_types_list = get_program_types_from_gdoc($program_sheets['type']);
+  $program_rooms_list = get_program_rooms_from_gdoc($program_sheets['room']);
+  $program_community_list = get_program_community_from_gdoc($program_sheets['community']);
 
   if ($program_list === FALSE
       || $program_types_list === FALSE

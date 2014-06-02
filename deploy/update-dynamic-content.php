@@ -15,7 +15,7 @@ print ("\n");
 
 print ("== Generating Program ==\n");
 include ("compile-program.php");
-write_program_files($program_list_output, $json_output);
+write_program_files($program_sheets, $program_list_output, $json_output);
 print ("\n");
 
 print ("== Generating Live Streaming ==\n");

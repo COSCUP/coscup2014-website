@@ -1,7 +1,7 @@
 <?php
-function get_live_list_from_gdoc() {
+function get_live_list_from_gdoc($source_url) {
 
-    $handle = @fopen('https://spreadsheets.google.com/pub?key=' . LIVE_LIST_KEY . '&range=A2%3AF999&output=csv', 'r');
+    $handle = @fopen($source_url, 'r');
 
     if (!$handle)
     {
@@ -89,7 +89,7 @@ function get_live_list_html($LIVE_LIST, $lang = 'zh-tw') {
     return $html;
 }
 
-$live_list = get_live_list_from_gdoc();
+$live_list = get_live_list_from_gdoc($live_sheets['live']);
 
 if ($live_list === FALSE)
 {

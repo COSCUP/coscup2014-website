@@ -16,10 +16,11 @@ class fake_marksite
   }
 
   function generate() {
-    $program_list = get_program_list_from_gdoc();
-    $program_types_list = get_program_types_from_gdoc();
-    $program_rooms_list = get_program_rooms_from_gdoc();
-    $program_community_list = get_program_community_from_gdoc();
+    global $program_sheets;
+    $program_list = get_program_list_from_gdoc($program_sheets['program']);
+    $program_types_list = get_program_types_from_gdoc($program_sheets['type']);
+    $program_rooms_list = get_program_rooms_from_gdoc($program_sheets['room']);
+    $program_community_list = get_program_community_from_gdoc($program_sheets['community']);
 
     if ($program_list &&
         $program_types_list &&

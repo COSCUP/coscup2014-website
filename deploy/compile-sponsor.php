@@ -41,9 +41,8 @@ function validate_sponsor_data($sponsor) {
   return $ret;
 }
 
-function get_sponsors_list_from_gdoc() {
-
-	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . SPONSOR_LIST_KEY . '&range=A2%3AI999&output=csv', 'r');
+function get_sponsors_list_from_gdoc($source_url) {
+	$handle = @fopen($source_url, 'r');
 
 	if (!$handle)	{
 		return FALSE; // failed
@@ -101,8 +100,8 @@ function get_sponsors_list_from_gdoc() {
 	return $SPONS;
 }
 
-function get_donate_list_from_gdoc() {
-	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . SPONSOR_LIST_KEY . '&gid=7&range=A2%3AB999&output=csv', 'r');
+function get_donate_list_from_gdoc($source_url) {
+    $handle = @fopen($source_url, 'r');
 
 	if (!$handle) {
 		return FALSE; // failed
@@ -212,8 +211,8 @@ function get_sponsors_html($SPONS, $DONATES, $lang = 'zh-tw') {
 	return $html;
 }
 
-$SPONS = get_sponsors_list_from_gdoc();
-$DONATES = get_donate_list_from_gdoc();
+$SPONS = get_sponsors_list_from_gdoc($sponsors_sheets['sponsor']);
+$DONATES = get_donate_list_from_gdoc($sponsors_sheets['donate']);
 
 if ($SPONS === FALSE) {
 	print "Notice: skip Sponsor list from Google Docs.\n";

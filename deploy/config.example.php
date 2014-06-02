@@ -5,6 +5,28 @@ define('PROGRAM_LIST_KEY', 'YOUR_GOOGLE_SPREADSHEET_API_KEY_WHICH_HAS_PROGRAM_LI
 define('NEWS_LIST_KEY', 'YOUR_GOOGLE_SPREADSHEET_API_KEY_WHICH_HAS_NEWS_LIST');
 define('LIVE_LIST_KEY', 'YOUR_GOOGLE_SPREADSHEET_API_KEY_WHICH_HAS_LIVE_LIST');
 
+# every sheet's csv data URL
+# example: https://spreadsheets.google.com/pub?key='.SPONSOR_LIST_KEY.'&gid=0&range=A2%3AD999&output=csv
+$sponsors_sheets = array(
+  'sponsor' => '',
+  'donate' => ''
+);
+
+$program_sheets = array(
+  'program' => '',
+  'room' => '', 
+  'type' => '',
+  'community' => '' 
+);
+
+$news_sheets = array(
+  'news' => '' 
+);
+
+$live_sheets = array(
+  'live' => '' 
+);
+
 # deploy path
 define('MARKSITE_PATH', 'marksite/');
 define('THEME_PATH', '../theme/');
