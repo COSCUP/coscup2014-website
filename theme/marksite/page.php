@@ -125,7 +125,8 @@ $theme_assets_uri = $home_path."assets/";
 <!--底-->
 <div id="footer">
   <ul class="no-decoration">
-    <li><span data-l10n-id="copyright"><a href="http://coscup.org/2014/en/contact/">Contact us</a></span> | </li>
+    <li><span>&copy; 2014 COSCUP<span></li>
+    <li><a data-l10n-id="contactUs" href="<?php echo $home_path.$this->current[0]."/contact/"?>">聯絡我們</a>|</li>
     <li><a href="http://coscup.org/2006/" target="_blank">2006</a>|</li>
     <li><a href="http://coscup.org/2007/" target="_blank">2007</a>|</li>
     <li><a href="http://coscup.org/2008/" target="_blank">2008</a>|</li>
