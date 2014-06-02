@@ -1,18 +1,17 @@
 <?php
-function get_live_list_from_gdoc($source_url) {
+function get_live_list_from_gdoc($source_url)
+{
 
     $handle = @fopen($source_url, 'r');
 
-    if (!$handle)
-    {
+    if (!$handle) {
         return FALSE; // failed
     }
 
     $LIVE_LIST = array();
 
     // from, to, title, speaker, url, isOnline
-    while (($live = fgetcsv($handle)) !== FALSE)
-    {
+    while (($live = fgetcsv($handle)) !== FALSE) {
         if (trim($live[4]) === "") {
             continue;
         }
@@ -26,7 +25,7 @@ function get_live_list_from_gdoc($source_url) {
             'isOnline' => (trim($live[5]) === 'yes')
         );
 
-        array_push ($LIVE_LIST, $LIVE_obj);
+        array_push($LIVE_LIST, $LIVE_obj);
     }
 
     fclose($handle);
@@ -34,7 +33,8 @@ function get_live_list_from_gdoc($source_url) {
     return $LIVE_LIST;
 }
 
-function get_live_list_html($LIVE_LIST, $lang = 'zh-tw') {
+function get_live_list_html($LIVE_LIST, $lang = 'zh-tw')
+{
 
     $l10n = array(
         'en' => array(
@@ -57,30 +57,24 @@ function get_live_list_html($LIVE_LIST, $lang = 'zh-tw') {
     $html = '';
     $html .= sprintf("<h1 id=\"Live\">%s</h1>\n", htmlspecialchars($l10n[$lang]['Live']));
     $html .= "<div class=\"live\">\n";
-    foreach ($LIVE_LIST as $idx => &$live)
-    {
+    foreach ($LIVE_LIST as $idx => &$live) {
         $html .= "    <div class=\"list\">\n";
         $html .= "<div>\n";
         $formated_from = strftime("%m/%d %R", $live['from']);
-        $formated_to = strftime("%R", $live['to']);
-        $html .= sprintf("  <span>%s - %s</span>\n", 
-                            htmlspecialchars($formated_from), htmlspecialchars($formated_to));
+        $formated_to   = strftime("%R", $live['to']);
+        $html .= sprintf("  <span>%s - %s</span>\n", htmlspecialchars($formated_from), htmlspecialchars($formated_to));
         if ($live['isOnline']) {
-          $html .= sprintf("  <span class=\"online\">%s</span>\n", htmlspecialchars($l10n[$lang]['Online']));
-        }
-        else {
-          $html .= sprintf("  <span class=\"online end\">%s</span>\n", htmlspecialchars($l10n[$lang]['Over']));
+            $html .= sprintf("  <span class=\"online\">%s</span>\n", htmlspecialchars($l10n[$lang]['Online']));
+        } else {
+            $html .= sprintf("  <span class=\"online end\">%s</span>\n", htmlspecialchars($l10n[$lang]['Over']));
         }
         $html .= "</div>\n";
         $html .= sprintf("  <div class=\"title\">%s</div>\n", htmlspecialchars($live['title']));
         $html .= sprintf("  <div class=\"speaker\">%s</div>\n", htmlspecialchars($live['speaker']));
 
         if ($live['isOnline']) {
-          $html .= sprintf("  <div class=\"link\"><a href=\"%s\" target=\"_blank\">%s</a></div>\n",
-                           htmlspecialchars($live['url']),
-                           htmlspecialchars($live['url']));
-          $html .= sprintf("  <iframe src=\"%s\" frameborder=\"0\" allowfullscreen></iframe>\n",
-                           htmlspecialchars($live['url']));
+            $html .= sprintf("  <div class=\"link\"><a href=\"%s\" target=\"_blank\">%s</a></div>\n", htmlspecialchars($live['url']), htmlspecialchars($live['url']));
+            $html .= sprintf("  <iframe src=\"%s\" frameborder=\"0\" allowfullscreen></iframe>\n", htmlspecialchars($live['url']));
         }
 
         $html .= "    </div>\n";
@@ -91,14 +85,10 @@ function get_live_list_html($LIVE_LIST, $lang = 'zh-tw') {
 
 $live_list = get_live_list_from_gdoc($live_sheets['live']);
 
-if ($live_list === FALSE)
-{
+if ($live_list === FALSE) {
     print "Notice: skip Live list from Google Docs.\n";
-}
-else
-{
-    foreach ($live_list_output as $lang => $path)
-    {
+} else {
+    foreach ($live_list_output as $lang => $path) {
         $live_list_html = get_live_list_html($live_list, $lang);
         print "Write live into " . $path . " .\n";
         $fp = fopen($path, "w");
@@ -106,3 +96,4 @@ else
         fclose($fp);
     }
 }
+

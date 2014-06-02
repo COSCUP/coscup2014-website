@@ -1,26 +1,23 @@
 <?php
-function get_news_list_from_gdoc($source_url) {
+function get_news_list_from_gdoc($source_url)
+{
 
     $handle = @fopen($source_url, 'r');
 
-    if (!$handle)
-    {
+    if (!$handle) {
         return FALSE; // failed
     }
 
     $NEWS_LIST = array();
 
     // date, title, source, link
-    while (($NEWS = fgetcsv($handle)) !== FALSE)
-    {
-        $date = trim($NEWS[0]);
-        $title = trim($NEWS[1]);
+    while (($NEWS = fgetcsv($handle)) !== FALSE) {
+        $date   = trim($NEWS[0]);
+        $title  = trim($NEWS[1]);
         $source = trim($NEWS[2]);
-        $link = trim($NEWS[3]);
+        $link   = trim($NEWS[3]);
 
-        if ($date === "" ||
-            $title === "" ||
-            $link === "") {
+        if ($date === "" || $title === "" || $link === "") {
             continue;
         }
 
@@ -31,7 +28,7 @@ function get_news_list_from_gdoc($source_url) {
             'link' => $link
         );
 
-        array_push ($NEWS_LIST, $NEWS_obj);
+        array_push($NEWS_LIST, $NEWS_obj);
     }
 
     fclose($handle);
@@ -39,7 +36,8 @@ function get_news_list_from_gdoc($source_url) {
     return $NEWS_LIST;
 }
 
-function get_news_list_html($NEWS_LIST, $lang = 'zh-tw') {
+function get_news_list_html($NEWS_LIST, $lang = 'zh-tw')
+{
 
     $l10n = array(
         'en' => array(
@@ -56,15 +54,11 @@ function get_news_list_html($NEWS_LIST, $lang = 'zh-tw') {
     $html = '';
     $html .= sprintf("<h1>%s</h1>\n", htmlspecialchars($l10n[$lang]['News']));
     $html .= "<div class=\"news news-list\">\n";
-    foreach ($NEWS_LIST as $idx => &$news)
-    {
+    foreach ($NEWS_LIST as $idx => &$news) {
         $html .= "    <div class=\"list\">\n";
-        $html .= sprintf("  <span>%s<b>%s</b></span>\n", 
-                            htmlspecialchars($news['date']), htmlspecialchars($news['source']));
+        $html .= sprintf("  <span>%s<b>%s</b></span>\n", htmlspecialchars($news['date']), htmlspecialchars($news['source']));
         $html .= sprintf("  <div class=\"title\">%s</div>\n", htmlspecialchars($news['title']));
-        $html .= sprintf("  <div class=\"link\"><a href=\"%s\" target=\"_blank\">%s</a></div>\n",
-                         htmlspecialchars($news['link']),
-                         htmlspecialchars($news['link']));
+        $html .= sprintf("  <div class=\"link\"><a href=\"%s\" target=\"_blank\">%s</a></div>\n", htmlspecialchars($news['link']), htmlspecialchars($news['link']));
         $html .= "    </div>\n";
     }
     $html .= "</div>\n"; // <div class="news">
@@ -73,14 +67,10 @@ function get_news_list_html($NEWS_LIST, $lang = 'zh-tw') {
 
 $news_list = get_news_list_from_gdoc($news_sheets['news']);
 
-if ($news_list === FALSE)
-{
+if ($news_list === FALSE) {
     print "Notice: skip News list from Google Docs.\n";
-}
-else
-{
-    foreach ($news_list_output as $lang => $path)
-    {
+} else {
+    foreach ($news_list_output as $lang => $path) {
         $news_list_html = get_news_list_html($news_list, $lang);
         print "Write news into " . $path . " .\n";
         $fp = fopen($path, "w");
@@ -89,8 +79,10 @@ else
     }
 
     print "Write news into " . $json_output["news"] . " .\n";
-    $fp = fopen ($json_output["news"], "w");
-    fwrite ($fp, json_encode(array('news' => $news_list)));
-    fclose ($fp);
+    $fp = fopen($json_output["news"], "w");
+    fwrite($fp, json_encode(array(
+        'news' => $news_list
+    )));
+    fclose($fp);
 }
 
