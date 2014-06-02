@@ -5,14 +5,15 @@ define(['jquery', 'context'], function($, context) {
 
   // init: Load navigation from API if it's empty
   function menuInit() {
-    if (!$('nav.empty').length) { // menu is not empty
+    if (!$('#mainNav.empty').length) { // menu is not empty
       return;
     }
     // Fetch site nav from remove JSON api
     $.getJSON(api_url, function(data) {
-        var $nav = $('nav').removeClass('empty');
-        $nav.html(data[context.lang].replace(/href="(\/[^\/])/g, 'href="' + context.origin + '$1'));
-        $('nav a[href*="' + window.location.hostname + '"]').parent().addClass('current');
+        var $nav = $('#mainNav').removeClass('empty');
+        var $ul = $(data[context.lang].replace(/href="(\/[^\/])/g, 'href="' + context.origin + '$1'));
+        $nav.append($ul.children()); // we only need those <li>
+        $('#mainNav a[href*="' + window.location.hostname + '"]').parent().addClass('current');
       }
     );
   }

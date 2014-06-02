@@ -85,7 +85,7 @@
 //]]>
 </script>
 
-<script src="http://coscup.org/2014/assets/js/lib/require.js"></script>
+<script src="http://coscup.org/2014/assets/js/lib/require.js"/>
 <script>
     require.config({
       baseUrl: "http://coscup.org/2014/assets/js/"
@@ -153,13 +153,8 @@ head.appendChild(script);
       </ul>
       <nav id='nav-wrap'>
         <div data-l10n-id='menu' id='mobile-menu-icon'>選單</div>
-        <ul class='no-decoration' id='mainNav'>
-          <li><a href='http://coscup.org/2014/zh-tw/index.html'>首頁</a></li>
-          <li><a href='http://coscup.org/2014/zh-tw/about/'>活動簡介</a></li>
-          <li><a href='http://coscup.org/2014/zh-tw/venue/'>地點</a></li>
-          <li><a href='http://coscup.org/2014/zh-tw/sponsors/'>贊助單位</a></li>
-          <li><a href='http://blog.coscup.org/'>部落格</a></li>
-          <li><a href='http://coscup.org/2014/zh-tw/contact/'>聯絡資訊</a></li>
+        <ul class='no-decoration empty' id='mainNav'>
+          <!-- 加上 class="empty" 會觸發 script 拉遠端資料顯示 -->
         </ul>
       </nav> 
     </div>
