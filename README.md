@@ -2,8 +2,12 @@
 
 ### Prerequisite
 
-* You need to clone [COSCUP/marksite](https://github.com/COSCUP/marksite.git) to generate *.html from *.md. Put it under `deploy` folder.
 * php interpreter
+
+### Init submodules
+
+* `git submodule init`
+* `git submodule update`
 
 ### Configuration
 
