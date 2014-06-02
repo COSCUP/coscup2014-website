@@ -1,0 +1,3 @@
+[submodule "deploy/marksite"]
+	path = deploy/marksite
+	url = https://github.com/COSCUP/marksite.git
