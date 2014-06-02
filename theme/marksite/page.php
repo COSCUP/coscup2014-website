@@ -61,7 +61,6 @@ $theme_assets_uri = $home_path."assets/";
     //so after a build there are only 2 HTTP requests instead of three.
     require(['config', 'main-menu', 'sidebar-sponsor'], function () {
       require(['page/<?php echo $this->current[1];?>'], null, function(err) {
-        console.log(err);
         var failedId = err.requireModules && err.requireModules[0];
         console.log(failedId + ' is not existing');
       });
