@@ -4,9 +4,7 @@
   If you are interested in sponsoring COSCUP, please contact
   <a href="mailto:sponsorship@coscup.org">sponsorship@coscup.org</a>.
 """>
-<copyright """
-  &copy; 2014 COSCUP | <a href="http://coscup.org/2014/contact/">Contact us</a>
-""">
+<contactUs "Contact Us">
 <diamond "Diamond Level">
 <gold "Gold Level">
 <silver "Silver Level">
