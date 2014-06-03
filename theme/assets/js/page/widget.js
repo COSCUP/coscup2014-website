@@ -117,7 +117,40 @@ define(['jquery', 'context'], function($, context) {
     );
   }
 
+  function paddingZero(num) {
+    return (num < 10)? '0'+num : num;
+  }
+
+  function countdown(end) {
+    var $warning = $('<div style="font-size: 14px;" data-l10n-id="countdownWarning"></div>');
+    $warning.text(document.l10n.getSync('countdownWarning'));
+    var countdownText = document.l10n.getSync('countdown');
+    var startedText = document.l10n.getSync('registrationStarted');
+    var $countdown = $('<div></div>');
+    $('.countdown').append($countdown);
+    $('.countdown').append($warning);
+
+    var id = setInterval(function() {
+      var now = new Date();
+      if (now > end) {
+        $('.countdown a').text(startedText);
+        clearInterval(id);
+        return;
+      }
+      var diff = Math.floor((end - now) / 1000);
+      var hour = Math.floor(diff / 3600);
+      diff -= (3600 * hour);
+      var min = paddingZero(Math.floor(diff / 60));
+      diff -= (60 * min);
+      var sec = paddingZero(diff);
+      $countdown.text(countdownText + ': ' + hour + ' : ' + min + ' : ' + sec);
+    }, 1000);
+  }
+
   // init widgets
   loadNewsWidget();
   socialBuzz();
+  document.l10n.ready(function() {
+    countdown(new Date(1401796800000)); // epoch time of 2014-06-03 20:00
+  });
 });
