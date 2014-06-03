@@ -2,6 +2,11 @@
   <div id="left">
     <h1 class="coscup">COSCUP - Conference for Open Source Coders, Users and Promoters</h1>
 
+    <!--registration-->
+    <div class="countdown">
+      <div class="date">2014.06.03 20:00</div>
+      <a data-l10n-id="register" href="http://coscup2014.kktix.cc/events/coscup2014-regist">Registration Open TODAY!</a>
+    </div>
     <!--news-->
     <div class="news">
       <h1>News Release</h1>

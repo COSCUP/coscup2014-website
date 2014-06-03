@@ -1,6 +1,11 @@
 <div><!--add root div as a workaround of weird makrdown parser-->
   <div id="left">
     <h1 class="coscup">COSCUP - Conference for Open Source Coders, Users and Promoters</h1>
+    <!--registration-->
+    <div class="countdown">
+      <div class="date">2014.06.03 20:00</div>
+      <a data-l10n-id="register" href="http://coscup2014.kktix.cc/events/coscup2014-regist">COSCUP 报名就在今天！</a>
+    </div>
     <!--news-->
     <div class="news">
       <h1>媒体报导</h1>

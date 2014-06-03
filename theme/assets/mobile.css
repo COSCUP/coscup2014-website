@@ -109,6 +109,21 @@ h2 {
     line-height: 28px;
 }
 
+#left .countdown {
+    font-size: 20px;
+    line-height: 30px;
+    background: #EAF1D0;
+    width: 90%;
+    padding: 5px;
+    text-align: center;
+}
+#left .countdown .date {
+    font-weight: bold;
+}
+#left .countdown a {
+  text-decoration: underline;
+}
+
 #left .news {
     width: 95%;
 }

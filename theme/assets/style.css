@@ -225,6 +225,21 @@ h2 {
     margin-bottom: 45px;
 }
 
+#left .countdown {
+    font-size: 22px;
+    line-height: 34px;
+    background: #EAF1D0;
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+}
+#left .countdown .date {
+    font-weight: bold;
+}
+#left .countdown a {
+  text-decoration: underline;
+}
+
 #left .news .news_list .list {
     margin-bottom: 0px;
     border-bottom: none;
