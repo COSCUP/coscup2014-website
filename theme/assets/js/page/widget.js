@@ -150,7 +150,7 @@ define(['jquery', 'context'], function($, context) {
   // init widgets
   loadNewsWidget();
   socialBuzz();
-  document.l10n.ready(function() {
+  /*document.l10n.ready(function() {
     countdown(new Date(1401796800000)); // epoch time of 2014-06-03 20:00
-  });
+  });*/
 });
