@@ -48,6 +48,17 @@ define(function(require) {
         $sponsors.append($u);
       }
     );
+    if (data['sponsors']['special']) {
+        var $h2 = $('<h2 data-l10n-id="special" />');
+        $h2.text(document.l10n.getSync('special'));
+        var $u = $('<ul class="no-decoration" />');
+        var text = document.l10n.getSync('specialThanks');
+        var url = context.origin + '/2014/' + context.lang + '/sponsors/#special';
+        var $a = $('<li><a href="' + url + '" data-l10n-id="specialThanks">' + text + '</a></li>');
+        $u.append($a);
+        $sponsors.append($h2);
+        $sponsors.append($u);
+    }
     // Restore existing sponsors
     $sponsors.append($existingSponsors);
   }
