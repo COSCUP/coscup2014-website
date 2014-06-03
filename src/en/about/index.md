@@ -184,6 +184,8 @@ Leader: **小畢 (CrBoy)**
 - 奇猴
 - 小草
 - 闇鴉/Lora
+- nfs
+- Orange
 
 ### Website
 
