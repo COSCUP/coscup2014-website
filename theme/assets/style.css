@@ -225,6 +225,10 @@ h2 {
     margin-bottom: 45px;
 }
 
+#left .empty {
+    display: none;
+}
+
 #left .countdown {
     font-size: 22px;
     line-height: 34px;
@@ -237,7 +241,7 @@ h2 {
     font-weight: bold;
 }
 #left .countdown a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 #left .news .news_list .list {

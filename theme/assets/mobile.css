@@ -109,6 +109,9 @@ h2 {
     line-height: 28px;
 }
 
+#left .empty {
+    display: none;
+}
 #left .countdown {
     font-size: 20px;
     line-height: 30px;
@@ -121,7 +124,7 @@ h2 {
     font-weight: bold;
 }
 #left .countdown a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 #left .news {

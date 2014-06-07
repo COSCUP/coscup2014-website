@@ -2,9 +2,7 @@
   <div id="left">
     <h1 class="coscup">COSCUP - Conference for Open Source Coders, Users and Promoters</h1>
     <!--registration-->
-    <div class="countdown">
-      <div class="date" style="display:none;">2014.06.03 20:00</div>
-      <a data-l10n-id="registrationEnd" href="http://coscup2014.kktix.cc/events/coscup2014-regist">票亭已被推倒(誤)</a>
+    <div class="countdown empty">
     </div>
     <!--news-->
     <div class="news">
