@@ -10,9 +10,9 @@ The term "Open Source" appears in 1998, which is familiar to everyone. This kind
 
 COSCUP celebrated its 9th anniversary this year. Over the past 8 years, the event has co-operated with coumminities all over the world. With everyone's involvement, we grow sustainly. Whoever you are a Open Source coder, a devoted Open Source promoter, a user fimiliar with Open Source, or even a newbie, we sincerely welcome you to be a part of COSCUP.
 
-## 2014 Organizaing Team
+## 2014 Organizing Team
 <div class="team">
-### Orgnizer
+### Organizer
 
 **[BobChao](https://reps.mozilla.org/u/bobchao/)**（Mozilla Community）
 
@@ -145,7 +145,7 @@ Leader: **David Huang**
 - 腹黒い茶
 - 阿嘉
 
-### Archeving Team
+### Archiving Team
 
 Leader: **丞相**
 
@@ -174,7 +174,7 @@ Leader: **Tim Chen**
 
 Leader: **Lloyd Huang**
 
-### Administration Asisstant
+### Administration Assistant
 
 Leader: **小畢 (CrBoy)**
 
