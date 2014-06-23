@@ -85,9 +85,9 @@ define(function(require) {
       $wrap.append(
         '<div><span>'
           + '<a href="' + sponsor1.url + '" target="_blank" title="' + sponsor1.name[context.lang] + '">'
-          + '<img alt="' + sponsor1.name[context.lang] + '" src="' + context.origin + sponsor1.logoUrl + '" width="40%"/></a>'
+          + '<img alt="' + sponsor1.name[context.lang] + '" src="' + context.origin + sponsor1.logoUrl + '"/></a>'
           + '<a href="' + sponsor2.url + '" target="_blank" title="' + sponsor2.name[context.lang] + '">'
-          + '<img alt="' + sponsor2.name[context.lang] + '" src="' + context.origin + sponsor2.logoUrl + '" width="40%"/></a>'
+          + '<img alt="' + sponsor2.name[context.lang] + '" src="' + context.origin + sponsor2.logoUrl + '"/></a>'
           + '</span></div>');
     }
     $('#mySwipe').removeClass('empty').append($wrap);
