@@ -731,7 +731,8 @@ MOBILE NAV
     line-height: 134px;
 }
 #mySwipe div span img {
-    width: 40%;
+    max-width: 40%;
+    max-height: 72px;
     vertical-align: middle;
     margin: 0 10px;
 }
