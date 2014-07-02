@@ -210,6 +210,10 @@ h2 {
     width: 525px;
 }
 
+#left.blog .post-body a {
+    color: blue;
+}
+
 #left > * {
     margin-bottom: 20px;
     float: left;
