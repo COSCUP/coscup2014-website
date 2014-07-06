@@ -56,7 +56,7 @@
     <div class="socialbuzz">
       <h1>Social Buzz <em>(Tag: #coscup)</em></h1>
       <div id="socialbuzz" class="text"></div>
-      <div class="more">More: <a href="https://search.twitter.com/search?q=coscup+OR+from%3Acoscup">Twitter</a>、<a href="http://www.plurk.com/psearch#q=COSCUP">Plurk</a> »</div>
+      <div class="more">More: <a href="https://search.twitter.com/search?q=coscup+OR+from%3Acoscup">Twitter</a>、<a href="http://www.plurk.com/topics/coscup">Plurk</a> »</div>
     </div>
     <!--u tube-->
     <div class="utube">
