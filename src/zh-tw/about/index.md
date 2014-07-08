@@ -86,6 +86,7 @@ COSCUP 研討會已堂堂邁入第九年，八年來不但由各地社群共同�
 - Trista
 - Vagabond
 - Vincent
+- Wei
 - wenhao
 - ws育慈
 - Yexina
@@ -93,7 +94,9 @@ COSCUP 研討會已堂堂邁入第九年，八年來不但由各地社群共同�
 - 下午
 - 亞亞
 - 伊賀
+- 匡政
 - 姿姿
+- 小Q
 - 小元
 - 小六
 - 小宇
@@ -113,7 +116,6 @@ COSCUP 研討會已堂堂邁入第九年，八年來不但由各地社群共同�
 - 糖萱
 - 紗子
 - 花花
-- 負負
 - 阿膽
 - 高個
 - 魏言
@@ -126,8 +128,8 @@ COSCUP 研討會已堂堂邁入第九年，八年來不但由各地社群共同�
 
 - Conan
 - cyrandy
-- 薏仁
 - DennyHuang
+- Ei-ling 艾岭
 - HenryYang
 - itsneo
 - Ming
@@ -138,8 +140,14 @@ COSCUP 研討會已堂堂邁入第九年，八年來不但由各地社群共同�
 - Starlition
 - xxx
 - 凌羽
+- 小六
 - 小明
+- 小翊
+- 左邊
+- 手慢君
+- 波卡Poka
 - 浚原
+- 皇甫
 - 竹本立里
 - 胖胖
 - 腹黒い茶
@@ -151,16 +159,23 @@ COSCUP 研討會已堂堂邁入第九年，八年來不但由各地社群共同�
 
 - adaam
 - Aminzai
+- Arvin
+- Can
 - CJOKER
+- Daniel丹丹
 - Iven
 - Mike
 - Stanley
 - w
+- Zac
 - 傑諾特
+- 勞倫斯
 - 小聖
 - 小豪
+- 日京三子
 - 星雨
 - 歐三
+- 西歪街
 - 黃牙牙
 
 ### 會計
@@ -168,7 +183,7 @@ COSCUP 研討會已堂堂邁入第九年，八年來不但由各地社群共同�
 組長： **Tim Chen**
 
 - Toby Liu
-- Singing Li
+- Singing
 
 ### 出納
 
@@ -180,12 +195,16 @@ COSCUP 研討會已堂堂邁入第九年，八年來不但由各地社群共同�
 
 - choupi
 - Idril*阿南
+- Jie
+- nfsnfs
+- Orange
 - Rainny
+- Yiling Chen
+- 一枝
 - 奇猴
 - 小草
+- 豬豬
 - 闇鴉/Lora
-- nfs
-- Orange
 
 ### 網站
 
