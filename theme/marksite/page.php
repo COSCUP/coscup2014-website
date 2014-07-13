@@ -74,9 +74,10 @@ $theme_assets_uri = $home_path."assets/";
     <div class="wrap">
       <div id="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">COSCUP 2014</a></div>
         <ul id="languages" class="no-decoration">
-          <li><a href="<?php echo $home_path;?>en/" title="English" data-lang="en-US">EN</a></li>
-          <li><a href="<?php echo $home_path;?>zh-tw/" title="正體中文" data-lang="zh-TW">正體</a></li>
-          <li><a href="<?php echo $home_path;?>zh-cn/" title="简体中文" data-lang="zh-CN">简体</a></li>
+          <?php $local_path = join('/', array_slice($this->current, 1, -1)); ?>
+          <li><a href="<?php echo $home_path;?>en/<?php echo $local_path;?>" title="English" data-lang="en-US">EN</a></li>
+          <li><a href="<?php echo $home_path;?>zh-tw/<?php echo $local_path;?>" title="正體中文" data-lang="zh-TW">正體</a></li>
+          <li><a href="<?php echo $home_path;?>zh-cn/<?php echo $local_path;?>" title="简体中文" data-lang="zh-CN">简体</a></li>
         </ul>
 	    <ul id="desktop-social-links" class="no-decoration">
         <li><a href="https://www.facebook.com/coscup" title="facebook" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
