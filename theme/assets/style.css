@@ -652,6 +652,8 @@ h2.pro {
     font-weight: bold;
     width: 60%;
     min-height: 63px;
+    max-height: 80px;
+    overflow: hidden;
     margin-right: 10px;
     float: left;
     line-height: 16px;
