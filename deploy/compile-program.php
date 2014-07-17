@@ -280,7 +280,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
         $html['program'] .= '<div class="article">' . "\n";
 
         $structure[$time_stamp] = array_merge($structure[$time_stamp], $continue);
-        $continue               = array();
+        $continue = array();
 
         usort($structure[$time_stamp], function($a, $b)
         {
@@ -291,13 +291,18 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
             return ($a['room'] - $b['room']);
         });
 
+        // check and enqueue multiple slots
         foreach ($structure[$time_stamp] as &$program) {
             // We need to process multi-span session again
             if ($program['to'] !== $time_stamp_end) {
-                $program['isMultiSlot']     = true;
+                $program['isMultiSlot']  = true;
                 $continue[$program['room']] = $program;
             }
 
+        }
+
+        // layout each program within this time slot
+        foreach ($structure[$time_stamp] as &$program) {
             // check in & break & lunch
             if ($program['isBreak']) {
                 $html['program'] .= sprintf('<span class="title">%s</span>', htmlspecialchars($program['name']));
