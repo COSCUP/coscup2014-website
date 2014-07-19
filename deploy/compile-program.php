@@ -251,7 +251,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
     }
     $html['program'] .= '</ul></div>' . "\n\n";
     $html['program'] .= '<span style="color:red">' . $draft[$lang] . '</span>';
-    $bof_link = "https://docs.google.com/document/d/1akcB6ad1koXY6Q3En93wYN77LSatVKORlQRN-8P7nRs/edit?usp=docslist_api  ";
+    $bof_link = "https://docs.google.com/document/d/1g4tEBCAfRuVeJGpTrgWK_jUBWOXCwwiIGNta8YtWO6c/preview?pli=1&sle=true";
     $html['program'] .= '<div class="bof"><a href="'. $bof_link .'" target="_blank">'. $bof[$lang] .'</a></div>';
     
 
