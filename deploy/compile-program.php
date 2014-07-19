@@ -194,6 +194,11 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
         'zh-cn' => '* 议程表仍有变动，请常回来查看本网页，不另通知',
         'en' => '* We are still updating, check out often!'
     );
+    $bof = array(
+        'zh-tw' => 'COSCUP 2014 BOF 內容',
+        'zh-cn' => 'COSCUP 2014 BOF 內容',
+        'en' => 'COSCUP 2014 BOF detail'
+    );
 
     $ps_list = array(
         'zh-tw' => '* 跨時段議程',
@@ -246,6 +251,9 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
     }
     $html['program'] .= '</ul></div>' . "\n\n";
     $html['program'] .= '<span style="color:red">' . $draft[$lang] . '</span>';
+    $bof_link = "https://docs.google.com/document/d/1akcB6ad1koXY6Q3En93wYN77LSatVKORlQRN-8P7nRs/edit?usp=docslist_api  ";
+    $html['program'] .= '<div class="bof"><a href="'. $bof_link .'" target="_blank">'. $bof[$lang] .'</a></div>';
+    
 
     $last_stamp    = 0;
     $day_increment = 0;

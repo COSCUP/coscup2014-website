@@ -456,6 +456,15 @@ h2.pro {
     border-bottom: 1px solid #CCC;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
+
+.bof {
+    padding: 10px;
+    background: #f1e05a;
+    font-weight: bold;
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+}
 .class_tag {
     display:none
 }
