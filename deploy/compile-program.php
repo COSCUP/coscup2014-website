@@ -195,9 +195,9 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
         'en' => '* We are still updating, check out often!'
     );
     $bof = array(
-        'zh-tw' => 'COSCUP 2014 BOF 內容',
-        'zh-cn' => 'COSCUP 2014 BOF 內容',
-        'en' => 'COSCUP 2014 BOF detail'
+        'zh-tw' => 'COSCUP 2014 BoF 內容',
+        'zh-cn' => 'COSCUP 2014 BoF 內容',
+        'en' => 'COSCUP 2014 BoF detail'
     );
 
     $ps_list = array(
