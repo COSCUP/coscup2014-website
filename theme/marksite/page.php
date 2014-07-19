@@ -1,5 +1,6 @@
 <?php
 $theme_assets_uri = $home_path."assets/";
+$cachebusting = rand(0, 1000);
 ?>
 
 <!DOCTYPE html>
@@ -31,8 +32,8 @@ $theme_assets_uri = $home_path."assets/";
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <link rel="apple-touch-icon" href="<?php echo $theme_assets_uri;?>ios-fav.jpg" />
 <link href="<?php echo $theme_assets_uri;?>normalize.css" type= "text/css" rel="stylesheet" />
-<link media="only screen and (max-width:768px)" href="<?php echo $theme_assets_uri;?>mobile.css" type= "text/css" rel="stylesheet" />
-<link media="screen and (min-width:769px)" href="<?php echo $theme_assets_uri;?>style.css" type="text/css" rel="stylesheet" />
+<link media="only screen and (max-width:768px)" href="<?php echo $theme_assets_uri;?>mobile.css?<?php echo $cachebusting;?>" type= "text/css" rel="stylesheet" />
+<link media="screen and (min-width:769px)" href="<?php echo $theme_assets_uri;?>style.css?<?php echo $cachebusting;?>" type="text/css" rel="stylesheet" />
 <!--favicon-->
 <link type="image/x-icon" href="<?php echo $theme_assets_uri;?>favicon.ico" rel="shortcut icon">
 
