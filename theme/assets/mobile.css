@@ -723,12 +723,11 @@ MOBILE NAV
 #mySwipe div span {
     display: block;
     text-align: center;
-    padding: 10px 10px;
     margin-bottom: 10px;
     box-shadow: 0 1px #EBEBEB;
     background: #fff;
     border-radius: 3px;
-    line-height: 134px;
+    line-height: 100px;
 }
 #mySwipe div span img {
     max-width: 40%;
