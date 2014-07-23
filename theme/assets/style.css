@@ -757,6 +757,10 @@ h2.pro {
     padding-right: 10px;
     text-align: right;
 }
+#program_detail.program .ps {
+    bottom: auto;
+    left: auto;
+}
 
 #lock_background.show {
     display: block;

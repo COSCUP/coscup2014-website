@@ -96,20 +96,15 @@ define(['jquery', 'context' , 'lib/bootstrap-scrollspy', './program-filter'], fu
 
     $('#content').on('click', '.article .program', function() {
       var id = $(this).data('id');
+      var $metadata = $(this).find('.metadata').clone();
+
       function displayDetails(data) {
         var program = data.program[id];
 
         $('#program_detail').empty();
-        $('#program_detail')
-          .append($('<div class="metadata"></div>').addClass('track_tag colorTag-' + program.type)
-            .append($('<div></div>').addClass('head')
-              .append($('<div></div>').addClass('place').html(data.room[program.room]['zh-tw']))
-              .append($('<div></div>').addClass('timeinfo').html(getTime(program.from) + ' - ' + getTime(program.to)))
-              .append($('<div></div>').addClass('community').html(data.community[program.community])))
-            .append($('<div></div>').addClass('body')
-              .append($('<div></div>').addClass('topic').addClass(program.lang).html(program.name))
-              .append($('<div></div>').addClass('speaker').html(program.speaker))
-              .append($('<div></div>').addClass('speaker-title').html(program.speakerTitle))));
+        $('#program_detail').append($metadata);
+        $('<div></div>').addClass('timeinfo').html(getTime(program.from) + ' - ' + getTime(program.to))
+          .insertAfter($('#program_detail .place'));
 
         $('#program_detail')
           .append($('<div></div>').addClass('detail')
